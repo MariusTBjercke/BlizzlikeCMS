@@ -1,4 +1,4 @@
-<h3>Welcome to the repository for my try on a website/account creation page for the TrinityCore WotLK 3.3.5a emulator.</h3>
+<h3>Welcome to the repository for my try on a CMS for the TrinityCore Open Source MMO Framework.</h3>
 This is focused on being easy to setup and use for your own private server.
 
 **FEATURES** 
