@@ -948,3 +948,31 @@ hr{
 .delete {
     color: red;
 }
+
+.edit_gamemasters ul {
+    list-style: none;
+    margin: 5px 0px 0px 0px;
+    padding: 0;
+}
+
+.edit_gamemasters li {
+    width: 100%;
+    border-bottom: 1px solid #000000;
+    padding-bottom: 3px;
+    padding-top: 10px;
+}
+
+.edit_gamemasters span {
+    display: block;
+    margin-top: 30px;
+}
+
+.edit_gamemasters .addsuccess {
+    padding-top: 15px;
+    color: #009b22;
+}
+
+.edit_gamemasters .delsuccess {
+    padding-top: 15px;
+    color: #d61000;
+}

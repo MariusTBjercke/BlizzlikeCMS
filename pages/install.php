@@ -56,12 +56,6 @@ $row = $result->fetch_assoc();
 // The name of your server
 $servername = $row["servername"];
 
-// Gamemaster on your server
-$gamemasters = array(
-    "Example",
-    "Example"
-);
-
 // Front page top video YouTube link
 $frontpage_toppage_ytlink = $row["youtube"];
 
@@ -95,6 +89,8 @@ $installed = true;
     $mysqli->query("INSERT INTO posts (title, content, poster_id) VALUES ('Example Post', 'This post can be edited from the administration panel. You can also add new posts from there.', '1')");
     $mysqli->query("CREATE TABLE config (servername VARCHAR(255) NOT NULL, serveraddress VARCHAR(255) NOT NULL, worldport VARCHAR(255) NOT NULL, youtube VARCHAR(255), download VARCHAR(255))");
     $mysqli->query("INSERT INTO config (servername, serveraddress, worldport, youtube, download) VALUES ('$servername', '$serveraddress', '$worldport', '$youtube', '$download')");
+    $mysqli->query("CREATE TABLE gamemasters (id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, charname VARCHAR(255) NOT NULL)");
+    $mysqli->query("INSERT INTO gamemasters (charname) VALUES ('Example')");
 
 }
 
