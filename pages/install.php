@@ -26,11 +26,12 @@ if (isset($_POST['install_submit'])) {
     }
 
     $my_file = 'includes/config.php';
-    $handle = fopen($my_file, 'w') or die('Cannot open file:  '.$my_file);
+    $handle = fopen($my_file, 'w');
     // Writing data to config.php
     $data = '
-    <?php
-    // MySQL login details
+<?php
+
+// MySQL login details
 $hostname = "' . $hostname . '";
 $username = "' . $username . '";
 $password = "' . $password . '";
@@ -78,21 +79,22 @@ $installed = true;
 
 ?>
     ';
-    $success = fwrite($handle, $data);
+    fwrite($handle, $data);
+
+	if ($handle == false) {
+		echo '<strong>Error: </strong>You do not have write access to includes/config.php<br />';
+		echo '<a href="#" onclick="javascript:history.back(1);">Try again</a> with the correct access, or replace everything in the includes/config.php file with the text below:<br /><br />';
+		echo '<textarea style="min-width: 80%; min-height: 80%;">' . $data . '</textarea>';
+		die();
+	} else {
+		echo '<script>alert("The installation was successful. For security reasons you should now delete the install.php file.");</script>';
+		echo '<script>window.location="index.php";</script>';
+	}
 
     $mysqli->query("CREATE TABLE posts (id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, title VARCHAR(255) NOT NULL, content TEXT NOT NULL, poster_id INT(255) NOT NULL)");
     $mysqli->query("INSERT INTO posts (title, content, poster_id) VALUES ('Example Post', 'This post can be edited from the administration panel. You can also add new posts from there.', '1')");
     $mysqli->query("CREATE TABLE config (servername VARCHAR(255) NOT NULL, serveraddress VARCHAR(255) NOT NULL, worldport VARCHAR(255) NOT NULL, youtube VARCHAR(255), download VARCHAR(255))");
     $mysqli->query("INSERT INTO config (servername, serveraddress, worldport, youtube, download) VALUES ('$servername', '$serveraddress', '$worldport', '$youtube', '$download')");
-
-    if ($success) {
-		echo '<script>alert("The installation was successful. For security reasons you should now delete the install.php file.");</script>';
-		echo '<script>window.location="index.php";</script>';
-	} else {
-        echo '<strong>Error: </strong>You do not have write access to includes/config.php<br />';
-        echo '<a href="#" onclick="javascript:history.back(1);">Try again</a> with the correct access, or paste the text below manually into the includes/config.php file:<br /><br />';
-        echo $data;
-    }
 
 }
 
