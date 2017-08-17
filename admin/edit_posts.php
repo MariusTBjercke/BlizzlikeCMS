@@ -10,7 +10,7 @@ if (isset($_GET['id'])) {
     $post_id = $_GET['id'];
 }
 $_SESSION['headers'] = array(
-    "<script src='node_modules/tinymce/tinymce.min.js'></script>",
+    "<script src='includes/tinymce/tinymce.min.js'></script>",
     "<script>
   tinymce.init({
     selector: '.content_field',
