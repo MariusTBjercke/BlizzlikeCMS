@@ -27,4 +27,4 @@ or...
 
 **PS: This is still a work in progress, but I will try to update the project frequently.**
 
-<img src='img/demo.png' width='800'>
+<img src='img/demo.png' width='100%'>
