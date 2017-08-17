@@ -19,7 +19,7 @@ For security reasons, remember to **delete both install.php** files after the in
 
 **If you are going to edit the stylesheets it is recommended to have <a href="https://nodejs.org">Node.js</a> installed as this project comes with a CSS watcher/minimizer script.**
 
-**First install NPM by command "npm install", then you can run "gulp" or "gulp watch" to start using the CSS-watcher.**
+**First setup Node by running the command "npm install". Then you can run "gulp" or "gulp watch" to start using the CSS-watcher.**
 
 or...
 
