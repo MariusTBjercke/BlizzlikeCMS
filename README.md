@@ -17,7 +17,11 @@ Simply import all the files into your desired website root folder, then open the
 
 For security reasons, remember to **delete both install.php** files after the installation is complete*
 
-**If you are going to edit the stylesheets it is recommended to have <a href="https://nodejs.org">Node.js</a> installed as this project comes with a CSS minifier and watcher script. The "node_modules" folder is completely optional.**
+**If you are going to edit the stylesheets it is recommended to have <a href="https://nodejs.org">Node.js</a> installed as this project comes with a CSS watcher/minimizer script.**
+
+**First install NPM by command "npm install", then you can run "gulp" or "gulp watch" to start using the CSS-watcher.**
+
+or...
 
 **If you don't want to use minified CSS then simply change the CSS source in the header.php from the current /min folder to the /css folder instead.**
 
