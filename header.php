@@ -14,6 +14,7 @@ $activeplayersResult = $mysqli->query("SELECT * FROM characters");
     <link rel="shortcut icon" href="favicon.png">
 	<link rel="stylesheet" type="text/css" href="min/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="min/main.min.css">
+    <link rel="stylesheet" type="text/css" href="includes/featherlight/featherlight.min.css">
     <link href="https://fonts.googleapis.com/css?family=Zilla+Slab" rel="stylesheet">
     <?php
     if (isset($_SESSION['headers'])) {
@@ -102,9 +103,7 @@ $activeplayersResult = $mysqli->query("SELECT * FROM characters");
         </div>
         <div class="left-menuContent">
             <ul>
-                <li class="disabled">Screenshots</li>
-                <li class="disabled">Videos</li>
-                <li class="disabled">Wallpapers</li>
+                <li><a href="gallery.php">Gallery</a></li>
             </ul>
         </div>
 

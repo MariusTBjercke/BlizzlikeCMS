@@ -22,6 +22,9 @@ switch($page) {
     case "armory":
         include 'pages/armory.php';
         break;
+	case "gallery":
+		include 'pages/gallery.php';
+		break;
     case "admin":
         include 'admin/index.php';
         break;

@@ -6,3 +6,12 @@ function confirmDelete(deleteId) {
         return false;
     }
 }
+
+function confirmDeleteImage(deleteId) {
+    var conf = confirm("Are you sure you want to delete this image?");
+    if (conf == true) {
+        window.location="admin.php?page=edit_gallery&action=del&id=" + deleteId;
+    } else {
+        return false;
+    }
+}

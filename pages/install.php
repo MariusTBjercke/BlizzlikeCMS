@@ -85,7 +85,7 @@ $installed = true;
 		echo '<textarea style="min-width: 80%; min-height: 80%;">' . $data . '</textarea>';
 		die();
 	} else {
-		echo '<script>alert("The installation was successful. For security reasons you should now delete the install.php file.");</script>';
+		echo '<script>alert("The installation was successful. For security reasons you should now delete the pages/install.php file.");</script>';
 		echo '<script>window.location="index.php";</script>';
 	}
 
@@ -95,6 +95,8 @@ $installed = true;
     $mysqli->query("INSERT INTO config (servername, serveraddress, worldport, contact, youtube, download) VALUES ('$servername', '$serveraddress', '$worldport', 'contact@example.com', '$youtube', '$download')");
     $mysqli->query("CREATE TABLE gamemasters (id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, charname VARCHAR(255) NOT NULL)");
     $mysqli->query("INSERT INTO gamemasters (charname) VALUES ('Example')");
+	$mysqli->query("CREATE TABLE gallery (id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, title VARCHAR(255) NOT NULL, URL VARCHAR(255) NOT NULL)");
+	$mysqli->query("INSERT INTO gallery (title, url) VALUES ('Example', 'img/gallery/example.jpg')");
 
 }
 

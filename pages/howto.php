@@ -4,7 +4,7 @@
 
     <h3>2. If you haven't already, download the Wrath of the Lich King client. <strong>Download link: </strong><a
                 href="<?php echo $wotlk_downloadlink; ?>">WotLK Client (This server, fast connection.)</a></h3>
-    <h3>3. If you've downloaded the client from above, you can skip the next steps and open <strong>wow.exe
+    <h3>3. If you've downloaded the client from above, you can skip the next steps and <sropen <strong>wow.exe
             to start playing right away.</strong></h3>
     <p>or...</p>
     <h3>4. Go to "../World of Warcraft/Data/enUS/realmlist.wtf" or "../World of Warcraft/Data/enGb/realmlist.wtf" file.</h3>
