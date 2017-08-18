@@ -31,14 +31,12 @@ if (isset($_POST['submit'])) {
 	if (file_exists($target_file)) {
 		echo "Sorry, file already exists.";
 		$uploadOk = 0;
-		sleep(3);
 		echo '<script>history.back(1);</script>';
 	}
     // Check file size
 	if ($_FILES["file"]["size"] > 9000000000) {
 		echo "Sorry, your file is too large.";
 		$uploadOk = 0;
-		sleep(3);
 		echo '<script>history.back(1);</script>';
 	}
     // Allow certain file formats
@@ -46,13 +44,11 @@ if (isset($_POST['submit'])) {
 		&& $imageFileType != "gif" ) {
 		echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
 		$uploadOk = 0;
-		sleep(3);
 		echo '<script>history.back(1);</script>';
 	}
     // Check if $uploadOk is set to 0 by an error
 	if ($uploadOk == 0) {
 		echo "Sorry, your file was not uploaded.";
-		sleep(3);
 		echo '<script>history.back(1);</script>';
     // if everything is ok, try to upload file
 	} else {
@@ -60,7 +56,7 @@ if (isset($_POST['submit'])) {
 			$result = $mysqli_cms->query("INSERT INTO gallery (title, url) VALUES ('$title', 'img/gallery/$newfilename')");
 			echo '<script>window.location="admin.php?page=edit_gallery";</script>';
 		} else {
-			echo "Sorry, there was an error uploading your file.";
+			echo '<script>alert("Sorry, there was an error uploading your file. Do you have permission to write to the img/gallery folder?");</script>';
 			echo '<script>history.back(1);</script>';
 		}
 	}
