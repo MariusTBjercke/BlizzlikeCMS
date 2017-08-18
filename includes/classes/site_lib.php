@@ -62,6 +62,8 @@ class Site
                   </div>';
 		}
 
+		echo '<div class="clearfix"></div>';
+
 		echo '<ul>';
 		echo 'Page ' . $pagenum . ' of ' . $endpage . '<br/><br/>';
 		if ($pagenum >= 2) {
