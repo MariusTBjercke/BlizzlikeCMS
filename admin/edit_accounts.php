@@ -67,8 +67,13 @@ if ($_GET['action'] == 'edit') {
     }
     echo '<p><label>GM Level:</label> ' . $account->getGmLevel() . '</p>';
     if ($_GET['edit'] == 1) {
-        echo '<p><select name="gmlevel">
-<option value="' . $account->getGmLevel() . '">' . $account->getGmLevel() . '</option>
+        echo '<p><select name="gmlevel">';
+        if (empty($account->getGmLevel())) {
+            echo '<option value="0">0</option>';
+		} else {
+			echo '<option value="' . $account->getGmLevel() . '">' . $account->getGmLevel() . '</option>';
+		}
+		echo '
 <option value="0">0</option>
 <option value="1">1</option>
 <option value="2">2</option>
