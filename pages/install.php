@@ -95,7 +95,7 @@ $installed = true;
     $mysqli->query("INSERT INTO config (servername, serveraddress, worldport, contact, youtube, download) VALUES ('$servername', '$serveraddress', '$worldport', 'contact@example.com', '$youtube', '$download')");
     $mysqli->query("CREATE TABLE gamemasters (id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, charname VARCHAR(255) NOT NULL)");
     $mysqli->query("INSERT INTO gamemasters (charname) VALUES ('Example')");
-	$mysqli->query("CREATE TABLE gallery (id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, title VARCHAR(255) NOT NULL, URL VARCHAR(255) NOT NULL)");
+	$mysqli->query("CREATE TABLE gallery (id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, title VARCHAR(255) NOT NULL, url VARCHAR(255) NOT NULL)");
 	$mysqli->query("INSERT INTO gallery (title, url) VALUES ('Example', 'img/gallery/example.jpg')");
 
 }
