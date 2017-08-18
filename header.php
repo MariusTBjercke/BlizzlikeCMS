@@ -67,7 +67,7 @@ $activeplayersResult = $mysqli->query("SELECT * FROM characters");
         <div class="left-menuContent">
             <ul>
                 <li><a href="index.php" title="Go back to the home page">Home</a></li>
-                <li><a href="<?php echo $wotlk_downloadlink; ?>" title="Download the WotLK 3.3.5a client">Download game</a></li>
+                <?php if (strlen($wotlk_downloadlink) > 0) { echo '<li><a href="' . $wotlk_downloadlink . '" title="Download the WotLK 3.3.5a client">Download game</a></li>'; } else {} ?>
             </ul>
         </div>
 

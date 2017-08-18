@@ -976,3 +976,46 @@ hr{
     padding-top: 15px;
     color: #d61000;
 }
+
+.edit_settings ul {
+    list-style: none;
+    margin: 5px 0px 0px 0px;
+    padding: 0;
+}
+
+.edit_settings li {
+    width: 100%;
+    border-bottom: 1px solid #000000;
+    padding-bottom: 3px;
+    padding-top: 10px;
+}
+
+.edit_settings span {
+    display: block;
+    margin-top: 30px;
+}
+
+.edit_settings input[type="submit"] {
+    margin-top: 20px;
+    font-size: 1.8rem;
+    padding: 5px;
+}
+
+.edit_settings button {
+    margin-top: 20px;
+}
+
+.edit_settings .addsuccess {
+    padding-top: 15px;
+    color: #009b22;
+}
+
+.edit_settings .delsuccess {
+    padding-top: 15px;
+    color: #d61000;
+}
+
+.edit_settings .success {
+    margin-top: 20px;
+    color: #009b22;
+}
