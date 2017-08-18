@@ -695,7 +695,7 @@ hr{
     -moz-user-select: none;
     -webkit-user-select: none;
     user-select: none;
-    cursor: default;
+    cursor: pointer;
     border-radius:0;
     height: 55px;
     margin-bottom:10px;

@@ -111,7 +111,6 @@ if ($_GET['action'] == 'edit') {
     $post = new Post($del_id);
     $result = $post->deletePost();
     if ($result == true) {
-        echo '<script>alert("The post has been deleted.");</script>';
         echo '<script>history.back(1);</script>';
     } else {
         echo '<script>alert("Something went wrong, please try again.");</script>';
