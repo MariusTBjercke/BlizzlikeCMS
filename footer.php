@@ -6,7 +6,7 @@
             <img src="img/themes/wrath/warning2.png" class="warning2">
         </div>
         <div class="footer-copyright"><?php echo $servername; ?> © <?php echo date("Y"); ?><br />Powered by a <a
-                    href="https://gitlab.com/Bjercke/trinitycore-wotlk" target="_blank">Blizzlike CMS</a></div>
+                    href="https://gitlab.com/Delusional/BlizzlikeCMS" target="_blank">Blizzlike CMS</a></div>
     </div>
 </footer>
 
