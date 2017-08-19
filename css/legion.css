@@ -1196,6 +1196,10 @@ hr{
     list-style: none;
 }
 
+.gallery span {
+    font-size: 2rem;
+}
+
 .theme_selector {
     margin-top: 20px;
 }
@@ -1253,5 +1257,33 @@ hr{
 }
 
 .characters-page input[type="submit"] {
+    color: #000000;
+}
+
+.admin_login {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 40px; 10px 10px 30px;
+    color: #FFFFFF;
+}
+
+.admin_login h1, h3 {
+    color: #FFFFFF;
+}
+
+.admin_front {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 40px 10px 220px 30px;
+    color: #FFFFFF;
+}
+
+.container {
+    color: #FFFFFF;
+}
+
+.container h1 {
+    color: #FFFFFF;
+}
+
+.edit_theme {
     color: #000000;
 }

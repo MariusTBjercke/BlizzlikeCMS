@@ -16,27 +16,29 @@ if (isset($_POST['submit'])) {
 
 ?>
 
-<h1>Administrator login</h1>
-<h3>In order to continue, you need to sign in with an account with administrative privileges.</h3>
+<div class="admin_login">
 
-<div class="card card-container">
+    <h1>Administrator login</h1>
+    <h3>In order to continue, you need to sign in with an account with administrative privileges.</h3>
 
-    <div class="lock-img"></div>
+    <div class="card card-container">
 
-    <form class="form-signin" name="admLogin" method="post" action="">
-        <span id="reauth-email" class="reauth-email"></span>
-        <input type="text" id="inputEmail" class="login_box" placeholder="Username" name="username" required autofocus>
-        <input type="password" name="password" id="inputPassword" class="login_box" placeholder="Password" required>
-        <?php
+        <form class="form-signin" name="admLogin" method="post" action="">
+            <span id="reauth-email" class="reauth-email"></span>
+            <input type="text" id="inputEmail" class="login_box" placeholder="Username" name="username" required autofocus>
+            <input type="password" name="password" id="inputPassword" class="login_box" placeholder="Password" required>
+            <?php
 
-        if (isset($_GET['action'])) {
-            if ($_GET['error'] == 1) {
+            if (isset($_GET['action'])) {
+                if ($_GET['error'] == 1) {
 
+                }
             }
-        }
 
-        ?>
-        <button class="btn btn-lg btn-primary" type="submit" name="submit">Login</button>
-    </form>
+            ?>
+            <button class="btn btn-lg btn-primary" type="submit" name="submit">Login</button>
+        </form>
+
+    </div>
 
 </div>

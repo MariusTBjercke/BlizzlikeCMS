@@ -3,9 +3,7 @@
         <div class="row">
             <h1><a href="index.php"><?php echo $servername; ?></a></h1>
             <ul class="pull-right">
-                <li><a href="#">Support</a></li>
-                <li><a href="#">My Account</a></li>
-                <li><a href="#">Administration</a></li>
+                <li><a href="admin.php">Administration</a></li>
             </ul>
         </div>
     </div>

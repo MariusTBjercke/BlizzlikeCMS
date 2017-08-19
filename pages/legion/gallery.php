@@ -12,7 +12,7 @@ $site = new Site();
 
 <div class="gallery">
 
-    <h1>Gallery (Click to enlarge)</h1>
+    <h1>Gallery <span>(Click to enlarge)</span></h1>
 
 	<?php
 	$site->getGallery($pagenum);
