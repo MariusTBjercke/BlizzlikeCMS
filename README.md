@@ -30,8 +30,5 @@ or...
 
 <img src='img/demo/demo.png' width='100%'>
 
-<img src='img/demo/adminpanel.png' width='100%'>
-
-<img src='img/demo/gallery.png' width='100%'>
-
-<img src='img/demo/edit_gallery.png' width='100%'>
+**Coming tomorrow**
+<img src='img/demo/legion_demo.png' width='100%'>
