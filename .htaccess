@@ -1,1 +1,5 @@
 ErrorDocument 404 /404.php
+
+RewriteEngine On
+RewriteCond %{HTTP_HOST} !^www\. [NC]
+RewriteRule ^(.*)$ http://www.%{HTTP_HOST}/$1 [R=301,L]
