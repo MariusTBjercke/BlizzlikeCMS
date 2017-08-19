@@ -194,7 +194,7 @@ p {
 }
 
 .top-bar {
-    background-color: #000000;
+    background-color: #111111;
     width: 100%;
     height: 40px;
     border-bottom: 1px solid #313337;
@@ -246,6 +246,24 @@ p {
     margin-top: 40px;
     z-index: 200;
     right: 0;
+    color: #caa426;
+}
+
+.navbar-legion ul {
+    list-style: none;
+    position: absolute;
+    right: 30px;
+    height: 80px;
+}
+
+.navbar-legion li {
+    display: inline;
+    padding-left: 10px;
+    line-height: 73px;
+    font-size: 1.8rem;
+    height: 100%;
+    border-left: 1px solid #382419;
+    border-right: 1px solid #382419;
 }
 
 .page-bg-top {
@@ -520,7 +538,7 @@ footer {
     width: 100%;
     min-height: 600px;
     position: relative;
-    margin-top: 250px;
+    margin-top: 160px;
 }
 
 .front-banner h1 {
@@ -536,7 +554,7 @@ footer {
 }
 
 .front-banner button {
-    padding: 15px 30px 15px 20px;
+    padding: 15px 30px 15px 30px;
     margin-top: 20px;
     border: 1px solid #b06601;
     color: #ffd548;
@@ -1156,4 +1174,19 @@ hr{
     color: #3c763d;
     margin-top: 10px;
     font-size: 1.8rem;
+}
+
+.navbar-nav {
+    width: 80%;
+    height: 80px;
+    position: absolute;
+    right: -195px;
+}
+
+.navbar-menuitem {
+    display: inline;
+    padding: 22px 15px 30px 15px;
+    font-size: 2rem;
+    line-height: 70px;
+    border-left: 1px solid #412e11;
 }
