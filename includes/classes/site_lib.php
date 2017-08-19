@@ -42,6 +42,15 @@ class Site
         echo '</ul></div>';
     }
 
+    public function getLatestPost() {
+        global $mysqli_cms;
+
+        $result = $mysqli_cms->query("SELECT * FROM posts ORDER BY id DESC LIMIT 1");
+        $row = $result->fetch_assoc();
+        echo '<h1>' . $row['title'] . '</h1>';
+        echo '<p>' . $row['content'] . '</p><button>Go down</button>';
+    }
+
     public function getGallery($pagenum) {
     	global $mysqli_cms;
 

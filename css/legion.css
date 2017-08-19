@@ -1,5 +1,7 @@
 body {
     background-color: #000000;
+    background-image: url("../img/themes/legion/bg.jpg");
+    background-size: cover;
     color: #000000;
     font-family: 'Zilla Slab', serif;
     overflow-x: hidden;
@@ -195,18 +197,28 @@ p {
     background-color: #000000;
     width: 100%;
     height: 40px;
+    border-bottom: 1px solid #313337;
 }
 
 .top-bar h1 {
     color: #009ae4;
     margin: 0;
-    padding: 6px 0px 0px 0px;
-    font-size: 2.6rem;
+    padding: 7px 0px 0px 0px;
+    font-size: 2.2rem;
     float: left;
+}
+
+.top-bar li a {
+    color: #b9b9b9;
+}
+
+.top-bar li a:hover {
+    color: #ffffff;
 }
 
 .top-bar a {
     text-decoration: none;
+    color: #009ae4;
 }
 
 .top-bar a:hover {
@@ -225,6 +237,17 @@ p {
     padding: 0px 0px 0px 10px;
 }
 
+.navbar-legion {
+    width: 90%;
+    position: absolute;
+    height: 80px;
+    background-image: url("../img/themes/legion/navbar-bg.png");
+    border: 1px solid #251812;
+    margin-top: 40px;
+    z-index: 200;
+    right: 0;
+}
+
 .page-bg-top {
     background-image: url("../img/themes/wotlk/page-bg-top.jpg");
     width: 100%;
@@ -232,13 +255,14 @@ p {
 }
 
 .top-logo {
-    background-image: url("../img/themes/wotlk/WrathLogo.png");
-    width: 180px;
-    height: 94px;
-    background-size: 180px 94px;
+    background-image: url("../img/themes/legion/logo-wow.png");
+    width: 256px;
+    height: 103px;
+    background-size: 256px 103px;
     position: absolute;
-    left: 0px;
-    top: 7px;
+    left: -125px;
+    z-index: 1;
+    margin: -10px 0px 0px 0px;
 }
 
 .left-sidebar {
@@ -292,11 +316,9 @@ p {
 }
 
 .midContent {
-    min-height: 1108px;
-    width: 828px;
-    position: relative;
-    background-image: url("../img/themes/wotlk/light.jpg");
-    margin-left: 150px;
+    min-height: 500px;
+    width: 100%;
+    margin-top: 200px;
 }
 
 .parchment-top {
@@ -495,18 +517,53 @@ footer {
 }
 
 .front-banner {
-    background-image: url("../img/themes/wotlk/banners/1.png");
-    width: 400px;
-    height: 251px;
+    width: 100%;
+    min-height: 600px;
     position: relative;
-    left: 40px;
-    top: 5px;
-    border-radius: 5px;
+    margin-top: 250px;
+}
+
+.front-banner h1 {
+    color: #FFFFFF;
+    text-transform: uppercase;
+    font-size: 6rem;
+}
+
+.front-banner p {
+    color: #ebdec2;
+    width: 80%;
+    margin-top: 5px;
+}
+
+.front-banner button {
+    padding: 15px 30px 15px 20px;
+    margin-top: 20px;
+    border: 1px solid #b06601;
+    color: #ffd548;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.front-banner button:hover {
+    background-color: #b06601;
+    color: #fff68d;
+}
+
+.front-banner button + button {
+    margin-left: 20px;
+}
+
+.front-banner-btn2 {
+    border: 1px solid #ea3012 !important;
+    background-color: rgba(231, 0, 0, 0.4) !important;
+    color: #ffd548 !important;
+}
+
+.front-banner-btn2:hover {
+    background-color: rgba(255, 0, 0, 0.65) !important;
 }
 
 .midContent-content {
-    width: 600px;
-    padding: 0px 0px 0px 55px;
+    padding: 0px 0px 0px 0px;
 }
 
 .midContent-content p {
@@ -514,7 +571,7 @@ footer {
 }
 
 .midContent-content h1 {
-    color: #bd4631;
+    color: #FFFFFF;
     margin: 35px 0px 3px 0px;
     padding: 0;
     font-size: 3rem;
