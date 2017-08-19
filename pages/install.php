@@ -97,6 +97,8 @@ $installed = true;
     $mysqli->query("INSERT INTO gamemasters (charname) VALUES ('Example')");
 	$mysqli->query("CREATE TABLE gallery (id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, title VARCHAR(255) NOT NULL, url VARCHAR(255) NOT NULL)");
 	$mysqli->query("INSERT INTO gallery (title, url) VALUES ('Example', 'img/gallery/example.jpg')");
+    $mysqli->query("CREATE TABLE themes (id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, name VARCHAR(255) NOT NULL, description TEXT NOT NULL, author VARCHAR(255) NOT NULL)");
+    $mysqli->query("INSERT INTO gallery (name, description, author) VALUES ('wotlk', 'Wrath of the Lich King theme for BlizzlikeCMS', 'BlizzlikeCMS')");
 
 }
 

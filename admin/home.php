@@ -8,5 +8,6 @@
         <li><span class="glyphicon glyphicon-picture"></span> <a href="admin.php?page=edit_gallery">Edit gallery</a></li>
         <li><span class="glyphicon glyphicon-flag"></span> <a href="admin.php?page=edit_gamemasters">Edit list of gamemasters</a></li>
         <li><span class="glyphicon glyphicon-cog"></span> <a href="admin.php?page=edit_settings">Edit website settings</a></li>
+        <li><span class="glyphicon glyphicon-eye-open"></span> <a href="admin.php?page=edit_theme">Edit website theme</a></li>
     </ul>
 </div>
