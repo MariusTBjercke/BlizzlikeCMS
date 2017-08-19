@@ -1,5 +1,13 @@
-<div class="midContent-content">
+<div class="container">
+    <div class="front-banner">
+        <?php
+        $site = new Site();
+        echo $site->getLatestPost();
+        ?>
+    </div>
+</div>
 
+<div class="midContent-content">
     <div class="frontPage-news">
 
         <?php
@@ -16,6 +24,6 @@
         $site->getPosts($pagenum);
 
         ?>
-    </div>
 
+    </div>
 </div>

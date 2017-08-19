@@ -15,22 +15,15 @@
     <div class="navbar-legion">
         <a href="index.php" title="<?php echo $servername; ?>"><div class="top-logo"></div></a>
         <div class="navbar-nav">
-            <div class="navbar-menuitem">Home</div>
-            <div class="navbar-menuitem">Register</div>
-            <div class="navbar-menuitem">Online players</div>
-            <div class="navbar-menuitem">How to</div>
-            <div class="navbar-menuitem">Armory</div>
-            <div class="navbar-menuitem">Gallery</div>
+            <div class="navbar-list">
+                <div class="navbar-menuitem"><a href="index.php">Home</a></div>
+                <div class="navbar-menuitem"><a href="register.php">Register</a></div>
+                <div class="navbar-menuitem"><a href="onlineplayers.php">Online players</a></div>
+                <div class="navbar-menuitem"><a href="howto.php">How to</a></div>
+                <div class="navbar-menuitem"><a href="armory.php">Armory</a></div>
+                <div class="navbar-menuitem"><a href="gallery.php">Gallery</a></div>
+            </div>
         </div>
-    </div>
-</div>
-
-<div class="container">
-    <div class="front-banner">
-        <?php
-        $site = new Site();
-        echo $site->getLatestPost();
-        ?>
     </div>
 </div>
 

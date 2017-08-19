@@ -5,10 +5,23 @@ body {
     color: #000000;
     font-family: 'Zilla Slab', serif;
     overflow-x: hidden;
+    height: 100%;
+    position: relative;
 }
+
+body:before {
+    content: " ";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    background: -webkit-radial-gradient(top center, ellipse cover, rgba(255,255,255,0.2) 0%,rgba(0,0,0,0.9) 100%);
 
 html {
     overflow-y: scroll;
+    height: 100%;
 }
 
 @font-face {
@@ -336,7 +349,7 @@ p {
 .midContent {
     min-height: 500px;
     width: 100%;
-    margin-top: 200px;
+    margin-top: 150px;
 }
 
 .parchment-top {
@@ -536,9 +549,8 @@ footer {
 
 .front-banner {
     width: 100%;
-    min-height: 600px;
     position: relative;
-    margin-top: 160px;
+    padding-bottom: 30px;
 }
 
 .front-banner h1 {
@@ -582,6 +594,9 @@ footer {
 
 .midContent-content {
     padding: 0px 0px 0px 0px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px 0px 0px 40px;
+    color: #FFFFFF;
 }
 
 .midContent-content p {
@@ -654,12 +669,19 @@ footer {
     margin: 10px 0px 0px 0px;
 }
 
+.register-page {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #FFFFFF;
+    padding: 10px 20px 50px 40px;
+    min-height: 600px;
+}
+
 .register-gnome {
     background-image: url("../img/themes/wotlk/characters/gnome.png");
     width: 313px;
     height: 341px;
     position: absolute;
-    left: 455px;
+    left: 485px;
     top: 150px;
 }
 
@@ -728,6 +750,7 @@ footer {
     margin: 0px 0px 10px 0px;
     padding: 0;
     font-size: 1.6rem;
+    color: #c6c6c6;
 }
 
 .frontPage-news-author {
@@ -736,10 +759,14 @@ footer {
 
 .howto-page {
     margin-top: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px 10px 70px 20px;
 }
 
 .howto-page h3 {
-    margin: 10px 0px 10px 0px;
+    margin: 0px;
+    padding: 10px;
+    color: #FFFFFF;
 }
 
 .howto-page img {
@@ -1180,7 +1207,11 @@ hr{
     width: 80%;
     height: 80px;
     position: absolute;
-    right: -195px;
+    right: 0px;
+}
+
+.navbar-list {
+    float: right;
 }
 
 .navbar-menuitem {
@@ -1189,4 +1220,24 @@ hr{
     font-size: 2rem;
     line-height: 70px;
     border-left: 1px solid #412e11;
+}
+
+.navbar-menuitem a {
+    text-decoration: none;
+    color: #caa426;
+}
+
+.navbar-menuitem:hover {
+    background-color: #3c2a13;
+}
+
+.register-content {
+    width: 100%;
+    margin: auto;
+}
+
+.onlineplayers {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px 40px 450px 30px;
+    color: #FFFFFF;
 }
