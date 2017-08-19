@@ -6,6 +6,7 @@ if (isset($_POST['submit'])) {
     $themeRow = $themeResult->fetch_assoc();
     $themeId = $themeRow['id'];
     $themeUpdate = $mysqli_cms->query("UPDATE config SET theme='$themeId'");
+    echo '<script>window.location="admin.php?page=edit_theme&action=success";</script>';
 }
 
 $current_theme = $mysqli_cms->query("SELECT * FROM config");
@@ -35,5 +36,13 @@ $result = $mysqli_cms->query("SELECT * FROM themes");
         </select>
         <input type="submit" name="submit" value="Set active">
     </form>
+
+    <?php
+
+    if ($_GET['action'] == 'success') {
+        echo '<div class="success_text">Saved</div>';
+    }
+
+    ?>
 
 </div>

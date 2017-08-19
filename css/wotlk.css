@@ -1066,3 +1066,9 @@ hr{
 .theme_selector {
     margin-top: 20px;
 }
+
+.success_text {
+    color: #3c763d;
+    margin-top: 10px;
+    font-size: 1.8rem;
+}

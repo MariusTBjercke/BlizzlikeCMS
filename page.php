@@ -28,7 +28,7 @@ switch($page) {
 		include 'pages/' . $theme_name . '/gallery.php';
 		break;
     case "admin":
-        include 'admin/' . $theme_name . '/index.php';
+        include 'admin/index.php';
         break;
     case "install":
         include 'pages/install.php';
