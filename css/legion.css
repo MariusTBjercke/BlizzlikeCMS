@@ -197,6 +197,34 @@ p {
     height: 40px;
 }
 
+.top-bar h1 {
+    color: #009ae4;
+    margin: 0;
+    padding: 6px 0px 0px 0px;
+    font-size: 2.6rem;
+    float: left;
+}
+
+.top-bar a {
+    text-decoration: none;
+}
+
+.top-bar a:hover {
+    color: #00aeff;
+}
+
+.top-bar ul {
+    padding: 10px 0px 0px 0px;
+    margin: 0;
+    list-style: none;
+}
+
+.top-bar li {
+    display: inline;
+    color: #ffffff;
+    padding: 0px 0px 0px 10px;
+}
+
 .page-bg-top {
     background-image: url("../img/themes/wotlk/page-bg-top.jpg");
     width: 100%;

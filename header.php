@@ -39,5 +39,5 @@ $activeplayersResult = $mysqli->query("SELECT * FROM characters");
 </script>
 
 <?php
-include 'pages/wotlk/header.php';
+include 'pages/' . $theme_name . '/header.php';
 ?>

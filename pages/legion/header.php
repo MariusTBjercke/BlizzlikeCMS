@@ -1,10 +1,17 @@
-<div class="top-bar"></div>
+<div class="top-bar">
+    <div class="container">
+        <div class="row">
+            <h1><a href="index.php"><?php echo $servername; ?></a></h1>
+            <ul class="pull-right">
+                <li>Support</li>
+                <li>My Account</li>
+            </ul>
+        </div>
+    </div>
+</div>
 
 <div class="page-bg-top">
     <div class="container">
-        <div class="murloc_speechubble">
-            <div class="speechbubble_content">Rwlrwl! (Hello!)</div>
-        </div>
         <a href="index.php" title="<?php echo $servername; ?>"><div class="top-logo"></div></a>
     </div>
 </div>
