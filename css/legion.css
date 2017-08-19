@@ -593,9 +593,8 @@ footer {
 }
 
 .midContent-content {
-    padding: 0px 0px 0px 0px;
     background-color: rgba(0, 0, 0, 0.5);
-    padding: 5px 0px 0px 40px;
+    padding: 5px 0px 200px 40px;
     color: #FFFFFF;
 }
 
