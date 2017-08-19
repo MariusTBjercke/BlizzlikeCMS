@@ -59,7 +59,7 @@ $row = $result->fetch_assoc();
 
 // Get theme (same name as the *.min.css)
 $theme_id = $row["theme"];
-$theme_result = $mysqli_cms->query("SELECT * FROM themes where id="$theme_id");
+$theme_result = $mysqli_cms->query("SELECT * FROM themes where id=$theme_id");
 $theme_row = $theme_result->fetch_assoc();
 $theme_name = $theme_row["name"];
 
