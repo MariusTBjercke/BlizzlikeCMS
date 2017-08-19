@@ -28,6 +28,7 @@ or...
 
 **PS: This is still a work in progress, but I will try to update the project frequently.**
 
+**Comes with two themes; WotLK and Legion**
 <img src='img/demo/demo.png' width='100%'>
 
 **Coming tomorrow**
