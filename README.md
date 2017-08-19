@@ -11,6 +11,7 @@ This is focused on being easy to setup and use for your own private server.
 - CMS for editing posts/news on the website
 - Administration panel for editing server accounts without using the console
 - Gallery
+- Multiple themes (easy to switch through admin panel)
 
 **SETUP**
 
@@ -31,5 +32,5 @@ or...
 **Comes with two themes; WotLK and Legion**
 <img src='img/demo/demo.png' width='100%'>
 
-**Coming tomorrow**
+**Legion theme**
 <img src='img/demo/legion_demo.png' width='100%'>
