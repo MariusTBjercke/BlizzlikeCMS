@@ -8,7 +8,7 @@
             to start playing right away.</strong></h3>
     <p>or...</p>
     <h3>4. Go to "../World of Warcraft/Data/enUS/realmlist.wtf" or "../World of Warcraft/Data/enGb/realmlist.wtf" file.</h3>
-    <img src="../img/realmlist.png">
+    <img src="../../img/realmlist.png">
     <h3>5. Open <strong>realmlist.wtf</strong> with Notepad or any text editor.</h3>
     <h3>6. Replace the text inside with "set realmlist <?php echo $server; ?>" then save.</h3>
     <h3>7. Open <strong>Wow.exe</strong> and enjoy.</h3>

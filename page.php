@@ -1,32 +1,34 @@
 <?php
 
+$theme = $theme_name;
+
 switch($page) {
     case "home":
-        include 'pages/index.php';
+        include 'pages/' . $theme_name . '/index.php';
         break;
     case "register":
-        include 'pages/register.php';
+        include 'pages/' . $theme_name . '/register.php';
         break;
     case "howto":
-        include 'pages/howto.php';
+        include 'pages/' . $theme_name . '/howto.php';
         break;
     case "onlineplayers":
-        include 'pages/onlineplayers.php';
+        include 'pages/' . $theme_name . '/onlineplayers.php';
         break;
     case "videos":
-        include 'pages/videos.php';
+        include 'pages/' . $theme_name . '/videos.php';
         break;
     case "gamemasters":
-        include 'pages/gamemasters.php';
+        include 'pages/' . $theme_name . '/gamemasters.php';
         break;
     case "armory":
-        include 'pages/armory.php';
+        include 'pages/' . $theme_name . '/armory.php';
         break;
 	case "gallery":
-		include 'pages/gallery.php';
+		include 'pages/' . $theme_name . '/gallery.php';
 		break;
     case "admin":
-        include 'admin/index.php';
+        include 'admin/' . $theme_name . '/index.php';
         break;
     case "install":
         include 'pages/install.php';
