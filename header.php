@@ -13,7 +13,8 @@ $activeplayersResult = $mysqli->query("SELECT * FROM characters");
 	<title><?php if($title) { echo $title; } echo $servername; ?></title>
     <link rel="shortcut icon" href="favicon.png">
 	<link rel="stylesheet" type="text/css" href="min/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="min/main.min.css">
+    <link rel="stylesheet" type="text/css" href="min/main.min.css">
+	<link rel="stylesheet" type="text/css" href="min/<?php echo $theme_name; ?>.min.css">
     <link rel="stylesheet" type="text/css" href="includes/featherlight/featherlight.min.css">
     <link href="https://fonts.googleapis.com/css?family=Zilla+Slab" rel="stylesheet">
     <?php

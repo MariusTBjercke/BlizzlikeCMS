@@ -2,8 +2,8 @@
     <div class="footer-border"></div>
     <div class="container">
         <div class="footer-content">
-            <img src="img/themes/wrath/warning1.gif">
-            <img src="img/themes/wrath/warning2.png" class="warning2">
+            <img src="img/themes/wotlk/warning1.gif">
+            <img src="img/themes/wotlk/warning2.png" class="warning2">
         </div>
         <div class="footer-copyright"><?php echo $servername; ?> © <?php echo date("Y"); ?><br />Powered by a <a
                     href="https://gitlab.com/Delusional/BlizzlikeCMS" target="_blank">Blizzlike CMS</a></div>

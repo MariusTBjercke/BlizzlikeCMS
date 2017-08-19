@@ -1,34 +1,39 @@
 <?php
 
+if (isset($_POST['submit'])) {
+    $themename = $_POST['themename'];
+    $themeResult = $mysqli_cms->query("SELECT * FROM themes WHERE name='$themename'");
+    $themeRow = $themeResult->fetch_assoc();
+    $themeId = $themeRow['id'];
+    $themeUpdate = $mysqli_cms->query("UPDATE config SET theme='$themeId'");
+}
+
+$current_theme = $mysqli_cms->query("SELECT * FROM config");
+$current_theme_row = $current_theme->fetch_assoc();
+$current_themeId = $current_theme_row['theme'];
+$current_themename = $mysqli_cms->query("SELECT * FROM themes WHERE id='$current_themeId'");
+$current_themename_row = $current_themename->fetch_assoc();
+$current_themename_name = $current_themename_row['name'];
+
 $result = $mysqli_cms->query("SELECT * FROM themes");
 
 ?>
 
 <div class="edit_theme">
 
-    <h1>Edit Gamemasters</h1>
+    <h1>Edit active theme</h1>
     <button onclick="window.location='admin.php';">Go back</button>
 
-    <ul>
+    <form method="post" action="" class="theme_selector">
+        <select name="themename" id="themename">
+            <option value="<?php echo $current_themename_name; ?>"><?php echo $current_themename_name; ?></option>
         <?php
         while ($row = $result->fetch_assoc()) {
-            echo '<li>' . $row['charname'] . ' <a href="admin.php?page=edit_gamemasters&action=delete&id=' . $row['id'] . '">Delete</a> </li>';
+            echo '<option value="' . $row['name'] . '">' . $row['name'] . '</option>';
         }
         ?>
-    </ul>
-    <?php
-
-    if ($_GET['action'] == 'addsuccess') {
-        echo '<div class="addsuccess">Added!</div>';
-    } else if ($_GET['action'] == 'delsuccess') {
-        echo '<div class="delsuccess">Deleted!</div>';
-    }
-
-    ?>
-
-    <form action="" method="post">
-        <p><span>Character name</span><input type="text" name="charname"></p>
-        <p><input type="submit" name="submit" value="Add to list"></p>
+        </select>
+        <input type="submit" name="submit" value="Set active">
     </form>
 
 </div>

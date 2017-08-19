@@ -17,6 +17,9 @@ if ($_SESSION['admin_logged_n'] == true) {
 		case 'edit_gallery':
 			include 'edit_gallery.php';
 			break;
+        case 'edit_theme':
+            include 'edit_theme.php';
+            break;
         default:
             include 'home.php';
             break;
