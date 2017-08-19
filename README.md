@@ -10,6 +10,7 @@ This is focused on being easy to setup and use for your own private server.
 - Server status
 - CMS for editing posts/news on the website
 - Administration panel for editing server accounts without using the console
+- Gallery
 
 **SETUP**
 
