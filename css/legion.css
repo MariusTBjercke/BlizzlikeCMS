@@ -776,8 +776,8 @@ footer {
     position: absolute;
     width: 400px;
     text-align: right;
-    left: 560px;
-    top: 10px;
+    right: 0;
+    top: 14px;
     color: #ffffff;
 }
 
