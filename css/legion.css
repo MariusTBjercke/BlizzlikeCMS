@@ -283,6 +283,26 @@ button {
     border-right: 1px solid #382419;
 }
 
+.navbar-toggle {
+    position: relative;
+    float: right;
+    padding: 9px 10px;
+    margin-top: 8px;
+    margin-right: 15px;
+    margin-bottom: 8px;
+    background-color: #C0C0C0;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+.navbar-toggle .icon-bar {
+    display: block;
+    width: 22px;
+    height: 2px;
+    border-radius: 1px;
+    background-color: #FFFFFF;
+}
+
 .page-bg-top {
     background-image: url("../img/themes/wotlk/page-bg-top.jpg");
     width: 100%;
@@ -1229,21 +1249,23 @@ hr{
     padding: 22px 15px 30px 15px;
     font-size: 2rem;
     line-height: 70px;
-    border-left: 1px solid #412e11;
 }
 
 @media(max-width: 1320px) {
     .navbar-menuitem {
-        padding: 22px 10px 30px 10px;
+        padding: 27px 10px 35px 10px;
         font-size: 1.5rem;
     }
 }
 
 @media(max-width: 760px) {
-    .navbar-menuitem {
-        padding: 22px 7px 30px 7px;
-        font-size: 1.2rem;
+    .navbar-list {
+        display: none;
     }
+}
+
+.navbar-toggle {
+    color: #FFFFFF;
 }
 
 .navbar-menuitem a {
