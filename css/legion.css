@@ -1228,6 +1228,20 @@ hr{
     border-left: 1px solid #412e11;
 }
 
+@media(max-width: 1320px) {
+    .navbar-menuitem {
+        padding: 22px 10px 30px 10px;
+        font-size: 1.5rem;
+    }
+}
+
+@media(max-width: 760px) {
+    .navbar-menuitem {
+        padding: 22px 7px 30px 7px;
+        font-size: 1.2rem;
+    }
+}
+
 .navbar-menuitem a {
     text-decoration: none;
     color: #caa426;
