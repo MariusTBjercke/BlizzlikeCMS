@@ -37,6 +37,10 @@ p {
     font-size: 2.5rem;
 }
 
+button {
+    color: #000000;
+}
+
 .faded_top {
     background-color: rgba(0, 0, 0, 0.7);
     height: 90px;
