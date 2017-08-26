@@ -79,6 +79,7 @@ $result = $mysqli_cms->query("SELECT * FROM gallery ORDER BY id DESC LIMIT " . $
 ?>
 
 <h1>Edit Gallery <span>(Click the images to enlarge)</span></h1>
+
 <button onclick="window.location='admin.php';">Go back</button>
 
 <div class="edit_gallery">

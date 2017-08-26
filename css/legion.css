@@ -1270,6 +1270,10 @@ hr{
     color: #FFFFFF;
 }
 
+.admin_login input {
+    color: #000000;
+}
+
 .admin_front {
     background-color: rgba(0, 0, 0, 0.5);
     padding: 40px 10px 220px 30px;
