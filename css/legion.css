@@ -246,6 +246,7 @@ button {
     padding: 10px 0px 0px 0px;
     margin: 0;
     list-style: none;
+    display: block;
 }
 
 .top-bar li {
@@ -1034,7 +1035,7 @@ hr{
 }
 
 .admin_front span {
-    color: #773722;
+    color: #FFFFFF;
 }
 
 .admin_logout {
@@ -1264,8 +1265,29 @@ hr{
     }
 }
 
+#toggledMenu {
+    display: none;
+}
+
+#toggledMenu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    min-width: 300px;
+    background-color: #402822;
+}
+
+#toggledMenu li {
+    margin: 0;
+    padding: 0;
+    display: inline;
+}
+
 .navbar-toggle {
     color: #FFFFFF;
+    background-color: #402822 !important;
+    margin-top: 14px !important;
+    margin-right: 45px !important;
 }
 
 .navbar-menuitem a {

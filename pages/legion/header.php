@@ -14,8 +14,12 @@
         <a href="index.php" title="<?php echo $servername; ?>"><div class="top-logo"></div></a>
         <div class="navbar-nav">
 
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                <span class="sr-only">Toggle navigation</span>
+            <button type="button" title="Open menu" id="toggleNavigation" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <div class="toggledMenu">
+                    <ul>
+                        <li>Menu item</li>
+                    </ul>
+                </div>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>

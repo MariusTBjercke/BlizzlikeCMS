@@ -19,3 +19,9 @@ function confirmDeleteImage(deleteId) {
 function scrollToBottom() {
     $('html,body').animate({scrollTop: document.body.scrollHeight},"slow");
 }
+
+$(document).ready(function() {
+    $("#toggleNavigation").click(function(){
+        $("#toggledMenu").toggle();
+    });
+});
