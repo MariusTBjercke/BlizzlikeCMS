@@ -19,6 +19,8 @@ Simply import all the files into your desired website root folder, then open the
 
 For security reasons, remember to **delete both install.php** files after the installation is complete*
 
+In order to log in to the administration panel, use the same credentials as your server accounts with admin rights.
+
 **If you are going to edit the stylesheets it is recommended to have <a href="https://nodejs.org">Node.js</a> installed as this project comes with a CSS watcher/minimizer script.**
 
 **First setup Node by running the command "npm install". Then you can run "gulp" or "gulp watch" to start using the CSS-watcher.**
