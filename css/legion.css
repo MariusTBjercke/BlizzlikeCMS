@@ -1339,6 +1339,10 @@ hr{
     color: #FFFFFF;
 }
 
+.characters-page input {
+    color: #000000;
+}
+
 .characters-page input[type="submit"] {
     color: #000000;
     display: block;
