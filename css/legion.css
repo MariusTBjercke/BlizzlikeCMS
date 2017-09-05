@@ -226,7 +226,7 @@ button {
 }
 
 .top-bar li a {
-    color: #b9b9b9;
+    color: #caa426;
 }
 
 .top-bar li a:hover {
@@ -1044,7 +1044,7 @@ hr{
 }
 
 .admin_front span {
-    color: #c3c3c3;
+    color: #caa426;
 }
 
 .admin_front a {
@@ -1166,6 +1166,7 @@ hr{
     margin-top: 20px;
     font-size: 1.8rem;
     padding: 5px;
+    color: #000000;
 }
 
 .edit_settings button {
@@ -1187,6 +1188,10 @@ hr{
     color: #009b22;
 }
 
+.edit_settings input {
+    color: #735c17;
+}
+
 .edit_gallery {
     margin-top: 15px;
 }
@@ -1197,6 +1202,10 @@ hr{
 
 .edit_gallery form {
     margin-top: 20px;
+}
+
+.edit_gallery input {
+    color: #735c17;
 }
 
 .edit_gallery_pagination {
