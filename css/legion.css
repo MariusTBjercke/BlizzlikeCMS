@@ -523,7 +523,8 @@ footer {
     height: 130px;
     background-color: #000000;
     z-index: 1;
-    position: relative;
+    bottom: 0;
+    position: fixed;
 }
 
 .footer-content {
@@ -797,6 +798,10 @@ footer {
     border-radius: 10px;
 }
 
+.howto-page a {
+    color: #caa426;
+}
+
 .footer-copyright {
     position: absolute;
     width: 400px;
@@ -1035,6 +1040,10 @@ hr{
 }
 
 .admin_front span {
+    color: #c3c3c3;
+}
+
+.admin_front a {
     color: #FFFFFF;
 }
 
