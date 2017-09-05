@@ -377,6 +377,10 @@ button {
     margin-top: 150px;
 }
 
+.midContent a {
+    color: #caa426;
+}
+
 .parchment-top {
     background-image: url("../img/themes/wotlk/parchment-top.jpg");
     width: 100%;
