@@ -679,14 +679,6 @@ footer {
     color: lightgrey;
 }
 
-.fourofour-stormtrooper {
-    background-image: url("../img/404-stormtrooper.png");
-    width: 328px;
-    height: 452px;
-    position: absolute;
-    right: 0;
-}
-
 .frontpage-onlineplayers {
     position: absolute;
     left: 460px;
