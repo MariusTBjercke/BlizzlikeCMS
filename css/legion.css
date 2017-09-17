@@ -997,6 +997,7 @@ hr{
 
 .edit_account {
     margin-top: 20px;
+    padding-bottom: 200px;
 }
 
 .edit_account h3 {
@@ -1075,6 +1076,7 @@ hr{
 
 .edit_post {
     margin-top: 20px;
+    padding-bottom: 200px;
 }
 
 .edit_post input {
@@ -1114,6 +1116,10 @@ hr{
     color: red;
 }
 
+.edit_gamemasters {
+    padding-bottom: 200px;
+}
+
 .edit_gamemasters ul {
     list-style: none;
     margin: 5px 0px 0px 0px;
@@ -1140,6 +1146,10 @@ hr{
 .edit_gamemasters .delsuccess {
     padding-top: 15px;
     color: #d61000;
+}
+
+.edit_settings {
+    padding-bottom: 200px;
 }
 
 .edit_settings ul {
@@ -1192,6 +1202,7 @@ hr{
 
 .edit_gallery {
     margin-top: 15px;
+    padding-bottom: 200px;
 }
 
 .edit_gallery label {
@@ -1374,4 +1385,5 @@ hr{
 
 .edit_theme {
     color: #000000;
+    padding-bottom: 200px;
 }
