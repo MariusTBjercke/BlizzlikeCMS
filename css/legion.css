@@ -787,7 +787,7 @@ footer {
 
 .howto-page {
     margin-top: 20px;
-    padding: 20px 10px 150px 20px;
+    padding: 0px 10px 150px 20px;
 }
 
 .howto-page h3 {
@@ -1330,7 +1330,7 @@ hr{
 
 .characters-page {
     margin-top: 20px;
-    padding: 20px 10px 450px 30px;
+    padding: 0px 10px 450px 30px;
     color: #FFFFFF;
 }
 
