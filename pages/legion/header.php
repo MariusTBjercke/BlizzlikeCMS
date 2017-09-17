@@ -3,6 +3,7 @@
         <div class="row">
             <h1><a href="index.php"><?php echo $servername; ?></a></h1>
             <ul class="pull-right">
+                <li>Server status: <?php getServerStatus(); ?></li>
                 <li><a href="admin.php">Administration</a></li>
             </ul>
         </div>

@@ -51,7 +51,7 @@
         <div class="left-menuContent">
             <ul>
                 <li><a href="onlineplayers.php" title="See a list of online players">Online players</a></li>
-                <li><a href="#">Server status: </a><?php getServerStatus() ?></li>
+                <li><a href="#">Server status: </a><?php getServerStatus(); ?></li>
                 <li><a href="gamemasters.php">Gamemasters</a></li>
                 <li><a href="howto.php" title="A guide on how to connect to the server">How to connect</a></li>
                 <li><a href="armory.php" title="Browse through the all characters">Armory (Beta)</a></li>
