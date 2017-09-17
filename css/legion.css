@@ -1346,6 +1346,7 @@ hr{
 .characters-page input[type="submit"] {
     color: #000000;
     display: block;
+    margin: 10px 0px 0px 0px;
 }
 
 .admin_login {
