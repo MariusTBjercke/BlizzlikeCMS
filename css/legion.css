@@ -6,6 +6,7 @@ body {
     font-family: 'Zilla Slab', serif;
     overflow-x: hidden;
     height: 100%;
+    position: relative;
 }
 
 body:before {
@@ -16,11 +17,12 @@ body:before {
     z-index: -1;
     top: 0;
     left: 0;
-    background: -webkit-radial-gradient(top center, ellipse cover, rgba(255,255,255,0.2) 0%,rgba(0,0,0,0.9) 100%);
+    background: -webkit-radial-gradient(top center, ellipse cover, rgba(255, 255, 255, 0.2) 0%, rgba(0, 0, 0, 0.9) 100%);
+}
 
 html {
     overflow-y: scroll;
-    height: 100%;
+    height: 100% !important;
 }
 
 @font-face {
