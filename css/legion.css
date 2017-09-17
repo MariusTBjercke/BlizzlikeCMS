@@ -699,7 +699,6 @@ footer {
 }
 
 .register-page {
-    background-color: rgba(0, 0, 0, 0.5);
     color: #FFFFFF;
     padding: 10px 20px 120px 40px;
     height: 100%;
@@ -788,7 +787,6 @@ footer {
 
 .howto-page {
     margin-top: 20px;
-    background-color: rgba(0, 0, 0, 0.5);
     padding: 20px 10px 150px 20px;
 }
 
@@ -1225,7 +1223,6 @@ hr{
 .gallery {
     padding: 20px 0px 0px 0px;
     color: #FFFFFF;
-    background-color: rgba(0, 0, 0, 0.5);
     padding: 20px 20px 40px 20px;
 }
 
@@ -1327,14 +1324,12 @@ hr{
 }
 
 .onlineplayers {
-    background-color: rgba(0, 0, 0, 0.5);
     padding: 10px 40px 500px 30px;
     color: #FFFFFF;
 }
 
 .characters-page {
     margin-top: 20px;
-    background-color: rgba(0, 0, 0, 0.5);
     padding: 20px 10px 450px 30px;
     color: #FFFFFF;
 }
