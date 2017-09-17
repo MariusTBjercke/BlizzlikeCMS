@@ -96,6 +96,17 @@ if ($_GET['action'] == 'edit') {
     }
     ?>
         </form>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
     </div>
     <?php
 } else {

@@ -42,6 +42,14 @@ button {
     color: #000000;
 }
 
+input {
+    color: #000000;
+}
+
+select {
+    color: #000000;
+}
+
 .faded_top {
     background-color: rgba(0, 0, 0, 0.7);
     height: 90px;
