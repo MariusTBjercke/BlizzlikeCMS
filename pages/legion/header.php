@@ -33,6 +33,7 @@
                 <div class="navbar-menuitem"><a href="howto.php">How to</a></div>
                 <div class="navbar-menuitem"><a href="armory.php">Armory</a></div>
                 <div class="navbar-menuitem"><a href="gallery.php">Gallery</a></div>
+                <div class="navbar-menuitem"><a href="gamemasters.php">Staff</a></div>
             </div>
 
         </div>
