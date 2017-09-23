@@ -73,21 +73,20 @@ class Site
                         <img src="' . $row['url'] . '" title="' . $row['title'] . '" alt="' . $row['title'] . '"></a>
                   </div>';
             }
+            echo '<div class="clearfix"></div>';
+
+            echo '<ul>';
+            echo 'Page ' . $pagenum . ' of ' . $endpage . '<br/><br/>';
+            if ($pagenum >= 2) {
+                echo '<li class="strong"><a href="gallery.php?pagenum=' . $previouspage . '">Previous</a></li>';
+            }
+            if ($pagenum != $endpage) {
+                echo '<li class="strong"><a href="gallery.php?pagenum=' . $nextpage . '">Next</a></li>';
+            }
+            echo '</ul>';
         } else {
 		    echo 'The gallery is empty..<br /><br />';
         }
-
-		echo '<div class="clearfix"></div>';
-
-		echo '<ul>';
-		echo 'Page ' . $pagenum . ' of ' . $endpage . '<br/><br/>';
-		if ($pagenum >= 2) {
-			echo '<li class="strong"><a href="gallery.php?pagenum=' . $previouspage . '">Previous</a></li>';
-		}
-		if ($pagenum != $endpage) {
-			echo '<li class="strong"><a href="gallery.php?pagenum=' . $nextpage . '">Next</a></li>';
-		}
-		echo '</ul>';
 	}
 
 }
