@@ -1289,7 +1289,7 @@ hr{
     }
 }
 
-@media(max-width: 760px) {
+@media(max-width: 767px) {
     .navbar-list {
         display: none;
     }
@@ -1370,7 +1370,7 @@ hr{
 }
 
 .admin_front {
-    padding: 40px 10px 220px 30px;
+    padding: 0px 10px 220px 30px;
     color: #FFFFFF;
 }
 
