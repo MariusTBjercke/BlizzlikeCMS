@@ -264,6 +264,11 @@ select {
     padding: 0px 0px 0px 10px;
 }
 
+.navbar-legion a {
+    text-decoration: none;
+    color: inherit;
+}
+
 .navbar-legion {
     width: 90%;
     position: absolute;
@@ -279,18 +284,26 @@ select {
 .navbar-legion ul {
     list-style: none;
     position: absolute;
-    right: 30px;
-    height: 80px;
+    right: 43px;
+    top: 33px;
+    width: 150px;
+    background-color: #462c25;
+    padding: 20px;
+    border-radius: 10px 0px 10px 10px;
+    display: none;
 }
 
 .navbar-legion li {
-    display: inline;
-    padding-left: 10px;
-    line-height: 73px;
+    display: block;
+    padding-left: 0px;
+    line-height: 45px;
     font-size: 1.8rem;
+    color: #caa426;
     height: 100%;
-    border-left: 1px solid #382419;
-    border-right: 1px solid #382419;
+}
+
+.navbar-legion li:hover {
+    color: #90792b;
 }
 
 .navbar-toggle {

@@ -22,6 +22,6 @@ function scrollToBottom() {
 
 $(document).ready(function() {
     $("#toggleNavigation").click(function(){
-        $("#toggledMenu").toggle();
+        $("#toggledMenuUl").toggle();
     });
 });

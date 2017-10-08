@@ -17,8 +17,14 @@
 
             <button type="button" title="Open menu" id="toggleNavigation" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
                 <div class="toggledMenu">
-                    <ul>
-                        <li>Menu item</li>
+                    <ul id="toggledMenuUl">
+                        <li><a href="index.php">Home</a></li>
+                        <li><a href="register.php">Register</a></li>
+                        <li><a href="onlineplayers.php">Who's online</a></li>
+                        <li><a href="howto.php">How to</a></li>
+                        <li><a href="armory.php">Armory</a></li>
+                        <li><a href="gallery.php">Gallery</a></li>
+                        <li><a href="gamemasters.php">Staff</a></li>
                     </ul>
                 </div>
                 <span class="icon-bar"></span>
