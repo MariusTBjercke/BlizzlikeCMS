@@ -56,7 +56,7 @@ class Site
 
 		$rowResult = $mysqli_cms->query("SELECT * FROM gallery");
 		$totalNum = $rowResult->num_rows;
-		$items_per_page = 8;
+		$items_per_page = 4;
 		$start = ($pagenum * $items_per_page) - $items_per_page;
 		$endpage = ceil($totalNum/$items_per_page);
 		$nextpage = $pagenum + 1;
