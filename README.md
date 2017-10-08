@@ -1,3 +1,7 @@
+**UPDATES**
+- 10.09.2017 - Added checkbox in website settings for turning on/off displaying the first post as a header on the front page or not.
+- 10.08.2017 - Fixed mobile menu bug on legion theme.
+
 <h3>Welcome to the repository for my try on a CMS for the TrinityCore Open Source MMO Framework.</h3>
 This is focused on being easy to setup and use for your own private server.
 
