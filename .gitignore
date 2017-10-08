@@ -60,4 +60,5 @@ typings/
 
 # Custom
 .idea
+includes/config.php
 
