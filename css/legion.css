@@ -291,6 +291,7 @@ select {
     padding: 20px;
     border-radius: 10px 0px 10px 10px;
     display: none;
+    border: 1px solid #170908;
 }
 
 .navbar-legion li {
@@ -300,10 +301,12 @@ select {
     font-size: 1.8rem;
     color: #caa426;
     height: 100%;
+    border-bottom: 1px solid #ffcc21;
 }
 
 .navbar-legion li:hover {
-    color: #90792b;
+    color: #ffcc21;
+    border-bottom: 2px solid #ffcc21;
 }
 
 .navbar-toggle {
