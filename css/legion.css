@@ -288,7 +288,7 @@ select {
     top: 33px;
     width: 150px;
     background-color: #462c25;
-    padding: 20px;
+    padding: 5px 20px 20px 20px;
     border-radius: 10px 0px 10px 10px;
     display: none;
     border: 1px solid #170908;
@@ -319,6 +319,10 @@ select {
     background-color: #C0C0C0;
     border: 1px solid transparent;
     border-radius: 4px;
+}
+
+#openMenuBtn {
+    border-radius: 0px !important;
 }
 
 .navbar-toggle .icon-bar {
@@ -1168,6 +1172,15 @@ hr{
     padding-bottom: 200px;
 }
 
+.edit_settings p {
+    margin: 20px 0px 0px 0px;
+}
+
+.edit_settings h1 {
+    margin-bottom: 0px;
+    padding: 0px;
+}
+
 .edit_settings ul {
     list-style: none;
     margin: 5px 0px 0px 0px;
@@ -1194,7 +1207,7 @@ hr{
 }
 
 .edit_settings button {
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 .edit_settings .addsuccess {

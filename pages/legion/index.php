@@ -1,11 +1,17 @@
-<div class="container">
-    <div class="front-banner">
-        <?php
-        $site = new Site();
-        echo $site->getLatestPost();
-        ?>
+<?php
+if ($show_frontpage > 0) {
+    ?>
+    <div class="container">
+        <div class="front-banner">
+            <?php
+            $site = new Site();
+            echo $site->getLatestPost();
+            ?>
+        </div>
     </div>
-</div>
+    <?php
+}
+?>
 
 <div class="midContent-content">
     <div class="frontPage-news">
