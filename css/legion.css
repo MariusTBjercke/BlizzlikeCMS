@@ -1261,9 +1261,8 @@ hr{
 }
 
 .gallery {
-    padding: 20px 0px 0px 0px;
     color: #FFFFFF;
-    padding: 20px 20px 40px 20px;
+    padding: 20px 20px 200px 20px;
 }
 
 .gallery .col-md-3 {
