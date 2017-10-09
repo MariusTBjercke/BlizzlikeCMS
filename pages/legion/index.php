@@ -5,7 +5,7 @@ if ($show_frontpage > 0) {
         <div class="front-banner">
             <?php
             $site = new Site();
-            echo $site->getLatestPost();
+            echo $site->getFirstPost();
             ?>
         </div>
     </div>
