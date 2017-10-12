@@ -1357,6 +1357,10 @@ hr{
     background-color: #3c2a13;
 }
 
+.menuitem-active {
+    background-color: #3c2a13;
+}
+
 .register-content {
     width: 100%;
     margin: auto;

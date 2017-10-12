@@ -33,13 +33,13 @@
             </button>
 
             <div class="navbar-list">
-                <div class="navbar-menuitem"><a href="index.php">Home</a></div>
-                <div class="navbar-menuitem"><a href="register.php">Register</a></div>
-                <div class="navbar-menuitem"><a href="onlineplayers.php">Online players</a></div>
-                <div class="navbar-menuitem"><a href="howto.php">How to</a></div>
-                <div class="navbar-menuitem"><a href="armory.php">Armory</a></div>
-                <div class="navbar-menuitem"><a href="gallery.php">Gallery</a></div>
-                <div class="navbar-menuitem"><a href="gamemasters.php">Staff</a></div>
+                <div class="navbar-menuitem <?php if ($page == 'home') { echo 'menuitem-active'; } ?>"><a href="index.php">Home</a></div>
+                <div class="navbar-menuitem <?php if ($page == 'register') { echo 'menuitem-active'; } ?>"><a href="register.php">Register</a></div>
+                <div class="navbar-menuitem <?php if ($page == 'onlineplayers') { echo 'menuitem-active'; } ?>"><a href="onlineplayers.php">Online players</a></div>
+                <div class="navbar-menuitem <?php if ($page == 'howto') { echo 'menuitem-active'; } ?>"><a href="howto.php">How to</a></div>
+                <div class="navbar-menuitem <?php if ($page == 'armory') { echo 'menuitem-active'; } ?>"><a href="armory.php">Armory</a></div>
+                <div class="navbar-menuitem <?php if ($page == 'gallery') { echo 'menuitem-active'; } ?>"><a href="gallery.php">Gallery</a></div>
+                <div class="navbar-menuitem <?php if ($page == 'gamemasters') { echo 'menuitem-active'; } ?>"><a href="gamemasters.php">Staff</a></div>
             </div>
 
         </div>
