@@ -68,7 +68,7 @@ class Site
 
 		if ($numRows > 0) {
             while ($row = $result->fetch_assoc()) {
-                echo '<div class="col-xs-6 col-md-3">' . $row['title'] . '
+                echo '<div class="col-lg-3 col-md-3 col-sm-6">' . $row['title'] . '
                         <a href="' . $row['url'] . '" class="thumbnail" data-featherlight="' . $row['url'] . '">
                         <img src="' . $row['url'] . '" title="' . $row['title'] . '" alt="' . $row['title'] . '"></a>
                   </div>';
