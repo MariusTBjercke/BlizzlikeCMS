@@ -34,5 +34,5 @@ or...
 **Comes with two themes; Modern and WotLK**
 <img src='img/demo/legion_demo.png' width='100%'>
 
-**Modern (Legion ish) theme**
+**WotLK**
 <img src='img/demo/demo.png' width='100%'>
