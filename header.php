@@ -16,6 +16,8 @@ $activeplayersResult = $mysqli->query("SELECT * FROM characters");
     <link rel="stylesheet" type="text/css" href="min/main.min.css">
 	<link rel="stylesheet" type="text/css" href="min/<?php echo $theme_name; ?>.min.css">
     <link rel="stylesheet" type="text/css" href="includes/featherlight/featherlight.min.css">
+    <link rel="stylesheet" type="text/css" href="includes/slick/slick.css">
+    <link rel="stylesheet" type="text/css" href="includes/slick/slick-theme.css">
     <link href="https://fonts.googleapis.com/css?family=Zilla+Slab" rel="stylesheet">
     <?php
     if (isset($_SESSION['headers'])) {

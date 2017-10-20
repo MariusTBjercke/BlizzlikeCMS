@@ -25,3 +25,13 @@ $(document).ready(function() {
         $("#toggledMenuUl").toggle();
     });
 });
+
+$(document).ready(function(){
+    $('.slick-gal').slick({
+        arrows: true,
+        variableWidth: true,
+        centerMode: true,
+        autoplay: true,
+        dots: true
+});
+});
