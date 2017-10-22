@@ -1423,3 +1423,7 @@ hr{
     color: #000000;
     padding-bottom: 200px;
 }
+
+.slick-current img {
+    height: 380px !important;
+}
