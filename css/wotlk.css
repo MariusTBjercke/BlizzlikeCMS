@@ -1064,3 +1064,19 @@ hr{
     margin-top: 10px;
     font-size: 1.8rem;
 }
+
+.gallery-img-description {
+    width: 480px;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 2.5rem;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    bottom: 0px;
+    color: #FFFFFF;
+}
+
+.gallery-img {
+    position: relative;
+}
