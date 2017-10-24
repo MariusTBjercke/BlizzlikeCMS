@@ -64,7 +64,7 @@ class Site
             echo '<div class="slick-gal">';
             while ($row = $result->fetch_assoc()) {
                 ?>
-                    <div><img src="<?php echo $row['url']; ?>" title="<?php echo $row['title']; ?>" alt="<?php echo $row['title']; ?>" data-featherlight="<?php echo $row['url']; ?>"></div>
+                    <div class="gallery-img"> <?php if ($row['title']) { ?><div class="gallery-img-description"><?php echo $row['title']; ?></div><?php } ?><img src="<?php echo $row['url']; ?>" title="<?php echo $row['title']; ?>" alt="<?php echo $row['title']; ?>" data-featherlight="<?php echo $row['url']; ?>"></div>
             <?php
             }
             echo '</div>';

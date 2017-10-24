@@ -1425,6 +1425,22 @@ hr{
 }
 
 .slick-current img {
+    width: 480px !important;
     height: 350px !important;
     transition: height 0.47s !important;
+}
+
+.gallery-img-description {
+    width: 480px;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 2.5rem;
+    text-align: center;
+    background-color: rgba(0,0,0,0.4);
+    position: absolute;
+    bottom: 0px;
+}
+
+.gallery-img {
+    position: relative;
 }
