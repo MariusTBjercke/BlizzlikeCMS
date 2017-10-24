@@ -1425,6 +1425,6 @@ hr{
 }
 
 .slick-current img {
-    height: 380px !important;
+    height: 350px !important;
     transition: height 0.47s !important;
 }
