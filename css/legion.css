@@ -1424,12 +1424,6 @@ hr{
     padding-bottom: 200px;
 }
 
-.slick-current img {
-    width: 480px !important;
-    height: 350px !important;
-    transition: height 0.47s !important;
-}
-
 .gallery-img-description {
     width: 480px;
     padding: 5px;
