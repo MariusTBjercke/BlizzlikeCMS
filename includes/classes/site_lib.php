@@ -24,10 +24,12 @@ class Site
         echo '<div class="posts_list_front">';
         while ($row = $result->fetch_assoc()) {
             $poster_id = $row['poster_id'];
+            $newTime = strtotime($row['date']);
+            $outputTime = date('m.d.Y', $newTime);
             $result2 = $mysqli_auth->query("SELECT * FROM account WHERE id='$poster_id'");
             $row2 = $result2->fetch_assoc();
             echo '<h1>' . $row['title'] . '</h1>
-        <h2>Posted by <span class="frontPage-news-author">' . $row2['username'] . '</span></h2>
+        <h2>Posted by <span class="frontPage-news-author">' . $row2['username'] . '</span><br/>' . $outputTime . '</h2>
         <p>' . $row['content'] . '</p>';
         }
 

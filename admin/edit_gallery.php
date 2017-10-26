@@ -78,7 +78,7 @@ $previouspage = $pagenum - 1;
 $result = $mysqli_cms->query("SELECT * FROM gallery ORDER BY id DESC LIMIT " . $start . ", " . $items_per_page);
 ?>
 
-<h1>Edit Gallery <span>(Click the images to enlarge)</span></h1>
+<h1>Edit Gallery <span class="sub_text">(Click the images to enlarge)</span></h1>
 
 <button onclick="window.location='admin.php';">Go back</button>
 
@@ -87,7 +87,8 @@ $result = $mysqli_cms->query("SELECT * FROM gallery ORDER BY id DESC LIMIT " . $
     <div class="row">
 		<?php
 		while ($row = $result->fetch_assoc()) {
-			echo '<div class="col-xs-6 col-md-3">' . $row['title'] . ' - <a href="#" class="delete" onclick="confirmDeleteImage(' . $row['id'] . ')">Delete</a>
+			echo '<div class="col-xs-6 col-md-3">';
+			if (!empty($row['title'])) { echo  $row['title']; } else { echo 'Unnamed'; } echo ' - <a href="#" class="delete" onclick="confirmDeleteImage(' . $row['id'] . ')">Delete</a>
                         <a href="' . $row['url'] . '" class="thumbnail" data-featherlight="' . $row['url'] . '">
                         <img src="' . $row['url'] . '" title="' . $row['title'] . '" alt="' . $row['title'] . '"></a>
                   </div>';

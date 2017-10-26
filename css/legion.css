@@ -894,9 +894,6 @@ hr{
     -moz-border-radius: 2px;
     -webkit-border-radius: 2px;
     border-radius: 2px;
-    -webkit-box-shadow: 3px 3px 7px 7px rgba(0,0,0,0.32);
-    -moz-box-shadow: 3px 3px 7px 7px rgba(0,0,0,0.32);
-    box-shadow: 3px 3px 7px 7px rgba(0,0,0,0.32);
 }
 
 .lock-img {
@@ -1133,7 +1130,7 @@ hr{
 }
 
 .delete {
-    color: red;
+    color: red !important;
 }
 
 .edit_gamemasters {
@@ -1229,9 +1226,19 @@ hr{
     color: #735c17;
 }
 
+.sub_text {
+    font-size: 2rem;
+}
+
 .edit_gallery {
     margin-top: 15px;
     padding-bottom: 200px;
+}
+
+.edit_gallery img {
+    width: 350px;
+    height: 200px;
+    object-fit: cover;
 }
 
 .edit_gallery label {
@@ -1243,7 +1250,11 @@ hr{
 }
 
 .edit_gallery input {
-    color: #735c17;
+    color: #FFFFFF;
+}
+
+.edit_gallery input[type="submit"] {
+    color: #000000;
 }
 
 .edit_gallery_pagination {
@@ -1314,6 +1325,13 @@ hr{
     .navbar-menuitem {
         padding: 27px 10px 35px 10px;
         font-size: 1.5rem;
+    }
+}
+
+@media(max-width: 992px) {
+    .navbar-menuitem {
+        padding: 27px 10px 35px 10px;
+        font-size: 1.2rem;
     }
 }
 
