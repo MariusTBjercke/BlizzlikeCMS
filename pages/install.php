@@ -24,7 +24,7 @@ if (isset($_POST['install_submit'])) {
     // Try connecting to MySQL
     $mysqli = new mysqli($hostname, $username, $password, $database);
     if ($mysqli->connect_errno) {
-        echo '<script>alert("Connection to MySQL failed, please try again.");</script>';
+        echo '<script>alert("Connection to MySQL failed or database does not exist, please try again.");</script>';
         echo '<script>history.back(1);</script>';
         exit;
     }
