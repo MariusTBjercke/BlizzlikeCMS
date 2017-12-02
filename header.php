@@ -20,6 +20,13 @@ $activeplayersResult = $mysqli->query("SELECT * FROM characters");
     <link rel="stylesheet" type="text/css" href="includes/slick/slick-theme.css">
     <link href="https://fonts.googleapis.com/css?family=Zilla+Slab" rel="stylesheet">
     <?php
+    if ($_SESSION['admin_logged_n'] == true) {
+        ?>
+        <link rel="stylesheet" type="text/css" href="css/admin.min.css">
+        <?php
+    }
+    ?>
+    <?php
     if (isset($_SESSION['headers'])) {
         $headers = $_SESSION['headers'];
         foreach ($headers as $header) {

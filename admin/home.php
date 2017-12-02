@@ -3,11 +3,11 @@
     <a href="logout.php" class="admin_logout">Logout</a>
     <h3>Choose from the menu below:</h3>
     <ul>
-        <li><span class="glyphicon glyphicon-user"></span> <a href="admin.php?page=edit_accounts">Edit accounts</a></li>
-        <li><span class="glyphicon glyphicon-pencil"></span> <a href="admin.php?page=edit_posts">Edit posts</a></li>
-        <li><span class="glyphicon glyphicon-picture"></span> <a href="admin.php?page=edit_gallery">Edit gallery</a></li>
-        <li><span class="glyphicon glyphicon-flag"></span> <a href="admin.php?page=edit_gamemasters">Edit list of gamemasters</a></li>
-        <li><span class="glyphicon glyphicon-cog"></span> <a href="admin.php?page=edit_settings">Edit website settings</a></li>
-        <li><span class="glyphicon glyphicon-eye-open"></span> <a href="admin.php?page=edit_theme">Edit website theme</a></li>
+        <li><a href="admin.php?page=edit_accounts"><button><span class="glyphicon glyphicon-user"></span> Edit accounts</button></a></li>
+        <li><a href="admin.php?page=edit_posts"><button><span class="glyphicon glyphicon-pencil"></span> Edit posts</button></a></li>
+        <li><a href="admin.php?page=edit_gallery"><button><span class="glyphicon glyphicon-picture"></span> Edit gallery</button></a></li>
+        <li><a href="admin.php?page=edit_gamemasters"><button><span class="glyphicon glyphicon-flag"></span> Edit list of gamemasters</button></a></li>
+        <li><a href="admin.php?page=edit_settings"><button><span class="glyphicon glyphicon-cog"></span> Edit website settings</button></a></li>
+        <li><a href="admin.php?page=edit_theme"><button><span class="glyphicon glyphicon-eye-open"></span> Edit website theme</button></a></li>
     </ul>
 </div>

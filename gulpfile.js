@@ -44,6 +44,15 @@ gulp.task('minimize-scss', function(){
         .pipe(gulp.dest('css'))
 });
 
+// SCSS for WoTLK
+gulp.task('minimize-scss', function(){
+    return gulp.src('assets/scss/admin/**/*.scss')
+        .pipe(sass())
+        .pipe(concat('admin.min.css'))
+        .pipe(minifyCSS())
+        .pipe(gulp.dest('css'))
+});
+
 // Minimize install CSS
 gulp.task('minimize-login', function(){
     return gulp.src('assets/install.css')
@@ -59,6 +68,7 @@ gulp.task('watcher', function(){
     gulp.watch('./assets/scss/*.scss', ['minimize-scss']);
     gulp.watch('./assets/scss/legion/*.scss', ['minimize-scss']);
     gulp.watch('./assets/scss/wotlk/*.scss', ['minimize-scss']);
+    gulp.watch('./assets/scss/admin/*.scss', ['minimize-scss']);
     gulp.watch('./assets/install.css', ['minimize-login']);
     gulp.watch('./assets/js/*.js', ['minimize-js']);
 });
