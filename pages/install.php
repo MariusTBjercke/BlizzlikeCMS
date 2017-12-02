@@ -118,7 +118,7 @@ $installed = true;
 <head>
     <meta charset="UTF-8">
     <title>Install</title>
-    <link rel="stylesheet" type="text/css" href="../min/install.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/install.min.css">
 </head>
 <body>
 

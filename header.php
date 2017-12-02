@@ -12,9 +12,9 @@ $activeplayersResult = $mysqli->query("SELECT * FROM characters");
     335a, 3.3.5a, stable, fast, private, server, blizzlike">
 	<title><?php if($title) { echo $title; } echo $servername; ?></title>
     <link rel="shortcut icon" href="img/themes/<?php echo $theme_name; ?>/favicon.png">
-	<link rel="stylesheet" type="text/css" href="min/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="min/main.min.css">
-	<link rel="stylesheet" type="text/css" href="min/<?php echo $theme_name; ?>.min.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/main.min.css">
+	<link rel="stylesheet" type="text/css" href="css/<?php echo $theme_name; ?>.min.css">
     <link rel="stylesheet" type="text/css" href="includes/featherlight/featherlight.min.css">
     <link rel="stylesheet" type="text/css" href="includes/slick/slick.css">
     <link rel="stylesheet" type="text/css" href="includes/slick/slick-theme.css">

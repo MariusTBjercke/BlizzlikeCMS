@@ -32,6 +32,5 @@ $(document).ready(function(){
         variableWidth: true,
         centerMode: true,
         autoplay: true,
-        dots: true
-});
+        dots: true});
 });
