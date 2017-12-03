@@ -3,13 +3,40 @@
   margin: 0;
   padding: 0;
 
-li {
-  font-size: 2rem;
-  padding-bottom: 10px;
-}
+  li {
+    font-size: 2rem;
+    padding-bottom: 10px;
+  }
 
   span {
-  color: #773722;
+    color: #773722;
+  }
+}
+
+.admin_front {
+
+  button {
+    background-color: #2e211e;
+    border-color: #2e211e;
+    color: #FFFFFF;
+    width: 350px;
+
+    span {
+      color: #FFFFFF;
+    }
+
+    &:hover {
+      background-color: #3c2a13;
+      border-color: #3c2a13;
+      color: #caa426;
+
+      span {
+        color: #caa426;
+      }
+
+    }
+  }
+
 }
 
 .admin_logout {
