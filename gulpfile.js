@@ -61,6 +61,7 @@ gulp.task('minimize-scss', function(){
         .pipe(concat('admin.min.css'))
         .pipe(minifyCSS())
         .pipe(gulp.dest('css'))
+    
 });
 
 // Minimize install CSS
