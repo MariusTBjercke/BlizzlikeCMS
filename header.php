@@ -19,6 +19,7 @@ $activeplayersResult = $mysqli->query("SELECT * FROM characters");
     <link rel="stylesheet" type="text/css" href="includes/slick/slick.css">
     <link rel="stylesheet" type="text/css" href="includes/slick/slick-theme.css">
     <link href="https://fonts.googleapis.com/css?family=Zilla+Slab" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="includes/font-awesome/css/font-awesome.min.css">
     <?php
     if ($_SESSION['admin_logged_n'] == true) {
         ?>
