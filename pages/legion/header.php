@@ -34,7 +34,7 @@
             </button>
 
             <div class="navbar-list">
-                <div class="navbar-menuitem <?php if ($page == 'home') { echo 'menuitem-active'; } ?>"><a href="index.php">Home</a></div>
+                <div class="navbar-menuitem <?php if ($page == 'home') { echo 'menuitem-active'; } ?>"><a href="index.php"><i class="fa fa-home" aria-hidden="true"></i> Home</a></div>
                 <div class="navbar-menuitem <?php if ($page == 'register') { echo 'menuitem-active'; } ?>"><a href="register.php">Register</a></div>
                 <div class="navbar-menuitem <?php if ($page == 'onlineplayers') { echo 'menuitem-active'; } ?>"><a href="onlineplayers.php">Online players</a></div>
 <!--                <div class="navbar-menuitem --><?php //if ($page == 'forum') { echo 'menuitem-active'; } ?><!--"><a href="forum.php">Forum</a></div>-->

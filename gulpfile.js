@@ -18,17 +18,8 @@ gulp.task('minimize-js', function(){
         .pipe(gulp.dest('js'))
 });
 
-// SCSS
-gulp.task('minimize-scss', function(){
-    return gulp.src('assets/scss/**/*.scss')
-        .pipe(sass())
-        .pipe(concat('main.min.css'))
-        .pipe(minifyCSS())
-        .pipe(gulp.dest('css'))
-});
-
 // SCSS for Legion
-gulp.task('minimize-scss', function(){
+gulp.task('minimize-legion', function(){
     return gulp.src('assets/scss/legion/**/*.scss')
         .pipe(sass())
         .pipe(concat('legion.min.css'))
@@ -37,7 +28,7 @@ gulp.task('minimize-scss', function(){
 });
 
 // SCSS for WoTLK
-gulp.task('minimize-scss', function(){
+gulp.task('minimize-wotlk', function(){
     return gulp.src('assets/scss/wotlk/**/*.scss')
         .pipe(sass())
         .pipe(concat('wotlk.min.css'))
@@ -46,16 +37,15 @@ gulp.task('minimize-scss', function(){
 });
 
 // SCSS for Bootstrap
-gulp.task('minimize-scss', function(){
-    return gulp.src('assets/scss/bootstrap/**/*.scss')
-        .pipe(sass())
+gulp.task('minimize-bootstrap', function(){
+    return gulp.src('includes/bootstrap/bootstrap.css')
         .pipe(concat('bootstrap.min.css'))
         .pipe(minifyCSS())
         .pipe(gulp.dest('css'))
 });
 
 // SCSS for admin
-gulp.task('minimize-scss', function(){
+gulp.task('minimize-admin', function(){
     return gulp.src('assets/scss/admin/**/*.scss')
         .pipe(sass())
         .pipe(concat('admin.min.css'))
@@ -77,9 +67,10 @@ gulp.task('minimize-login', function(){
 // Watch the provided directories for changes and run tasks
 gulp.task('watcher', function(){
     gulp.watch('./assets/scss/*.scss', ['minimize-scss']);
-    gulp.watch('./assets/scss/legion/*.scss', ['minimize-scss']);
-    gulp.watch('./assets/scss/wotlk/*.scss', ['minimize-scss']);
-    gulp.watch('./assets/scss/admin/*.scss', ['minimize-scss']);
+    gulp.watch('./assets/scss/legion/*.scss', ['minimize-legion']);
+    gulp.watch('./assets/scss/wotlk/*.scss', ['minimize-wotlk']);
+    gulp.watch('./includes/bootstrap/bootstrap.css', ['minimize-bootstrap']);
+    gulp.watch('./assets/scss/admin/*.scss', ['minimize-admin']);
     gulp.watch('./assets/install.css', ['minimize-login']);
     gulp.watch('./assets/js/*.js', ['minimize-js']);
 });
