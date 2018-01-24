@@ -53,6 +53,22 @@ class Site
         echo '<p>' . $row['content'] . '</p><button onclick="scrollToBottom()">Go down</button>';
     }
 
+    public function checkIf404($url) {
+        $handle = curl_init($url);
+        curl_setopt($handle, CURLOPT_RETURNTRANSFER, true);
+
+        // Get the HTML or whatever is linked to the $url.
+        $response = curl_exec($handle);
+
+        // Check for 404 (file not found).
+        $httpCode = curl_getinfo($handle, CURLINFO_HTTP_CODE);
+        if ($httpCode == 404) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
     public function getGallery($pagenum) {
     	global $mysqli_cms;
 
@@ -65,9 +81,12 @@ class Site
 		if ($numRows > 0) {
             echo '<div class="slick-gal">';
             while ($row = $result->fetch_assoc()) {
+                $fullUrl = $_SERVER['SERVER_NAME'] . '/' . $row['url'];
+                if (!($this->checkIf404($fullUrl))) {
                 ?>
-                    <div class="gallery-img"> <?php if ($row['title']) { ?><div class="gallery-img-description"><?php echo $row['title']; ?></div><?php } ?><img src="<?php echo $row['url']; ?>" title="<?php echo $row['title']; ?>" alt="<?php echo $row['title']; ?>" data-featherlight="<?php echo $row['url']; ?>"></div>
-            <?php
+                        <div class="gallery-img"> <?php if ($row['title']) { ?><div class="gallery-img-description"><?php echo $row['title']; ?></div><?php } ?><img src="<?php echo $row['url']; ?>" title="<?php echo $row['title']; ?>" alt="<?php echo $row['title']; ?>" data-featherlight="<?php echo $row['url']; ?>"></div>
+                <?php
+                }
             }
             echo '</div>';
             echo '<div class="clearfix"></div>';

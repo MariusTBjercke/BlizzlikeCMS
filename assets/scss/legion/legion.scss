@@ -1250,7 +1250,7 @@ hr{
 }
 
 .edit_gallery input {
-  color: #FFFFFF;
+  color: #000000;
 }
 
 .edit_gallery input[type="submit"] {
@@ -1332,6 +1332,7 @@ hr{
 .admin_login {
   background-color: rgba(0, 0, 0, 0.5);
   color: #FFFFFF;
+  padding: 4rem;
 }
 
 .admin_login h1, h3 {
