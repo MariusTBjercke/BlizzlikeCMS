@@ -19,6 +19,15 @@ gulp.task('minimize-js', function(){
 });
 
 // SCSS for Legion
+gulp.task('minimize-scss', function(){
+    return gulp.src('assets/scss/main.scss')
+        .pipe(sass())
+        .pipe(concat('main.min.css'))
+        .pipe(minifyCSS())
+        .pipe(gulp.dest('css'))
+});
+
+// SCSS for Legion
 gulp.task('minimize-legion', function(){
     return gulp.src('assets/scss/legion/**/*.scss')
         .pipe(sass())

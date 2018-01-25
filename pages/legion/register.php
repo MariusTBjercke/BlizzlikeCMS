@@ -26,7 +26,12 @@
             <div class="form-group">
                 <?php
                 $recaptcha = rand(10000, 20000);
-                echo '<div class="reCaptcha-box">' . $recaptcha . '</div>';
+                $rotate1 = substr($recaptcha, 0, 1);
+                $rotate2 = substr($recaptcha, 1, 1);
+                $rotate3 = substr($recaptcha, 2, 1);
+                $rotate4 = substr($recaptcha, 3, 1);
+                $rotate5 = substr($recaptcha, 4, 1);
+                echo '<span class="reCaptcha-box"><span class="rotateNumber1">' . $rotate1 . '</span><span class="rotateNumber2">' . $rotate2 . '</span><span class=" rotateNumber3">' . $rotate3 . '</span><span class="rotateNumber4">' . $rotate4 . '</span><span class="rotateNumber5">' . $rotate5 . '</span></div>';
                 ?>
                 <input type="hidden" name="recaptcha_control" value="<?php echo $recaptcha ?>">
                 <input type="text" class="form-control" id="recaptcha" name="recaptcha"

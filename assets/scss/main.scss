@@ -1,2 +1,93 @@
+$randomNumber1: random(50);
+$randomNumber2: '-' + random(50);
+$randomNumber3: random(50);
+$randomNumber4: '-' + random(50);
+$randomNumber5: random(50);
+
 body {
+}
+
+.rotateNumber1 {
+  /* Safari */
+  -webkit-transform: rotate($randomNumber1 + deg);
+
+  /* Firefox */
+  -moz-transform: rotate($randomNumber1 + deg);
+
+  /* IE */
+  -ms-transform: rotate($randomNumber1 + deg);
+
+  /* Opera */
+  -o-transform: rotate($randomNumber1 + deg);
+
+  /* Internet Explorer */
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=$randomNumber1);
+}
+
+.rotateNumber2 {
+  /* Safari */
+  -webkit-transform: rotate($randomNumber2 + deg);
+
+  /* Firefox */
+  -moz-transform: rotate($randomNumber2 + deg);
+
+  /* IE */
+  -ms-transform: rotate($randomNumber2 + deg);
+
+  /* Opera */
+  -o-transform: rotate($randomNumber2 + deg);
+
+  /* Internet Explorer */
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=$randomNumber2);
+}
+
+.rotateNumber3 {
+  /* Safari */
+  -webkit-transform: rotate($randomNumber3 + deg);
+
+  /* Firefox */
+  -moz-transform: rotate($randomNumber3 + deg);
+
+  /* IE */
+  -ms-transform: rotate($randomNumber3 + deg);
+
+  /* Opera */
+  -o-transform: rotate($randomNumber3 + deg);
+
+  /* Internet Explorer */
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=$randomNumber3);
+}
+
+.rotateNumber4 {
+  /* Safari */
+  -webkit-transform: rotate($randomNumber4 + deg);
+
+  /* Firefox */
+  -moz-transform: rotate($randomNumber4 + deg);
+
+  /* IE */
+  -ms-transform: rotate($randomNumber4 + deg);
+
+  /* Opera */
+  -o-transform: rotate($randomNumber4 + deg);
+
+  /* Internet Explorer */
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=$randomNumber4);
+}
+
+.rotateNumber5 {
+  /* Safari */
+  -webkit-transform: rotate($randomNumber5 + deg);
+
+  /* Firefox */
+  -moz-transform: rotate($randomNumber5 + deg);
+
+  /* IE */
+  -ms-transform: rotate($randomNumber5 + deg);
+
+  /* Opera */
+  -o-transform: rotate($randomNumber5 + deg);
+
+  /* Internet Explorer */
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=$randomNumber5);
 }
