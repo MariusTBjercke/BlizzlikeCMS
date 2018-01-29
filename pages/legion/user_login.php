@@ -4,13 +4,10 @@ if (isset($_POST['submit'])) {
     $password = addslashes(trim($_POST['password']));
 
     $user = new User;
-    if ($user->validateLogin($username, $password) == true) {
-
-
-
+    if ($user->validateUser($username, $password) == true) {
         echo '<script>window.location="user.php?action=success";</script>';
     } else {
-        echo '<script>alert("Wrong username, password or access level. Please try again.");</script>';
+        echo '<script>alert("Wrong username or password, please try again.");</script>';
     }
 }
 
