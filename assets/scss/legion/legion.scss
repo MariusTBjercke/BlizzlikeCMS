@@ -810,6 +810,11 @@ footer {
   font-style: italic;
 }
 
+.forum-page {
+  margin-top: 20px;
+  padding: 0 10px 150px 20px;
+}
+
 .howto-page {
   margin-top: 20px;
   padding: 0px 10px 150px 20px;
@@ -1334,6 +1339,12 @@ hr{
   margin: 10px 0px 0px 0px;
 }
 
+.user_login {
+  color: #FFFFFF;
+  padding: 10px 20px 120px 40px;
+  height: 100%;
+}
+
 .admin_login {
   background-color: rgba(0, 0, 0, 0.5);
   color: #FFFFFF;
@@ -1380,4 +1391,12 @@ hr{
 
 .gallery-img {
   position: relative;
+}
+
+.register-submit {
+  margin-top: 15px;
+}
+
+.register-btn {
+  width: 100%;
 }

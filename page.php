@@ -27,6 +27,12 @@ switch($page) {
 	case "gallery":
 		include 'pages/' . $theme_name . '/gallery.php';
 		break;
+    case "forum":
+        include 'pages/' . $theme_name . '/forum.php';
+        break;
+    case "userlogin":
+        include 'pages/' . $theme_name . '/user_login.php';
+        break;
     case "admin":
         include 'admin/index.php';
         break;

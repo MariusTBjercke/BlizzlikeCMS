@@ -37,7 +37,7 @@
                 <input type="text" class="form-control" id="recaptcha" name="recaptcha"
                        placeholder="Type in the characters above" required>
             </div>
-            <input type="submit" class="btn btn-default" name="submit" value="Register account">
+            <input type="submit" class="btn btn-default register-submit" name="submit" value="Register account">
         </form>
 
     </div>
