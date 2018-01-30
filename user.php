@@ -1,7 +1,7 @@
 <?php
 session_start();
-$page = 'userlogin';
-$title = 'User login: ';
+$page = 'user';
+$title = 'User page: ';
 include 'includes/config.php';
 include 'includes/functions.php';
 include 'includes/classes/accounts_lib.php';

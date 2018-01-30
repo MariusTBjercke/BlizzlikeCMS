@@ -33,6 +33,9 @@ switch($page) {
     case "userlogin":
         include 'pages/' . $theme_name . '/user_login.php';
         break;
+    case "user":
+        include 'pages/' . $theme_name . '/user.php';
+        break;
     case "admin":
         include 'admin/index.php';
         break;

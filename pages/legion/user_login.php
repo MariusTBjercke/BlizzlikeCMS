@@ -3,8 +3,17 @@ if (isset($_POST['submit'])) {
     $username = addslashes(trim($_POST['username']));
     $password = addslashes(trim($_POST['password']));
 
-    $user = new User;
-    if ($user->validateUser($username, $password) == true) {
+    global $mysqli_auth;
+    $query = "SELECT * FROM account WHERE username='$username'";
+    $result = $mysqli_auth->query($query);
+    $fetch = $result->fetch_assoc();
+    $acc_id = $fetch['id'];
+
+    $account = new Account($acc_id);
+    if ($account->validateUser($username, $password) == true) {
+        $_SESSION['user_logged_n'] = true;
+        $_SESSION['username'] = $username;
+        $_SESSION['user_id'] = $acc_id;
         echo '<script>window.location="user.php?action=success";</script>';
     } else {
         echo '<script>alert("Wrong username or password, please try again.");</script>';
