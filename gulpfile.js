@@ -12,9 +12,7 @@ var minify = require('gulp-minify');
 gulp.task('minimize-js', function(){
     return gulp.src('assets/js/*.js')
         .pipe(uglify())
-        .pipe(rename({
-            suffix: '.min'
-        }))
+        .pipe(concat('site.min.js'))
         .pipe(gulp.dest('js'))
 });
 

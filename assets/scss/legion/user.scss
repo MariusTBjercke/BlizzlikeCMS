@@ -1,8 +1,10 @@
 .user-avatar {
   position: relative;
   width: 130px;
+  z-index: 1;
   img {
-    width: 100%;
+    width: 130px;
+    height: 130px;
     border: 2px solid #9b9b9b;
   }
 
@@ -14,11 +16,7 @@
     background-color: rgba(0, 0, 0, 0.6);
     text-align: center;
     line-height: 40px;
-    opacity: 0;
-
-    &:hover {
-      opacity: 1;
-    }
+    display: none;
 
     span {
       a {

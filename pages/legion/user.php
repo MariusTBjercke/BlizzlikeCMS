@@ -13,6 +13,7 @@ $account->retrieveAccount();
 
             <p>Avatar (Hover to change)</p>
             <div class="user-avatar">
+                <div class="user-avatar-box"></div>
                 <div class="change-avatar">
                     <span><a href="#">Change avatar?</a></span>
                 </div>
