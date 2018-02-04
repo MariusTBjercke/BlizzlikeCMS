@@ -31,7 +31,7 @@ $account->retrieveAccount();
 
             <h1>Welcome, <?php echo $account->getName(); ?></h1>
 
-            <p>Avatar (Hover to change)</p>
+            <p>Your Avatar</p>
             <div class="user-avatar">
                 <div class="user-avatar-box"></div>
                 <div class="change-avatar">
