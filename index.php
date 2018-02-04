@@ -1,4 +1,5 @@
 <?php
+session_start();
 $page = 'home';
 $title = 'Home: ';
 include 'includes/config.php';

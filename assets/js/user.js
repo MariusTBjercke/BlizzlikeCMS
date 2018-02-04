@@ -9,3 +9,20 @@ $(document).ready(function() {
         $(".change-avatar").css('display', 'block');
     });
 });
+
+var modalBg = $('.user-profilepic-modal-bg');
+
+$(document).ready(function() {
+    $('.user-change-avatar').click(function() {
+        modalBg.toggle();
+    });
+    $('.user-profilepic-modal-bg').click(function() {
+        modalBg.toggle();
+    });
+});
+
+$(document).on('keyup',function(evt) {
+    if (evt.keyCode === 27) {
+        modalBg.toggle();
+    }
+});

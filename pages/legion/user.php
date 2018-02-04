@@ -3,6 +3,13 @@ $account = new Account($_SESSION['user_id']);
 $account->retrieveAccount();
 ?>
 
+<div class="user-profilepic-modal-bg">
+    <div class="user-profilepic-modal">
+        <h2>Change avatar</h2>
+        <p>Upload a new avatar for your profile.</p>
+    </div>
+</div>
+
 <div class="user_page">
 
     <div class="row">
@@ -15,7 +22,7 @@ $account->retrieveAccount();
             <div class="user-avatar">
                 <div class="user-avatar-box"></div>
                 <div class="change-avatar">
-                    <span><a href="#">Change avatar?</a></span>
+                    <span><a href="#" class="user-change-avatar">Change avatar?</a></span>
                 </div>
                 <img src="../../img/avatars/no-avatar.png" alt="Avatar">
             </div>
