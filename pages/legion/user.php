@@ -7,6 +7,19 @@ $account->retrieveAccount();
     <div class="user-profilepic-modal">
         <h2>Change avatar</h2>
         <p>Upload a new avatar for your profile.</p>
+        <div class="avatar-upload-section">
+            <form action="" enctype="multipart/form-data" method="post" id="imagick">
+                <select class="form-control" id="filetype" name="type">
+                    <option value="">Convert to</option>
+                    <option value="jpeg">JPEG</option>
+                    <option value="png">PNG</option>
+                </select>
+                <div class="fileUpload">
+                    <span>Upload</span>
+                    <input type="file" name="file" class="upload" id="upload" />
+                </div>
+            </form>
+        </div>
     </div>
 </div>
 

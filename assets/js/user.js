@@ -16,9 +16,6 @@ $(document).ready(function() {
     $('.user-change-avatar').click(function() {
         modalBg.toggle();
     });
-    $('.user-profilepic-modal-bg').click(function() {
-        modalBg.toggle();
-    });
 });
 
 $(document).on('keyup',function(evt) {
