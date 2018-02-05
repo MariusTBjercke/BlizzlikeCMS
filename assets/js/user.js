@@ -23,3 +23,19 @@ $(document).on('keyup',function(evt) {
         modalBg.toggle();
     }
 });
+
+
+// Avatar upload
+$('#upload').on('change', function () { //trigger when a file is uploaded
+    if ($('#filetype').val() == '') //If target type is not selected
+    {
+        var control = $("#upload");
+        control.replaceWith(control = control.clone(true)); //Clone & Reset the input File type
+        setTimeout(function () {
+            runThis()
+        }, 1000); //Trigger the select box for user to select target type
+    }
+    else {
+        $('#imagick').submit(); //If target type is selected simply submit the form
+    }
+});

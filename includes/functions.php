@@ -1,8 +1,7 @@
 <?php
 
 // Get server status
-function getServerStatus()
-{
+function getServerStatus() {
 	global $server;
 	global $port;
 	global $serveronline;
@@ -17,6 +16,22 @@ function getServerStatus()
 		echo '<span class="server-offline">Offline</span>';
         $serveronline = false;
 	}
+}
+
+// Get if user is logged in
+function isUserLoggedIn() {
+    if ($_SESSION['user_logged_n'] == 'true') {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+// Get logged in users username
+function getLoggedInUsername() {
+    if ($_SESSION['username']) {
+        return $_SESSION['username'];
+    }
 }
 
 ?>

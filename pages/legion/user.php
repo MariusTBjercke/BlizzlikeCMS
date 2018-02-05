@@ -14,8 +14,7 @@ $account->retrieveAccount();
                     <option value="jpeg">JPEG</option>
                     <option value="png">PNG</option>
                 </select>
-                <div class="fileUpload">
-                    <span>Upload</span>
+                <div class="fileUpload btn btn-primary">
                     <input type="file" name="file" class="upload" id="upload" />
                 </div>
             </form>
