@@ -36,7 +36,7 @@ if (isset($_POST['submit'])) {
             }
 
             ?>
-            <button class="btn btn-lg btn-primary" type="submit" name="submit">Login</button>
+            <button class="btn btn-lg btn-primary" type="submit" name="submit"><i class="fa fa-sign-in"></i> Login</button>
         </form>
 
     </div>
