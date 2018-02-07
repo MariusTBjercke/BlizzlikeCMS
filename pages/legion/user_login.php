@@ -42,9 +42,9 @@ if (isset($_POST['submit'])) {
             }
 
             ?>
-            <button class="btn btn-lg btn-primary" type="submit" name="submit">Login</button>
+            <button class="btn btn-lg btn-primary" type="submit" name="submit"><i class="fa fa-sign-in"></i> Login</button>
         </form>
-        <a href="register.php"><button class="btn btn-lg btn-primary register-btn">Register</button></a>
+        <a href="register.php"><button class="btn btn-lg btn-primary register-btn"><i class="fa fa-user-plus"></i> Register</button></a>
 
     </div>
 
