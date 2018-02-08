@@ -2,11 +2,26 @@
 $account = new Account($_SESSION['user_id']);
 $account->retrieveAccount();
 
+// Avatar and thumbnail handler
 if (isset($_FILES["file"])) {
     $tmpFile = $_FILES["file"]["tmp_name"];
     $time = time();
+    // Path to avatar
     $target_file = 'img/avatars/' . $time . '.png';
+    // Path to thumbnail
+    $target_file_thumbnail = 'img/thumbnails/' . $time . '.png';
     move_uploaded_file($tmpFile, $target_file);
+
+    // Resize the avatar
+    $newFile = new Imagick($target_file);
+    $newFile->scaleImage('130', '130', true);
+    $newFile->writeImages($target_file, false);
+
+    // Crops the avatar into a thumbnail
+    $newThumb = new Imagick($target_file);
+    $newThumb->clone();
+    $newThumb->cropThumbnailImage('130', '130');
+    $newThumb->writeImages($target_file_thumbnail, false);
 }
 
 ?>
