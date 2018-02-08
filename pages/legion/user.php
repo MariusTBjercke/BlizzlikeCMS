@@ -1,6 +1,14 @@
 <?php
 $account = new Account($_SESSION['user_id']);
 $account->retrieveAccount();
+
+if (isset($_FILES["file"])) {
+    $tmpFile = $_FILES["file"]["tmp_name"];
+    $time = time();
+    $target_file = 'img/avatars/' . $time . '.png';
+    move_uploaded_file($tmpFile, $target_file);
+}
+
 ?>
 
 <div class="user-profilepic-modal-bg">
@@ -10,7 +18,7 @@ $account->retrieveAccount();
         <div class="avatar-upload-section">
             <form action="" enctype="multipart/form-data" method="post" id="imagick">
                 <div class="fileUpload">
-                    <input type="file" name="file" class="upload" id="upload" />
+                    <input type="file" name="file" class="upload" id="file" />
                     <input type="submit" name="submit" id="submit" value="Upload">
                 </div>
             </form>
