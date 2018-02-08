@@ -1,5 +1,5 @@
 .user-profilepic-modal-bg {
-  background-color: rgba(0, 0, 0, 0.31);
+  background-color: rgba(0, 0, 0, 0.60);
   width: 100%;
   height: 100%;
   position: fixed;
@@ -12,8 +12,6 @@
   bottom: 0;
 
   .user-profilepic-modal {
-    width: 70%;
-    height: 70%;
     background-color: #FFFFFF;
     -webkit-border-radius: 1rem;
     -moz-border-radius: 1rem;
@@ -22,7 +20,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    padding: 20px;
+    padding: 10px 50px 50px 50px;
     color: #000000;
     z-index: 300;
 
@@ -78,20 +76,21 @@
 .avatar-upload-section {
 
   .fileUpload {
-  position: relative;
-  overflow: hidden;
-  margin: 40px;
+    position: relative;
+    overflow: hidden;
+    color: #FFFFFF;
+    width: 250px;
 }
   .fileUpload input.upload {
-    position: absolute;
-    top: 0;
-    right: 0;
-    margin: 0;
-    padding: 0;
-    font-size: 20px;
     cursor: pointer;
-    opacity: 0;
-    filter: alpha(opacity=0);
+  }
+
+  .fileUpload input {
+    color: #000000 !important;
+  }
+
+  .fileUpload input[type="submit"] {
+    margin-top: 20px;
   }
 
 }

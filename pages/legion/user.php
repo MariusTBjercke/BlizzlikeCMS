@@ -6,16 +6,12 @@ $account->retrieveAccount();
 <div class="user-profilepic-modal-bg">
     <div class="user-profilepic-modal">
         <h2>Change avatar</h2>
-        <p>Upload a new avatar for your profile.</p>
+        <p>Upload a new avatar/profile picture.</p>
         <div class="avatar-upload-section">
             <form action="" enctype="multipart/form-data" method="post" id="imagick">
-                <select class="form-control" id="filetype" name="type">
-                    <option value="">Convert to</option>
-                    <option value="jpeg">JPEG</option>
-                    <option value="png">PNG</option>
-                </select>
-                <div class="fileUpload btn btn-primary">
+                <div class="fileUpload">
                     <input type="file" name="file" class="upload" id="upload" />
+                    <input type="submit" name="submit" id="submit" value="Upload">
                 </div>
             </form>
         </div>
