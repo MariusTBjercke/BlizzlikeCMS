@@ -12,7 +12,7 @@ if (isset($_POST['submit'])) {
     $account = new Account($acc_id);
     if ($account->validateUser($username, $password) == true) {
         $_SESSION['user_logged_n'] = true;
-        $_SESSION['username'] = $username;
+        $_SESSION['username'] = ucfirst($username);
         $_SESSION['user_id'] = $acc_id;
         echo '<script>window.location="user.php?action=success";</script>';
     } else {

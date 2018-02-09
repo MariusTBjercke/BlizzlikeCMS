@@ -6,6 +6,7 @@ class Account {
     public $email;
     public $lastLogin;
     public $last_ip;
+    public $avatar_id;
     public $gmlevel;
     public $expansion;
 
@@ -26,12 +27,15 @@ class Account {
 
     public function retrieveAccount() {
         global $mysqli_auth;
+        global $mysqli_cms;
         $user_id = $this->user_id;
 
         $result = $mysqli_auth->query("SELECT * FROM account WHERE id='$user_id'");
         $result2 = $mysqli_auth->query("SELECT * FROM account_access WHERE id='$user_id'");
+        $result3 = $mysqli_cms->query("SELECT * FROM users WHERE auth_id='$user_id'");
         $row = $result->fetch_assoc();
         $row2 = $result2->fetch_assoc();
+        $row3 = $result3->fetch_assoc();
 
         $this->username = $row['username'];
         $this->email = $row['email'];
@@ -39,6 +43,17 @@ class Account {
         $this->last_ip = $row['last_ip'];
         $this->gmlevel = $row2['gmlevel'];
         $this->expansion = $row['expansion'];
+        $this->avatar_id = $row3['avatar_id'];
+    }
+
+    public function checkIfLoggedIn() {
+        if (isset($_SESSION['user_logged_n'])) {
+            if ($_SESSION['user_logged_n'] == true) {
+                return true;
+            } else {
+                return false;
+            }
+        }
     }
 
     public function getName() {
@@ -71,6 +86,11 @@ class Account {
         return $expansion;
     }
 
+    public function getAvatarID() {
+        $avatar_id = $this->avatar_id;
+        return $avatar_id;
+    }
+
     public function saveDetails($username, $email, $gmlevel, $expansion) {
         global $mysqli_auth;
         $user_id = $this->user_id;
@@ -79,6 +99,21 @@ class Account {
         $result2 = $mysqli_auth->query("INSERT INTO account_access (id, gmlevel, RealmID) VALUES ('$user_id', '$gmlevel', '1') ON DUPLICATE KEY UPDATE gmlevel='$gmlevel'");
 
         if ($result && $result2) {
+            return true;
+        } else {
+            return false;
+        }
+
+    }
+
+    public function saveAvatarID($user_id, $avatar_id) {
+        global $mysqli_cms;
+        $user_id = $this->user_id;
+
+        $query = "INSERT INTO users (auth_id, avatar_id) VALUES ('$user_id', '$avatar_id') ON DUPLICATE KEY UPDATE avatar_id='$avatar_id'";
+        $result = $mysqli_cms->query($query);
+
+        if ($result) {
             return true;
         } else {
             return false;

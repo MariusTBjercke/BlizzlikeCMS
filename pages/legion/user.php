@@ -21,7 +21,14 @@ if (isset($_FILES["file"])) {
     $newThumb = new Imagick($target_file);
     $newThumb->clone();
     $newThumb->cropThumbnailImage('130', '130');
-    $newThumb->writeImages($target_file_thumbnail, false);
+    $success = $newThumb->writeImages($target_file_thumbnail, false);
+
+    if ($success) {
+        $saveAcc = $account->saveAvatarID($_SESSION['user_id'], $time);
+        if ($saveAcc) {
+            echo '<script>window.location="user.php";</script>';
+        }
+    }
 }
 
 ?>
@@ -55,7 +62,15 @@ if (isset($_FILES["file"])) {
                 <div class="change-avatar">
                     <span><a href="#" class="user-change-avatar">Change avatar?</a></span>
                 </div>
-                <img src="../../img/avatars/no-avatar.png" alt="Avatar">
+                <?php
+                if (empty($account->getAvatarID())) {
+                    ?>
+                    <img src="../../img/avatars/no-avatar.png" alt="Avatar">
+                    <?php
+                } else {
+                    echo '<img src="../../img/thumbnails/'.$account->getAvatarID().'.png" alt="Avatar">';
+                }
+                ?>
             </div>
 
         </div>
