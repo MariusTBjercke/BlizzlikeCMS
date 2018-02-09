@@ -65,10 +65,10 @@ if (isset($_FILES["file"])) {
                 <?php
                 if (empty($account->getAvatarID())) {
                     ?>
-                    <img src="../../img/avatars/no-avatar.png" alt="Avatar">
+                    <img src="../../img/avatars/no-avatar.png" title="Avatar" alt="Avatar">
                     <?php
                 } else {
-                    echo '<img src="../../img/thumbnails/'.$account->getAvatarID().'.png" alt="Avatar">';
+                    echo '<img src="../../img/thumbnails/'.$account->getAvatarID().'.png" title="Avatar" alt="Avatar">';
                 }
                 ?>
             </div>
