@@ -27,7 +27,7 @@ gulp.task('minimize-scss', function(){
 
 // SCSS for Legion
 gulp.task('minimize-legion', function(){
-    return gulp.src('assets/scss/legion/**/*.scss')
+    return gulp.src('assets/scss/legion/*.scss')
         .pipe(sass())
         .pipe(concat('legion.min.css'))
         .pipe(minifyCSS())
@@ -36,7 +36,7 @@ gulp.task('minimize-legion', function(){
 
 // SCSS for WoTLK
 gulp.task('minimize-wotlk', function(){
-    return gulp.src('assets/scss/wotlk/**/*.scss')
+    return gulp.src('assets/scss/wotlk/*.scss')
         .pipe(sass())
         .pipe(concat('wotlk.min.css'))
         .pipe(minifyCSS())
@@ -53,7 +53,7 @@ gulp.task('minimize-bootstrap', function(){
 
 // SCSS for admin
 gulp.task('minimize-admin', function(){
-    return gulp.src('assets/scss/admin/**/*.scss')
+    return gulp.src('assets/scss/admin/*.scss')
         .pipe(sass())
         .pipe(concat('admin.min.css'))
         .pipe(minifyCSS())
