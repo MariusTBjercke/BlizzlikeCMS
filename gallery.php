@@ -1,4 +1,5 @@
 <?php
+session_start();
 $page = 'gallery';
 $title = 'Gallery: ';
 include 'includes/config.php';

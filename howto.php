@@ -1,4 +1,5 @@
 <?php
+session_start();
 $page = 'howto';
 $title = 'How to connect: ';
 include 'includes/config.php';

@@ -1,4 +1,5 @@
 <?php
+session_start();
 $page = 'register';
 $title = 'Register: ';
 include 'includes/config.php';

@@ -1,6 +1,11 @@
 <?php
 $account = new Account($_SESSION['user_id']);
 $account->retrieveAccount();
+if ($account->checkIfLoggedIn() != true) {
+    ?>
+    <script>window.location="user_login.php";</script>
+    <?php
+}
 
 // Avatar and thumbnail handler
 if (isset($_FILES["file"])) {
@@ -14,7 +19,6 @@ if (isset($_FILES["file"])) {
 
     // Resize the avatar
     $newFile = new Imagick($target_file);
-    $newFile->scaleImage('130', '130', true);
     $newFile->writeImages($target_file, false);
 
     // Crops the avatar into a thumbnail

@@ -1,4 +1,5 @@
 <?php
+session_start();
 $page = 'gamemasters';
 $title = 'Gamemasters: ';
 include 'includes/config.php';

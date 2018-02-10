@@ -30,7 +30,7 @@ function isUserLoggedIn() {
 // Get logged in users username
 function getLoggedInUsername() {
     if ($_SESSION['username']) {
-        return $_SESSION['username'];
+        return ucfirst($_SESSION['username']);
     }
 }
 

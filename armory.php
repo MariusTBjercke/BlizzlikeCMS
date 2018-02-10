@@ -1,4 +1,5 @@
 <?php
+session_start();
 $page = 'armory';
 $title = 'Armory: ';
 include 'includes/config.php';

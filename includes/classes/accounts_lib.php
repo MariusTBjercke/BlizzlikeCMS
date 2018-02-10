@@ -53,6 +53,8 @@ class Account {
             } else {
                 return false;
             }
+        } else {
+            return false;
         }
     }
 

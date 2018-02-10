@@ -1,4 +1,5 @@
 <?php
+session_start();
 $page = 'onlineplayers';
 $title = 'Online players: ';
 include 'includes/config.php';
