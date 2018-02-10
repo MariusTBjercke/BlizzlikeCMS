@@ -20,6 +20,20 @@ body:before {
   background: -webkit-radial-gradient(top center, ellipse cover, rgba(255, 255, 255, 0.2) 0%, rgba(0, 0, 0, 0.9) 100%);
 }
 
+@media screen and (max-height: 600px) {
+  footer {
+    height: 90px!important;
+
+    .footer-content {
+      margin-top: -12px;
+
+      img {
+        width: 90px;
+      }
+    }
+  }
+}
+
 html {
   overflow-y: scroll;
   height: 100% !important;
