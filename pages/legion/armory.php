@@ -11,6 +11,8 @@ if (isset($_POST['charsearch'])) {
 
     <h2>Characters</h2>
 
+    <p>Get basic information about a character on the server.</p>
+
     <form action="" method="post">
         <h3>Search for a character: <input type="text" name="charname"><input type="submit" name="charsearch" value="Search"></h3>
     </form>

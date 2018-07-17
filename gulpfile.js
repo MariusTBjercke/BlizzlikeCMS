@@ -6,7 +6,7 @@ var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 var minifyCSS = require('gulp-minify-css');
 var rename = require('gulp-rename');
-var minify = require('gulp-minify');
+// var minify = require('gulp-minify');
 
 // Minifies JS
 gulp.task('minimize-js', function(){
