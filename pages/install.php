@@ -98,8 +98,10 @@ $installed = true;
 		echo '<script>window.location="index.php";</script>';
 	}
 
-    $mysqli->query("CREATE TABLE posts (id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, title VARCHAR(255) NOT NULL, content TEXT NOT NULL, poster_id INT(255) NOT NULL)");
-    $mysqli->query("INSERT INTO posts (title, content, poster_id) VALUES ('Example Post', 'This post can be edited from the administration panel. You can also add new posts from there.', '1')");
+	$today = date("d-m-Y");
+
+    $mysqli->query("CREATE TABLE posts (id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, title VARCHAR(255) NOT NULL, content TEXT NOT NULL, poster_id INT(255) NOT NULL, date VARCHAR(255))");
+    $mysqli->query("INSERT INTO posts (title, content, poster_id, date) VALUES ('Example Post', 'This post can be edited from the administration panel. You can also add new posts from there.', '1', $today)");
     $mysqli->query("CREATE TABLE config (id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, servername VARCHAR(255) NOT NULL, serveraddress VARCHAR(255) NOT NULL, worldport VARCHAR(255) NOT NULL, show_post_frontpage INT(11) NOT NULL, contact VARCHAR(255) NOT NULL, youtube VARCHAR(255), download VARCHAR(255), theme INT(11) NOT NULL)");
     $mysqli->query("INSERT INTO config (servername, serveraddress, worldport, show_post_frontpage, contact, youtube, download, theme) VALUES ('$servername', '$serveraddress', '$worldport', '1', 'contact@example.com', '$youtube', '$download', '2')");
     $mysqli->query("CREATE TABLE gamemasters (id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, charname VARCHAR(255) NOT NULL)");

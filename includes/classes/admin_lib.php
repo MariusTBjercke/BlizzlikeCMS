@@ -106,8 +106,9 @@ class Admin {
     public function addPost($title, $content) {
         global $mysqli_cms;
 
+        $today = date("d-m-Y");
         $poster_id = $_SESSION['admin_id'];
-        $result = $mysqli_cms->query("INSERT INTO posts (title, content, poster_id) VALUES ('$title', '$content', '$poster_id')");
+        $result = $mysqli_cms->query("INSERT INTO posts (title, content, poster_id, date) VALUES ('$title', '$content', '$poster_id', '$today')");
 
         if ($result) {
             return true;

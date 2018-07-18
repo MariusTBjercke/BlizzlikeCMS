@@ -25,7 +25,7 @@ class Site
         while ($row = $result->fetch_assoc()) {
             $poster_id = $row['poster_id'];
             $newTime = strtotime($row['date']);
-            $outputTime = date('m.d.Y', $newTime);
+            $outputTime = date('d.m.Y', $newTime);
             $result2 = $mysqli_auth->query("SELECT * FROM account WHERE id='$poster_id'");
             $row2 = $result2->fetch_assoc();
             echo '<h1>' . $row['title'] . '</h1>
