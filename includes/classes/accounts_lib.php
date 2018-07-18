@@ -32,7 +32,7 @@ class Account {
 
         $result = $mysqli_auth->query("SELECT * FROM account WHERE id='$user_id'");
         $result2 = $mysqli_auth->query("SELECT * FROM account_access WHERE id='$user_id'");
-        $result3 = $mysqli_cms->query("SELECT * FROM users WHERE auth_id='$user_id'");
+        $result3 = $mysqli_cms->query("SELECT * FROM avatars WHERE user_id='$user_id'");
         $row = $result->fetch_assoc();
         $row2 = $result2->fetch_assoc();
         $row3 = $result3->fetch_assoc();
@@ -112,7 +112,7 @@ class Account {
         global $mysqli_cms;
         $user_id = $this->user_id;
 
-        $query = "INSERT INTO users (auth_id, avatar_id) VALUES ('$user_id', '$avatar_id') ON DUPLICATE KEY UPDATE avatar_id='$avatar_id'";
+        $query = "INSERT INTO avatars (user_id, avatar_id) VALUES ('$user_id', '$avatar_id') ON DUPLICATE KEY UPDATE avatar_id='$avatar_id'";
         $result = $mysqli_cms->query($query);
 
         if ($result) {
