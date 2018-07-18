@@ -11,7 +11,7 @@ This is focused on being easy to setup and use for your own private server.
 - CMS for editing posts/news on the website
 - Administration panel for editing server accounts without using the console
 - Gallery
-- Multiple themes (easy to switch through admin panel)
+- Multiple themes
 
 **SETUP**
 
@@ -27,7 +27,7 @@ In order to log in to the administration panel, use the same credentials as your
 
 **PS: This is still a work in progress, but I will try to update the project frequently.**
 
-**Comes with two themes; Modern and WotLK**
+**Comes with two themes; Legion and WotLK**
 <img src='img/demo/legion_demo.png' width='100%'>
 
 **WotLK**

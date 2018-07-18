@@ -1,3 +1,9 @@
+@import "colors";
+@import "header";
+@import "legion";
+@import "user";
+@import "admin";
+
 $randomNumber1: random(50);
 $randomNumber2: '-' + random(50);
 $randomNumber3: random(50);
@@ -90,4 +96,18 @@ body {
 
   /* Internet Explorer */
   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=$randomNumber5);
+}
+
+#ramdomInt {
+  background-color: $main;
+  border: 1px solid black;
+  color: white;
+  padding: 5px;
+}
+
+#randomRange {
+  background-color: $secondary;
+  border: 1px solid black;
+  color: white;
+  padding: 5px;
 }

@@ -1,17 +1,47 @@
 body {
   background-color: #000000;
+  background-image: url("/img/themes/legion/bg.jpg");
+  background-size: cover;
   color: #000000;
   font-family: 'Zilla Slab', serif;
   overflow-x: hidden;
+  min-height: 100%;
+  position: relative;
+}
+
+body:before {
+  content: " ";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: -webkit-radial-gradient(top center, ellipse cover, rgba(255, 255, 255, 0.2) 0%, rgba(0, 0, 0, 0.9) 100%);
+}
+
+@media screen and (max-height: 650px) {
+  footer {
+    height: 90px!important;
+
+    .footer-content {
+      margin-top: -12px;
+
+      img {
+        width: 90px;
+      }
+    }
+  }
 }
 
 html {
   overflow-y: scroll;
+  height: 100% !important;
 }
 
 @font-face {
   font-family: LifeCraftRegular;
-  src: url('../fonts/LifeCraft_Font.ttf');
+  src: url('/fonts/LifeCraft_Font.ttf');
 }
 
 h2 {
@@ -20,6 +50,18 @@ h2 {
 
 p {
   font-size: 2.5rem;
+}
+
+button {
+  color: #000000;
+}
+
+input {
+  color: #000000;
+}
+
+select {
+  color: #000000;
 }
 
 .faded_top {
@@ -69,7 +111,7 @@ p {
 }
 
 .jumbotron {
-  background-image: url("../img/banner.jpg");
+  background-image: url("/img/banner.jpg");
   background-size: cover;
   margin-bottom: 0;
 }
@@ -132,7 +174,7 @@ p {
 }
 
 .horde_banner {
-  background-image: url("../img/icons/horde_banner.png");
+  background-image: url("/img/icons/horde_banner.png");
   width: 34px;
   height: 60px;
   position: absolute;
@@ -142,7 +184,7 @@ p {
 }
 
 .alliance_banner {
-  background-image: url("../img/icons/alliance_banner.png");
+  background-image: url("/img/icons/alliance_banner.png");
   width: 32px;
   height: 59px;
   position: absolute;
@@ -168,7 +210,9 @@ p {
 
   span {
     display: inline-block;
+    margin-left: 5px;
   }
+
 }
 
 .btn {
@@ -196,25 +240,134 @@ p {
 }
 
 .top-bar {
-  background-image: url('../img/themes/wotlk/topbg2.gif');
+  background-color: #111111;
   width: 100%;
-  height: 25px;
+  height: 40px;
+  border-bottom: 1px solid #313337;
+}
+
+.top-bar h1 {
+  color: #009ae4;
+  margin: 0;
+  padding: 7px 0px 0px 0px;
+  font-size: 2.2rem;
+  float: left;
+}
+
+.top-bar li a {
+  color: #caa426;
+}
+
+.top-bar li a:hover {
+  color: #ffffff;
+}
+
+.top-bar a {
+  text-decoration: none;
+  color: #009ae4;
+}
+
+.top-bar a:hover {
+  color: #00aeff;
+}
+
+.top-bar ul {
+  padding: 10px 0px 0px 0px;
+  margin: 0;
+  list-style: none;
+  display: block;
+}
+
+.top-bar li {
+  display: inline;
+  color: #ffffff;
+  padding: 0px 0px 0px 10px;
+}
+
+.navbar-legion a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.navbar-legion {
+  width: 90%;
+  position: absolute;
+  height: 80px;
+  background-image: url("/img/themes/legion/navbar-bg.png");
+  border: 1px solid #251812;
+  margin-top: 40px;
+  z-index: 200;
+  right: 0;
+  color: #caa426;
+}
+
+.navbar-legion ul {
+  list-style: none;
+  position: absolute;
+  right: -2px;
+  top: 33px;
+  width: 190px;
+  background-color: #462c25;
+  padding: 5px 20px 20px 20px;
+  border-radius: 10px 0px 10px 10px;
+  display: none;
+  border: 1px solid #170908;
+}
+
+.navbar-legion li {
+  display: block;
+  padding-left: 0px;
+  line-height: 45px;
+  font-size: 1.8rem;
+  color: #caa426;
+  height: 100%;
+  border-bottom: 1px solid #ffcc21;
+}
+
+.navbar-legion li:hover {
+  color: #ffcc21;
+  border-bottom: 2px solid #ffcc21;
+}
+
+.navbar-toggle {
+  position: relative;
+  float: right;
+  padding: 9px 10px;
+  margin-top: 8px;
+  margin-right: 15px;
+  margin-bottom: 8px;
+  background-color: #C0C0C0;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+
+#openMenuBtn {
+  border-radius: 0px !important;
+}
+
+.navbar-toggle .icon-bar {
+  display: block;
+  width: 22px;
+  height: 2px;
+  border-radius: 1px;
+  background-color: #FFFFFF;
 }
 
 .page-bg-top {
-  background-image: url("../img/themes/wotlk/page-bg-top.jpg");
+  background-image: url("/img/themes/wotlk/page-bg-top.jpg");
   width: 100%;
   height: 92px;
 }
 
 .top-logo {
-  background-image: url("../img/themes/wotlk/WrathLogo.png");
-  width: 180px;
-  height: 94px;
-  background-size: 180px 94px;
+  background-image: url("/img/themes/legion/logo-wow.png");
+  width: 256px;
+  height: 103px;
+  background-size: 256px 103px;
   position: absolute;
-  left: 0px;
-  top: 7px;
+  left: -125px;
+  z-index: 1;
+  margin: -10px 0px 0px 0px;
 }
 
 .left-sidebar {
@@ -227,7 +380,7 @@ p {
 }
 
 .left-menuHeader {
-  background-image: url("../img/themes/wotlk/leftMenu/leftMenu-button-off.gif");
+  background-image: url("/img/themes/wotlk/leftMenu/leftMenu-button-off.gif");
   width: 144px;
   height: 27px;
   position: relative;
@@ -235,7 +388,7 @@ p {
 }
 
 .left-menuHeader-icon {
-  background-image: url("../img/themes/wotlk/leftMenu/icon-news-off.gif");
+  background-image: url("/img/themes/wotlk/leftMenu/icon-news-off.gif");
   width: 23px;
   height: 21px;
   position: absolute;
@@ -268,28 +421,29 @@ p {
 }
 
 .midContent {
-  min-height: 1108px;
-  width: 828px;
-  position: relative;
-  background-image: url("../img/themes/wotlk/light.jpg");
-  margin-left: 150px;
+  width: 100%;
+  margin-top: 150px;
+}
+
+.midContent a {
+  color: #caa426;
 }
 
 .parchment-top {
-  background-image: url("../img/themes/wotlk/parchment-top.jpg");
+  background-image: url("/img/themes/wotlk/parchment-top.jpg");
   width: 100%;
   height: 18px;
 }
 
 .midContent-left {
-  background-image: url("../img/themes/wotlk/hp09_bg_rpt.jpg");
+  background-image: url("/img/themes/wotlk/hp09_bg_rpt.jpg");
   width: 827px;
   height: 100%;
   position: absolute;
 }
 
 .midContent-left-top {
-  background-image: url("../img/themes/wotlk/hp09_bg_lcol.jpg");
+  background-image: url("/img/themes/wotlk/hp09_bg_lcol.jpg");
   width: 490px;
   height: 433px;
   position: absolute;
@@ -297,7 +451,7 @@ p {
 }
 
 .parchment-left-top-corner {
-  background-image: url("../img/themes/wotlk/parchment-top-left.jpg");
+  background-image: url("/img/themes/wotlk/parchment-top-left.jpg");
   width: 18px;
   height: 18px;
   position: absolute;
@@ -306,7 +460,7 @@ p {
 }
 
 .parchment-right-top-corner {
-  background-image: url("../img/themes/wotlk/parchment-top-right.jpg");
+  background-image: url("/img/themes/wotlk/parchment-top-right.jpg");
   width: 18px;
   height: 18px;
   position: absolute;
@@ -315,7 +469,7 @@ p {
 }
 
 .midContent-left-bar {
-  background-image: url("../img/themes/wotlk/rect4138.png");
+  background-image: url("/img/themes/wotlk/rect4138.png");
   width: 17px;
   height: 100%;
   position: absolute;
@@ -323,7 +477,7 @@ p {
 }
 
 .midContent-right-bar {
-  background-image: url("../img/themes/wotlk/rect4138_reflect.png");
+  background-image: url("/img/themes/wotlk/rect4138_reflect.png");
   width: 17px;
   height: 100%;
   position: absolute;
@@ -332,7 +486,7 @@ p {
 }
 
 .midContent-left-bottom {
-  background-image: url("../img/themes/wotlk/hp09_bg_rpt.jpg");
+  background-image: url("/img/themes/wotlk/hp09_bg_rpt.jpg");
   width: 827px;
   height: 100%;
 }
@@ -361,7 +515,7 @@ p {
 }
 
 .parchment-left {
-  background-image: url("../img/themes/wotlk/parchment-left.jpg");
+  background-image: url("/img/themes/wotlk/parchment-left.jpg");
   width: 18px;
   height: 100%;
   left: 17px;
@@ -371,7 +525,7 @@ p {
 }
 
 .parchment-right {
-  background-image: url("../img/themes/wotlk/parchment-right.jpg");
+  background-image: url("/img/themes/wotlk/parchment-right.jpg");
   width: 18px;
   height: 100%;
   right: 17px;
@@ -381,7 +535,7 @@ p {
 }
 
 #ne-center {
-  background-image: url("../img/themes/wotlk/ne-center.jpg");
+  background-image: url("/img/themes/wotlk/ne-center.jpg");
   width: 980px;
   height: 548px;
   position: absolute;
@@ -390,7 +544,7 @@ p {
 }
 
 #ne-top-left {
-  background-image: url("../img/themes/wotlk/ne-top-left.gif");
+  background-image: url("/img/themes/wotlk/ne-top-left.gif");
   width: 107px;
   height: 40px;
   position: absolute;
@@ -400,7 +554,7 @@ p {
 }
 
 #bg-right {
-  background-image: url("../img/themes/wotlk/bg.png");
+  background-image: url("/img/themes/wotlk/bg.png");
   width: 768px;
   height: 539px;
   position: absolute;
@@ -410,7 +564,7 @@ p {
 }
 
 .footer-border {
-  background-image: url("../img/themes/wotlk/ironframe-bg.jpg");
+  background-image: url("/img/themes/wotlk/ironframe-bg.jpg");
   width: 100%;
   height: 15px;
   z-index: 2;
@@ -421,7 +575,8 @@ footer {
   height: 130px;
   background-color: #000000;
   z-index: 1;
-  position: relative;
+  bottom: 0;
+  position: fixed;
 }
 
 .footer-content {
@@ -446,7 +601,7 @@ footer {
 }
 
 .menu-bg {
-  background-image: url("../img/themes/wotlk/menu-bg.jpg");
+  background-image: url("/img/themes/wotlk/menu-bg.jpg");
   width: 87px;
   height: 100%;
   position: absolute;
@@ -454,7 +609,7 @@ footer {
 }
 
 .statue-left {
-  background-image: url("../img/themes/wotlk/statue-left.gif");
+  background-image: url("/img/themes/wotlk/statue-left.gif");
   width: 243px;
   height: 445px;
   position: absolute;
@@ -471,18 +626,53 @@ footer {
 }
 
 .front-banner {
-  background-image: url("../img/themes/wotlk/banners/1.png");
-  width: 400px;
-  height: 251px;
+  width: 100%;
   position: relative;
-  left: 40px;
-  top: 5px;
-  border-radius: 5px;
+  padding-bottom: 30px;
+}
+
+.front-banner h1 {
+  color: #FFFFFF;
+  font-size: 6rem;
+}
+
+.front-banner p {
+  color: #ebdec2;
+  width: 80%;
+  margin-top: 5px;
+}
+
+.front-banner button {
+  padding: 15px 30px 15px 30px;
+  margin-top: 20px;
+  border: 1px solid #b06601;
+  color: #ffd548;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.front-banner button:hover {
+  background-color: #b06601;
+  color: #fff68d;
+}
+
+.front-banner button + button {
+  margin-left: 20px;
+}
+
+.front-banner-btn2 {
+  border: 1px solid #ea3012 !important;
+  background-color: rgba(231, 0, 0, 0.4) !important;
+  color: #ffd548 !important;
+}
+
+.front-banner-btn2:hover {
+  background-color: rgba(255, 0, 0, 0.65) !important;
 }
 
 .midContent-content {
-  width: 750px;
-  padding: 0 0 0 75px;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 5px 0 20% 40px;
+  color: #FFFFFF;
 }
 
 .midContent-content p {
@@ -490,7 +680,7 @@ footer {
 }
 
 .midContent-content h1 {
-  color: #bd4631;
+  color: #FFFFFF;
   margin: 35px 0px 3px 0px;
   padding: 0;
   font-size: 3rem;
@@ -522,7 +712,7 @@ footer {
 }
 
 .lich_king_front {
-  background-image: url("../img/themes/wotlk/characters/lich_king.png");
+  background-image: url("/img/themes/wotlk/characters/lich_king.png");
   background-size: 450px 590px;
   width: 450px;
   height: 590px;
@@ -547,8 +737,14 @@ footer {
   margin: 10px 0px 0px 0px;
 }
 
+.register-page {
+  color: #FFFFFF;
+  padding: 10px 20px 120px 40px;
+  height: 100%;
+}
+
 .register-gnome {
-  background-image: url("../img/themes/wotlk/characters/gnome.png");
+  background-image: url("/img/themes/wotlk/characters/gnome.png");
   width: 313px;
   height: 341px;
   position: absolute;
@@ -587,7 +783,7 @@ footer {
 }
 
 .murloc_speechubble {
-  background-image: url("../img/themes/wotlk/characters/murloc_speechbubble.png");
+  background-image: url("/img/themes/wotlk/characters/murloc_speechbubble.png");
   width: 250px;
   height: 117px;
   position: absolute;
@@ -621,30 +817,43 @@ footer {
   margin: 0px 0px 10px 0px;
   padding: 0;
   font-size: 1.6rem;
+  color: #c6c6c6;
 }
 
 .frontPage-news-author {
   font-style: italic;
 }
 
+.forum-page {
+  margin-top: 20px;
+  padding: 0 10px 150px 20px;
+}
+
 .howto-page {
   margin-top: 20px;
+  padding: 0px 10px 150px 20px;
 }
 
 .howto-page h3 {
-  margin: 10px 0px 10px 0px;
+  margin: 0px;
+  padding: 10px;
+  color: #FFFFFF;
 }
 
 .howto-page img {
   border-radius: 10px;
 }
 
+.howto-page a {
+  color: #caa426;
+}
+
 .footer-copyright {
   position: absolute;
   width: 400px;
   text-align: right;
-  left: 560px;
-  top: 10px;
+  right: 0;
+  top: 14px;
   color: #ffffff;
 }
 
@@ -709,13 +918,10 @@ hr{
   -moz-border-radius: 2px;
   -webkit-border-radius: 2px;
   border-radius: 2px;
-  -webkit-box-shadow: 3px 3px 7px 7px rgba(0,0,0,0.32);
-  -moz-box-shadow: 3px 3px 7px 7px rgba(0,0,0,0.32);
-  box-shadow: 3px 3px 7px 7px rgba(0,0,0,0.32);
 }
 
 .lock-img {
-  background-image: url("../img/lock.png");
+  background-image: url("/img/lock.png");
   width: 312px;
   height: 312px;
   background-size: 312px 312px;
@@ -832,6 +1038,7 @@ hr{
 
 .edit_account {
   margin-top: 20px;
+  padding-bottom: 200px;
 }
 
 .edit_account h3 {
@@ -847,7 +1054,7 @@ hr{
 }
 
 .edit_account_pagination a {
-  color: #000000;
+  color: #FFFFFF;
 }
 
 .edit_account_pagination ul {
@@ -877,7 +1084,11 @@ hr{
 }
 
 .admin_front span {
-  color: #773722;
+  color: #caa426;
+}
+
+.admin_front a {
+  color: #FFFFFF;
 }
 
 .admin_logout {
@@ -906,6 +1117,7 @@ hr{
 
 .edit_post {
   margin-top: 20px;
+  padding-bottom: 200px;
 }
 
 .edit_post input {
@@ -942,7 +1154,11 @@ hr{
 }
 
 .delete {
-  color: red;
+  color: red !important;
+}
+
+.edit_gamemasters {
+  padding-bottom: 200px;
 }
 
 .edit_gamemasters ul {
@@ -973,6 +1189,19 @@ hr{
   color: #d61000;
 }
 
+.edit_settings {
+  padding-bottom: 200px;
+}
+
+.edit_settings p {
+  margin: 20px 0px 0px 0px;
+}
+
+.edit_settings h1 {
+  margin-bottom: 0px;
+  padding: 0px;
+}
+
 .edit_settings ul {
   list-style: none;
   margin: 5px 0px 0px 0px;
@@ -995,10 +1224,11 @@ hr{
   margin-top: 20px;
   font-size: 1.8rem;
   padding: 5px;
+  color: #000000;
 }
 
 .edit_settings button {
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 .edit_settings .addsuccess {
@@ -1016,8 +1246,23 @@ hr{
   color: #009b22;
 }
 
+.edit_settings input {
+  color: #735c17;
+}
+
+.sub_text {
+  font-size: 2rem;
+}
+
 .edit_gallery {
   margin-top: 15px;
+  padding-bottom: 200px;
+}
+
+.edit_gallery img {
+  width: 350px;
+  height: 200px;
+  object-fit: cover;
 }
 
 .edit_gallery label {
@@ -1026,6 +1271,14 @@ hr{
 
 .edit_gallery form {
   margin-top: 20px;
+}
+
+.edit_gallery input {
+  color: #000000;
+}
+
+.edit_gallery input[type="submit"] {
+  color: #000000;
 }
 
 .edit_gallery_pagination {
@@ -1043,7 +1296,8 @@ hr{
 }
 
 .gallery {
-  padding: 20px 0px 0px 0px;
+  color: #FFFFFF;
+  padding: 20px 20px 200px 20px;
 }
 
 .gallery .col-md-3 {
@@ -1059,6 +1313,10 @@ hr{
   list-style: none;
 }
 
+.gallery span {
+  font-size: 2rem;
+}
+
 .theme_selector {
   margin-top: 20px;
 }
@@ -1067,6 +1325,76 @@ hr{
   color: #3c763d;
   margin-top: 10px;
   font-size: 1.8rem;
+}
+
+.register-content {
+  width: 100%;
+  margin: auto;
+}
+
+.onlineplayers {
+  padding: 10px 40px 500px 30px;
+  color: #FFFFFF;
+}
+
+.characters-page {
+  margin-top: 20px;
+  padding: 0px 10px 450px 30px;
+  color: #FFFFFF;
+}
+
+.characters-page input {
+  color: #000000;
+}
+
+.characters-page input[type="submit"] {
+  color: #000000;
+  display: block;
+  margin: 10px 0px 0px 0px;
+}
+
+.user_login {
+  color: #FFFFFF;
+  padding: 10px 20px 120px 40px;
+  height: 100%;
+}
+
+.user_page {
+  color: #FFFFFF;
+  padding: 10px 20px 120px 40px;
+  height: 100%;
+}
+
+.admin_login {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #FFFFFF;
+  padding: 4rem;
+}
+
+.admin_login h1, h3 {
+  color: #FFFFFF;
+}
+
+.admin_login input {
+  color: #000000;
+}
+
+.admin_front {
+  padding: 0 10px 220px 30px;
+  color: #FFFFFF;
+}
+
+.container {
+  color: #FFFFFF;
+}
+
+.container h1 {
+  color: #FFFFFF;
+}
+
+.edit_theme {
+  color: #000000;
+  padding-bottom: 200px;
 }
 
 .gallery-img-description {
@@ -1083,4 +1411,12 @@ hr{
 
 .gallery-img {
   position: relative;
+}
+
+.register-submit {
+  margin-top: 15px;
+}
+
+.register-btn {
+  width: 100%;
 }
