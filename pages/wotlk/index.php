@@ -5,12 +5,12 @@
             allowfullscreen></iframe>
 </div>
 
-<div class="front-banner">
-    <div class="bannerContent">
-        <h2><?php echo $servername; ?></h2>
-        <h3>WotLK</h3>
-    </div>
-</div>
+<!--<div class="front-banner">-->
+<!--    <div class="bannerContent">-->
+<!--        <h2>--><?php //echo $servername; ?><!--</h2>-->
+<!--        <h3>WotLK</h3>-->
+<!--    </div>-->
+<!--</div>-->
 
 <div class="midContent-content">
 
