@@ -21,9 +21,9 @@ For security reasons, remember to **delete both install.php** files after the in
 
 In order to log in to the administration panel, use the same credentials as your server accounts with admin rights.
 
-**If you are going to edit the stylesheet/javascript files you are going to need <a href="https://nodejs.org">Node.js</a> installed as this project comes with watcher/sass/minimizer scripts.**
+**If you are going to edit the stylesheet/javascript files you are going to need <a href="https://nodejs.org">Node.js</a> installed as this project comes with watcher/sass scripts.**
 
-**First setup Node by running the command "npm install". Then you can run "gulp" or "gulp watch" to start using the watcher.**
+**First setup Node by running the command "npm install". Then you can run "npm run watch" to start using the watcher.**
 
 **PS: This is still a work in progress, but I will try to update the project frequently.**
 
