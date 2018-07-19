@@ -112,6 +112,12 @@ $installed = true;
     $mysqli->query("INSERT INTO themes (name, description, author) VALUES ('wotlk', 'Wrath of the Lich King theme for BlizzlikeCMS', 'BlizzlikeCMS')");
     $mysqli->query("INSERT INTO themes (name, description, author) VALUES ('legion', 'Legion theme for BlizzlikeCMS', 'BlizzlikeCMS (Not yet finished and might be unstable)')");
     $mysqli->query("CREATE TABLE avatars (id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, user_id INT(11) NOT NULL, avatar_id VARCHAR(255) NOT NULL)");
+    $mysqli->query("CREATE TABLE forum (id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, name VARCHAR(255) NOT NULL, active INT(11) NOT NULL DEFAULT '1')");
+    $mysqli->query("INSERT INTO forum (name) VALUES ('Forum')");
+    $mysqli->query("CREATE TABLE forum_categories (id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, name VARCHAR(255) NOT NULL)");
+    $mysqli->query("INSERT INTO forum_categories (name) VALUES ('News and announcements'), ('General'), ('World of Warcraft')");
+    $mysqli->query("CREATE TABLE forum_subcategories (id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, name VARCHAR(255) NOT NULL, parent_id INT(11) NOT NULL)");
+    $mysqli->query("INSERT INTO forum_subcategories (name, parent_id) VALUES ('News', '1'), ('Miscellaneous', '1'), ('General Chat', '2'), ('Server Chat', '3'), ('Support', '3')");
 
 }
 
