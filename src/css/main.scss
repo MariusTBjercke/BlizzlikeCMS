@@ -3,6 +3,7 @@
 @import "legion";
 @import "user";
 @import "admin";
+@import "forum";
 
 $randomNumber1: random(50);
 $randomNumber2: '-' + random(50);
