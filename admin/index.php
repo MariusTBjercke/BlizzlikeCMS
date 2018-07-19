@@ -8,9 +8,6 @@ if ($_SESSION['admin_logged_n'] == true) {
         case 'edit_posts':
             include 'edit_posts.php';
             break;
-        case 'edit_gamemasters':
-            include 'edit_gamemasters.php';
-            break;
 		case 'edit_settings':
 			include 'edit_settings.php';
 			break;
