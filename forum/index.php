@@ -1,9 +1,9 @@
 <?php
-if ($_SESSION['user_logged_n'] == true) {
+if (isset($_GET['page'])) {
     $page = $_GET['page'];
     switch ($page) {
-        case 'edit_accounts':
-            include 'edit_accounts.php';
+        case 'post':
+            include 'post.php';
             break;
     }
 } else {

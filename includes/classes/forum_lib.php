@@ -45,7 +45,7 @@ class Forum {
                             ?>
                             <tr>
                                 <td class="text-center"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></td>
-                                <td><?= $subcategory['name']; ?></td>
+                                <td><a href="forum.php?page=post&id=<?= $subcategory['id']; ?>"><?= $subcategory['name']; ?></a></td>
                                 <td></td>
                                 <td>@admin</td>
                             </tr>
@@ -58,6 +58,42 @@ class Forum {
             </div>
             <?php
         }
+    }
+
+    public function displayPost($postID) {
+        global $mysqli_auth;
+        global $mysqli_cms;
+
+        $query = "SELECT * FROM forum_subcategories WHERE id='$postID'";
+        $result = $mysqli_cms->query($query);
+        $array = $result->fetch_assoc();
+        ?>
+        <div class="table-wrapper">
+            <div class="table-top">
+                <div class="table-title"><?= $array['name']; ?></div>
+            </div>
+            <div class="table-body">
+                <table class="table">
+                    <thead>
+                    <tr class="black-bar">
+                        <th scope="col"></th>
+                        <th scope="col">Title</th>
+                        <th scope="col"></th>
+                        <th scope="col">Last Post By</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td class="text-center"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></td>
+                        <td>test</td>
+                        <td></td>
+                        <td>@admin</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <?php
     }
 
 }
