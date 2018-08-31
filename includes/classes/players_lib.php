@@ -10,15 +10,24 @@ class Player {
     public $status;
 
     public function __construct($player_name) {
-        $this->name = $player_name;
+        $this->name = ucfirst($player_name);
     }
 
     function getName() {
         return $this->name;
     }
 
-    function setLevel($playerLevel) {
-        $this->level = $playerLevel;
+    function getCharQuery($option) {
+        global $mysqli;
+        $query = "SELECT * FROM characters WHERE name = '$this->name'";
+        $result = $mysqli->query($query);
+        $row = $result->fetch_assoc();
+        $this->$option = $row[$option];
+        return $this->$option;
+    }
+
+    function getLevel() {
+        return $this->getCharQuery('level');
     }
 
     function setStatus($status) {
@@ -31,10 +40,6 @@ class Player {
         } else {
             return '<span class="server-offline">Offline</span>';
         }
-    }
-
-    function getLevel() {
-        return $this->level;
     }
 
     function setClass($classID) {

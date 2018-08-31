@@ -70,6 +70,7 @@ class Forum {
         $array = $result->fetch_assoc();
         ?>
         <div class="table-wrapper">
+            <button class="btn btn-primary"><i class="fa fa-plus" aria-hidden="true"></i> Create new thread</button>
             <div class="table-top">
                 <div class="table-title"><?= $array['name']; ?></div>
             </div>

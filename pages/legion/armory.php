@@ -32,7 +32,6 @@ if (isset($_POST['charsearch'])) {
             $character = new Player($charname);
             $character->setClass($row['class']);
             $character->setRace($row['race']);
-            $character->setLevel($row['level']);
             $character->setStatus($row['online']);
             $character->setFaction($character->race);
 
