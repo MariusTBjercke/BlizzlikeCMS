@@ -10,7 +10,7 @@
                 $player->setRace($row['race']);
                 $player->setFaction($player->race);
 
-                echo '<li class="list-group-item ' . $player->getFaction() . '"><div class="' . $player->getFaction() . '_banner"></div><span class="charname">' . $player->getName() . '</span><span class="charinfo">: Level ' . $player->getLevel() . ' ' . $player->getRace() . ', ' . $player->getClass() . '</span></li>';
+                echo '<<li class="list-group-item ' . $player->getFaction() . '"><div class="' . $player->getFaction() . '_banner"></div><span class="charname">' . $player->getName() . '</span><span class="charinfo">: Level ' . $player->getLevel() . ' ' . $player->getRace() . ', ' . $player->getClass() . '</span></li>';
 
             }
         } else {
