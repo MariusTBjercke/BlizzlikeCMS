@@ -580,7 +580,59 @@ footer {
 }
 
 .footer-content {
-  margin-top: 0px;
+  margin-top: 0;
+  position: relative;
+
+  .social-icons {
+    position: absolute;
+    top: 14px;
+
+    a {
+      float: left;
+    }
+
+    a + a {
+      margin-left: 10px;
+    }
+
+    .grayscale {
+      -webkit-filter: grayscale(50%); /* Safari 6.0 - 9.0 */
+      filter: grayscale(50%);
+
+      &:hover {
+        -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
+        filter: grayscale(0%);
+      }
+    }
+
+    .facebook-icon {
+      background: url("/img/icons/facebook_icon.svg");
+      background-size: 37px 37px;
+      width: 37px;
+      height: 37px;
+    }
+
+    .instagram-icon {
+      background: url("/img/icons/instagram_icon.svg");
+      background-size: 37px 37px;
+      width: 37px;
+      height: 37px;
+    }
+
+    .twitter-icon {
+      background: url("/img/icons/twitter_icon.svg");
+      background-size: 37px 37px;
+      width: 37px;
+      height: 37px;
+    }
+
+    .youtube-icon {
+      background: url("/img/icons/youtube_icon.svg");
+      background-size: 37px 37px;
+      width: 37px;
+      height: 37px;
+    }
+  }
 }
 
 .footer-content img {

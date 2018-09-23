@@ -2,8 +2,12 @@
     <div class="footer-border"></div>
     <div class="container">
         <div class="footer-content">
-            <img src="img/warning1.gif">
-            <img src="img/warning2.png" class="warning2">
+            <div class="social-icons">
+                <a href="#" title="Visit our Facebook"><div class="facebook-icon grayscale"></div></a>
+                <a href="#" title="Visit our Instagram"><div class="instagram-icon grayscale"></div></a>
+                <a href="#" title="Visit our Twitter"><div class="twitter-icon grayscale"></div></a>
+                <a href="#" title="Visit our YouTube"><div class="youtube-icon grayscale"></div></a>
+            </div>
         </div>
         <div class="footer-copyright"><?php echo $servername; ?> © <?php echo date("Y"); ?><br />Powered by a <a
                     href="https://gitlab.com/Delusional/BlizzlikeCMS" target="_blank">Blizzlike CMS</a></div>
