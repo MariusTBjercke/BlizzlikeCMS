@@ -19,6 +19,13 @@
         font-weight: bold;
         color: #caa426;
       }
+
+      .trash {
+        color: #ff5323;
+        &:hover {
+          color: red;
+        }
+      }
     }
 
     .table-body {

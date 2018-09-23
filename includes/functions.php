@@ -34,4 +34,13 @@ function getLoggedInUsername() {
     }
 }
 
+// Is Admin logged in?
+function isAdminLoggedIn() {
+    if ($_SESSION['admin_logged_n'] == true) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
 ?>

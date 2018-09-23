@@ -16,7 +16,9 @@ class Forum {
         $query = "SELECT * FROM forum_categories ORDER BY id";
         $result = $mysqli_cms->query($query);
         $array = $result->fetch_all(MYSQLI_ASSOC);
-
+        ?>
+        <button class="btn btn-primary"><i class="fa fa-plus" aria-hidden="true"></i> Create new forum</button>
+        <?php
         foreach ($array as $category) {
 
             // Subcategories query
@@ -28,7 +30,7 @@ class Forum {
             ?>
             <div class="table-wrapper">
                 <div class="table-top">
-                    <div class="table-title"><?= $category['name']; ?></div>
+                    <div class="table-title forum-category-title"><?= $category['name']; ?> <?php if (isAdminLoggedIn()) { ?><a href="#" class="editForumCategoryName"><i class="fa fa-pencil-square"></i></a> <a href="#" class="trash"><i class="fa fa-trash"></i></a> <?php } ?></div>
                 </div>
                 <div class="table-body">
                     <table class="table">

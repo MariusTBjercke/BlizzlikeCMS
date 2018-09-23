@@ -1,1 +1,5 @@
 // Custom file
+$(".editForumCategoryName").click(function() {
+    var htmlString = $(".forum-category-title").text();                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
+    $(".forum-category-title").html('<input type="text" value="' + htmlString + '">');
+});
