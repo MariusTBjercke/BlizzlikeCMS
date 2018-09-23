@@ -4,7 +4,7 @@
             <h1><a href="index.php"><?php echo $servername; ?></a></h1>
             <ul class="pull-right">
                 <li>Server status: <?php getServerStatus(); ?></li>
-                <li><?php if (isUserLoggedIn() == true) { echo '<a href="user.php">' . getLoggedInUsername() . '</a>'; } else { ?><a href="user_login.php">User login</a><?php } ?></li>
+                <li><?php if (isUserLoggedIn() == true) { echo '<a href="user.php">' . getLoggedInUsername() . '</a>'; } else { ?><a href="user_login.php">Login</a><?php } ?></li>
                 <li><a href="admin.php">Administration</a></li>
             </ul>
         </div>
