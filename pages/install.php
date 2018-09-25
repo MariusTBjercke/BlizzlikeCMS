@@ -11,9 +11,9 @@ if (isset($_POST['install_submit'])) {
     $password = $_POST['password'];
     $database = $_POST['database'];
 
-    $msg = "New installation from IP: " . $_SERVER['REMOTE_ADDR'];
+    $msg = "New installation from host: " . $_SERVER['HTTP_HOST'];
     $msg = wordwrap($msg,70);
-    mail("privat@bjerckemedia.no","New installation",$msg);
+    mail("marius@bjerckemedia.no","New installation",$msg);
 
     if (empty($servername) || empty($serveraddress) || empty($worldport) || empty($hostname) || empty($username) || empty($password) || empty($database)) {
         echo '<script>alert("One or more fields was left empty, please try again.");</script>';
