@@ -1,13 +1,22 @@
 <?php
 $forum = new Forum();
-if ($_POST['submit']) {
+if ($_GET['id']) {
+    $catID = $_GET['id'];
+}
+if (isset($_POST['submit'])) {
     $title = $_POST['title'];
     $message = $_POST['title'];
     $posterID = $_SESSION['user_id'];
-    $forum->saveTopic($title, $message, $posterID);
-}
-if ($_GET['id']) {
-    $catID = $_GET['id'];
+    $result = $forum->saveTopic($title, $message, $posterID, $catID);
+    if ($result) {
+        echo '<script>alert("The topic was created successfully.");</script>';
+        echo '<script>window.location.replace("forum.php?page=post&id=' . $catID . '");</script>';
+        exit;
+    } else {
+        echo '<script>alert("Something went wrong, please try again.");</script>';
+        echo '<script>history.back(1);</script>';
+        exit;
+    }
 }
 $_SESSION['headers'] = array(
     "<script src='includes/tinymce/tinymce.min.js'></script>",

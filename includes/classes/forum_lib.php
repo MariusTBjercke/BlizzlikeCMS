@@ -72,7 +72,7 @@ class Forum {
         $array = $result->fetch_assoc();
         ?>
         <div class="table-wrapper">
-            <a href="forum.php?page=create_topic&id=<?= $postID ?>"><button class="btn btn-primary"><i class="fa fa-plus" aria-hidden="true"></i> Post a new topic</button></a>
+            <?php if (isUserLoggedIn()) { ?><a href="forum.php?page=create_topic&id=<?= $postID ?>"><button class="btn btn-primary"><i class="fa fa-plus" aria-hidden="true"></i> Post a new topic</button></a><?php } ?>
             <div class="table-top">
                 <div class="table-title"><?= $array['name']; ?></div>
             </div>
@@ -87,12 +87,7 @@ class Forum {
                     </tr>
                     </thead>
                     <tbody>
-                    <tr>
-                        <td class="text-center"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></td>
-                        <td><?php $this->listThreads($postID); ?></td>
-                        <td></td>
-                        <td>@admin</td>
-                    </tr>
+                    <?php $this->listThreads($postID); ?>
                     </tbody>
                 </table>
             </div>
@@ -108,7 +103,12 @@ class Forum {
         $result = $mysqli_cms->query($query);
         $array = $result->fetch_all(MYSQLI_ASSOC);
         foreach ($array as $item) {
-            echo '<a href="forum.php?page=thread&cat=' . $postID . '&id=' . $item['id'] . '">' . $item['name'] . '</a>';
+            echo '<tr>
+                        <td class="text-center"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></td>
+                        <td><a href="forum.php?page=thread&cat=' . $postID . '&id=' . $item['id'] . '">' . $item['name'] . '</a></td>
+                        <td></td>
+                        <td>@admin</td>
+                    </tr>';
         }
     }
 
@@ -164,10 +164,17 @@ class Forum {
         <?php
     }
 
-    public function saveTopic($title, $message, $posterID) {
+    public function saveTopic($title, $message, $posterID, $catID) {
         global $mysqli_auth;
         global $mysqli_cms;
-        // TODO: CONTINUE ON saveTopic method FIRST!!!!
+
+        $query = "INSERT INTO forum_posts (user_id, category_id, name, description) VALUES ('$posterID', '$catID', '$title', '$message')";
+        $result = $mysqli_cms->query($query);
+        if ($result) {
+            return true;
+        } else {
+            return false;
+        }
     }
 
 }
