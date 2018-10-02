@@ -27,6 +27,13 @@ function isUserLoggedIn() {
     }
 }
 
+// Get logged in users ID
+function getLoggedInUserID() {
+    if ($_SESSION['user_id']) {
+        return $_SESSION['user_id'];
+    }
+}
+
 // Get logged in users username
 function getLoggedInUsername() {
     if ($_SESSION['username']) {

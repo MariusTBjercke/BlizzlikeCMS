@@ -17,7 +17,7 @@ class Forum {
         $result = $mysqli_cms->query($query);
         $array = $result->fetch_all(MYSQLI_ASSOC);
         ?>
-        <button class="btn btn-primary"><i class="fa fa-plus" aria-hidden="true"></i> Create new forum</button>
+        <button class="btn btn-primary"><i class="fa fa-plus" aria-hidden="true"></i> Create new forum (Admin only*)</button>
         <?php
         foreach ($array as $category) {
 
@@ -72,7 +72,7 @@ class Forum {
         $array = $result->fetch_assoc();
         ?>
         <div class="table-wrapper">
-            <button class="btn btn-primary"><i class="fa fa-plus" aria-hidden="true"></i> Create new thread</button>
+            <a href="forum.php?page=create_topic&id=<?= $postID ?>"><button class="btn btn-primary"><i class="fa fa-plus" aria-hidden="true"></i> Post a new topic</button></a>
             <div class="table-top">
                 <div class="table-title"><?= $array['name']; ?></div>
             </div>
@@ -89,7 +89,7 @@ class Forum {
                     <tbody>
                     <tr>
                         <td class="text-center"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></td>
-                        <td>test</td>
+                        <td><?php $this->listThreads($postID); ?></td>
                         <td></td>
                         <td>@admin</td>
                     </tr>
@@ -98,6 +98,76 @@ class Forum {
             </div>
         </div>
         <?php
+    }
+
+    public function listThreads($postID) {
+        global $mysqli_auth;
+        global $mysqli_cms;
+
+        $query = "SELECT * FROM forum_posts WHERE category_id='$postID'";
+        $result = $mysqli_cms->query($query);
+        $array = $result->fetch_all(MYSQLI_ASSOC);
+        foreach ($array as $item) {
+            echo '<a href="forum.php?page=thread&cat=' . $postID . '&id=' . $item['id'] . '">' . $item['name'] . '</a>';
+        }
+    }
+
+    public function displayTopic($threadID)
+    {
+        global $mysqli_auth;
+        global $mysqli_cms;
+
+        $query = "SELECT * FROM forum_thread WHERE id='$threadID'";
+        $result = $mysqli_cms->query($query);
+        $array = $result->fetch_assoc();
+    }
+
+    public function createTopic($catID) {
+        global $mysqli_auth;
+        global $mysqli_cms;
+
+        $catQuery = "SElECT * FROM forum_subcategories WHERE id='$catID'";
+        $catResult = $mysqli_cms->query($catQuery);
+        $catFetch = $catResult->fetch_assoc();
+        ?>
+        <div class="table-wrapper">
+            <a href="#" onclick="history.back(1);"><button class="btn btn-primary"><i class="fa fa-arrow-left" aria-hidden="true"></i> Go back</button></a>
+            <div class="table-top">
+                <div class="table-title">Post a new topic (<?= $catFetch['name']; ?>)</div>
+            </div>
+            <div class="table-body">
+                <form action="" method="post">
+                <table class="table">
+                    <thead>
+                    <tr class="black-bar">
+                        <th scope="col">Title</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td><input type="text" name="title"></td>
+                    </tr>
+                    <tr class="black-bar">
+                        <th scope="col">Message</th>
+                    </tr>
+                    <tr>
+                        <td><textarea name="message" class="message_field"></textarea></td>
+                    </tr>
+                    <tr>
+                        <td><div class="btn btn-primary" title="Coming soon..">Preview</div> <input type="submit" name="submit" class="btn btn-primary" value="Submit"></td>
+                    </tr>
+                    </tbody>
+                </table>
+                </form>
+            </div>
+        </div>
+        <?php
+    }
+
+    public function saveTopic($title, $message, $posterID) {
+        global $mysqli_auth;
+        global $mysqli_cms;
+        // TODO: CONTINUE ON saveTopic method FIRST!!!!
     }
 
 }
