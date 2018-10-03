@@ -72,7 +72,7 @@ class Forum {
         $array = $result->fetch_assoc();
         ?>
         <div class="table-wrapper">
-            <?php if (isUserLoggedIn()) { ?><a href="forum.php?page=create_topic&id=<?= $postID ?>"><button class="btn btn-primary"><i class="fa fa-plus" aria-hidden="true"></i> Post a new topic</button></a><?php } ?>
+            <?php if (isUserLoggedIn()) { ?><a href="forum.php?page=create_topic&id=<?= $postID ?>"><button class="btn btn-primary"><i class="fa fa-plus" aria-hidden="true"></i> Post a new topic</button></a><?php } else { echo '<p>You have to be <a href="user_login.php">signed in</a> to create a new topic.</p>'; }?>
             <div class="table-top">
                 <div class="table-title"><?= $array['name']; ?></div>
             </div>
