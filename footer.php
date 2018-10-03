@@ -10,7 +10,7 @@
             </div>
         </div>
         <div class="footer-copyright"><?php echo $servername; ?> © <?php echo date("Y"); ?><br />Powered by a <a
-                    href="https://gitlab.com/Delusional/BlizzlikeCMS" target="_blank">Blizzlike CMS</a></div>
+                    href="https://github.com/MariusTBjercke/BlizzlikeCMS" target="_blank">Blizzlike CMS</a></div>
     </div>
 </footer>
 
