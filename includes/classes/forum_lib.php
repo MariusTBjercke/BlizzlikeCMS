@@ -26,7 +26,6 @@ class Forum {
             $query2 = "SELECT * FROM forum_subcategories WHERE parent_id='$category_id' ORDER BY id";
             $result2 = $mysqli_cms->query($query2);
             $array2 = $result2->fetch_all(MYSQLI_ASSOC);
-
             ?>
             <div class="table-wrapper">
                 <div class="table-top">
@@ -50,7 +49,7 @@ class Forum {
                                 <td class="text-center"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></td>
                                 <td><a href="forum.php?page=post&id=<?= $subcategory['id']; ?>"><?= $subcategory['name']; ?></a></td>
                                 <td></td>
-                                <td>@admin</td>
+                                <td><?= $this->displayLastPosterNameFromCategory($subcategory['id']); ?></td>
                             </tr>
                             <?php
                         }
@@ -60,6 +59,23 @@ class Forum {
                 </div>
             </div>
             <?php
+        }
+    }
+
+    public function displayLastPosterNameFromCategory($categoryID) {
+        global $mysqli_auth;
+        global $mysqli_cms;
+
+        $query = "SELECT * FROM forum_posts WHERE category_id='$categoryID' ORDER BY id DESC LIMIT 1";
+        $result = $mysqli_cms->query($query);
+        $fetch = $result->fetch_assoc();
+        $poster_id = $fetch['user_id'];
+        $poster = new Account($poster_id);
+        $poster->retrieveAccount();
+        if (strlen($poster->getName()) > 0) {
+            return $poster->getName();
+        } else {
+            return 'None';
         }
     }
 
@@ -87,7 +103,7 @@ class Forum {
                     </tr>
                     </thead>
                     <tbody>
-                    <?php $this->listThreads($postID); ?>
+                    <?php $this->listTopics($postID); ?>
                     </tbody>
                 </table>
             </div>
@@ -95,11 +111,11 @@ class Forum {
         <?php
     }
 
-    public function listThreads($postID) {
+    public function listTopics($postID) {
         global $mysqli_auth;
         global $mysqli_cms;
 
-        $query = "SELECT * FROM forum_posts WHERE category_id='$postID'";
+        $query = "SELECT * FROM forum_posts WHERE category_id='$postID' ORDER BY id DESC";
         $result = $mysqli_cms->query($query);
         $array = $result->fetch_all(MYSQLI_ASSOC);
         foreach ($array as $item) {
