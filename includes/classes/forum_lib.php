@@ -5,6 +5,7 @@ class Forum {
     public $forumActive;
 
     public function __construct() {
+
     }
 
     public function displayAllCategories() {
