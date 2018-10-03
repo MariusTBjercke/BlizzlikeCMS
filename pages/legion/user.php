@@ -59,6 +59,7 @@ if (isset($_FILES["file"])) {
         <div class="col-sm-6">
 
             <h1>Welcome, <?php echo $account->getName(); ?></h1>
+            <p><a href="logout.php">Logout?</a></p>
 
             <p>Your Avatar</p>
             <div class="user-avatar">

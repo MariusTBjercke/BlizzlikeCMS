@@ -110,7 +110,7 @@ $installed = true;
     $mysqli->query("CREATE TABLE themes (id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, name VARCHAR(255) NOT NULL, description TEXT NOT NULL, author VARCHAR(255) NOT NULL)");
     $mysqli->query("INSERT INTO themes (name, description, author) VALUES ('wotlk', 'Wrath of the Lich King theme for BlizzlikeCMS', 'BlizzlikeCMS')");
     $mysqli->query("INSERT INTO themes (name, description, author) VALUES ('legion', 'Legion theme for BlizzlikeCMS', 'BlizzlikeCMS (Not yet finished and might be unstable)')");
-    $mysqli->query("CREATE TABLE avatars (id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, user_id INT(11) NOT NULL, avatar_id VARCHAR(255) NOT NULL)");
+    $mysqli->query("CREATE TABLE avatars (user_id INT(11) PRIMARY KEY, avatar_id VARCHAR(255) NOT NULL)");
     $mysqli->query("CREATE TABLE forum (id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, name VARCHAR(255) NOT NULL, active INT(11) NOT NULL DEFAULT '1')");
     $mysqli->query("INSERT INTO forum (name) VALUES ('Forum')");
     $mysqli->query("CREATE TABLE forum_categories (id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, name VARCHAR(255) NOT NULL)");

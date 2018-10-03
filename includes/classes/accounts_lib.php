@@ -110,7 +110,6 @@ class Account {
 
     public function saveAvatarID($user_id, $avatar_id) {
         global $mysqli_cms;
-        $user_id = $this->user_id;
 
         $query = "INSERT INTO avatars (user_id, avatar_id) VALUES ('$user_id', '$avatar_id') ON DUPLICATE KEY UPDATE avatar_id='$avatar_id'";
         $result = $mysqli_cms->query($query);
