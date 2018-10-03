@@ -1,6 +1,8 @@
 <h3>Welcome to the repository for my try on a CMS for the TrinityCore Open Source MMO Framework.</h3>
 This is focused on being easy to setup and use for your own private server.
 
+You can also join us on Discord if you need any help or have any other requests: https://discord.gg/Y9TTaNk
+
 **FEATURES** 
 - Account creation page
 - Easy to use and install
