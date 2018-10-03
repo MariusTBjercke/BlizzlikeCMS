@@ -5,7 +5,7 @@ if ($_GET['id']) {
 }
 if (isset($_POST['submit'])) {
     $title = $_POST['title'];
-    $message = $_POST['title'];
+    $message = $_POST['content'];
     $posterID = $_SESSION['user_id'];
     $result = $forum->saveTopic($title, $message, $posterID, $catID);
     if ($result) {

@@ -105,21 +105,50 @@ class Forum {
         foreach ($array as $item) {
             echo '<tr>
                         <td class="text-center"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></td>
-                        <td><a href="forum.php?page=thread&cat=' . $postID . '&id=' . $item['id'] . '">' . $item['name'] . '</a></td>
+                        <td><a href="forum.php?page=topic&cat=' . $postID . '&id=' . $item['id'] . '">' . $item['name'] . '</a></td>
                         <td></td>
                         <td>@admin</td>
                     </tr>';
         }
     }
 
-    public function displayTopic($threadID)
+    public function displayTopic($topicID)
     {
         global $mysqli_auth;
         global $mysqli_cms;
 
-        $query = "SELECT * FROM forum_thread WHERE id='$threadID'";
+        $query = "SELECT * FROM forum_posts WHERE id='$topicID'";
         $result = $mysqli_cms->query($query);
-        $array = $result->fetch_assoc();
+        $fetch = $result->fetch_assoc();
+        $poster = new Account($fetch['user_id']);
+        $poster->retrieveAccount();
+        $poster_name = $poster->getName();
+        ?>
+        <div class="table-wrapper">
+            <a href="#" onclick="history.back(1);"><button class="btn btn-primary"><i class="fa fa-arrow-left" aria-hidden="true"></i> Go back</button></a>
+            <div class="table-top">
+                <div class="table-title"><?= $fetch['name']; ?></div>
+            </div>
+            <div class="table-body">
+                <form action="" method="post">
+                    <table class="table">
+                        <thead>
+                        <tr class="black-bar">
+                            <th scope="col">By <?= $poster_name; ?></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>
+                                <div class="topic_content_field"><?= $fetch['content']; ?></div>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </form>
+            </div>
+        </div>
+        <?php
     }
 
     public function createTopic($catID) {
@@ -148,10 +177,10 @@ class Forum {
                         <td><input type="text" name="title"></td>
                     </tr>
                     <tr class="black-bar">
-                        <th scope="col">Message</th>
+                        <th scope="col">Content</th>
                     </tr>
                     <tr>
-                        <td><textarea name="message" class="message_field"></textarea></td>
+                        <td><textarea name="content" class="message_field"></textarea></td>
                     </tr>
                     <tr>
                         <td><div class="btn btn-primary" title="Coming soon..">Preview</div> <input type="submit" name="submit" class="btn btn-primary" value="Submit"></td>
@@ -168,7 +197,7 @@ class Forum {
         global $mysqli_auth;
         global $mysqli_cms;
 
-        $query = "INSERT INTO forum_posts (user_id, category_id, name, description) VALUES ('$posterID', '$catID', '$title', '$message')";
+        $query = "INSERT INTO forum_posts (user_id, category_id, name, content) VALUES ('$posterID', '$catID', '$title', '$message')";
         $result = $mysqli_cms->query($query);
         if ($result) {
             return true;

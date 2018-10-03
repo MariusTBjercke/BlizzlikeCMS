@@ -4,7 +4,7 @@ if ($_GET['cat']) {
     $catID = $_GET['cat'];
 }
 if ($_GET['id']) {
-    $postID = $_GET['id'];
+    $topicID = $_GET['id'];
 }
 ?>
 
@@ -13,7 +13,7 @@ if ($_GET['id']) {
     <div class="show_post">
 
         <?php
-        $forum->displayTopic($threadID);
+        $forum->displayTopic($topicID);
         ?>
 
     </div>
