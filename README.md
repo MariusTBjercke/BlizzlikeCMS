@@ -13,7 +13,6 @@ You can also join us on Discord if you need any help or have any other requests:
 - CMS for editing posts/news on the website
 - Administration panel for editing server accounts without using the console
 - Gallery
-- Multiple themes
 
 **SETUP**
 
@@ -29,8 +28,5 @@ In order to log in to the administration panel, use the same credentials as your
 
 **PS: This is still a work in progress, but I will try to update the project frequently.**
 
-**Comes with two themes; Legion and WotLK**
+**Preview of the Legion theme**
 <img src='img/demo/legion_demo.png' width='100%'>
-
-**WotLK**
-<img src='img/demo/demo.png' width='100%'>
