@@ -32,5 +32,3 @@ In order to log in to the administration panel, use the same credentials as your
 
 **WotLK**
 <img src='img/demo/demo.png' width='100%'>
-
-<iframe src="https://discordapp.com/widget?id=497087139109011476&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0"></iframe>
