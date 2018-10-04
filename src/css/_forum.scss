@@ -34,6 +34,14 @@
       width: 100%;
       height: auto;
 
+      .blck-border-right {
+        border-right: 1px solid #000000 !important;
+      }
+
+      .forum-post-avatar {
+        border-right: 1px solid #000000 !important;
+      }
+
       .table-spacing {
         margin-top: 10px;
         margin-bottom: 20px;
@@ -46,6 +54,11 @@
       .black-bar {
         background-color: #080808;
         color: #ffffff;
+
+        .posted-by {
+          width: 200px;
+          border-right: 1px solid #000000 !important;
+        }
       }
 
       th {
@@ -70,6 +83,7 @@
 
       .topic_content_field {
         padding: 10px;
+        margin-top: -40px;
 
         p {
           font-size: 1.7rem;

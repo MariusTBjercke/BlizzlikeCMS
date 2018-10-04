@@ -148,12 +148,15 @@ class Forum {
                 <form action="" method="post">
                     <table class="table">
                         <thead>
-                        <tr class="black-bar">
-                            <th scope="col">By <?= $poster_name; ?></th>
+                        <tr class="black-bar blck-border-right">
+                            <th scope="col" class="posted-by">By <?= $poster_name; ?> - <?= $fetch['date']; ?></th>
                         </tr>
                         </thead>
                         <tbody>
                         <tr>
+                            <td class="forum-post-avatar">
+                                <img src="img/avatars/<?= $poster->getAvatarID(); ?>.png" width="250">
+                            </td>
                             <td>
                                 <div class="topic_content_field"><?= $fetch['content']; ?></div>
                             </td>
