@@ -155,7 +155,7 @@ class Forum {
                         <tbody>
                         <tr>
                             <td class="forum-post-avatar">
-                                <img src="img/avatars/<?= $poster->getAvatarID(); ?>.png" width="250">
+                                <img src="img/avatars/<?= $poster->getAvatarID(); ?>.png" width="200">
                             </td>
                             <td>
                                 <div class="topic_content_field"><?= $fetch['content']; ?></div>
