@@ -39,6 +39,10 @@
         padding: 15px 5px 5px 2px;
       }
 
+      .role + .role {
+        padding-top: 0;
+      }
+
       .role-admin {
         color: #caa426;
         font-weight: bold;
