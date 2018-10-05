@@ -15,9 +15,11 @@ class Forum {
         $query = "SELECT * FROM forum_categories ORDER BY id";
         $result = $mysqli_cms->query($query);
         $array = $result->fetch_all(MYSQLI_ASSOC);
-        ?>
-        <button class="btn btn-primary"><i class="fa fa-plus" aria-hidden="true"></i> Create new forum (Admin only*)</button>
-        <?php
+        if (isAdminLoggedIn()) {
+            ?>
+            <button class="btn btn-primary"><i class="fa fa-plus" aria-hidden="true"></i> Create new forum (Admin only*)</button>
+            <?php
+        } else { echo '<p>You have to be <a href="admin.php">signed in as admin</a> to create a new forum.</p>'; }
         foreach ($array as $category) {
 
             // Subcategories query
