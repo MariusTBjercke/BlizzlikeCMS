@@ -9,13 +9,9 @@ if ($_GET['id']) {
 ?>
 
 <div class="forum-page">
-
     <div class="show_post">
-
         <?php
         $forum->displayTopic($topicID);
         ?>
-
     </div>
-
 </div>

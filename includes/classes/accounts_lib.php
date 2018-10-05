@@ -83,6 +83,35 @@ class Account {
         return $gmlevel;
     }
 
+    public function getHighestLevel() {
+        global $mysqli;
+
+        $query = "SELECT * FROM characters WHERE account = '$this->user_id' ORDER BY level DESC LIMIT 1";
+        $result = $mysqli->query($query);
+        $row = $result->fetch_assoc();
+        $level = $row['level'];
+        if ($level > 0) {
+            return $level;
+        } else {
+            return '0';
+        }
+    }
+
+    public function getRole() {
+        $gmlevel = $this->gmlevel;
+        switch ($gmlevel) {
+            case 0:
+                return "Player";
+                break;
+            case 2:
+                return "Moderator";
+                break;
+            case 3:
+                return '<span class="role-admin">Administrator</span>';
+                break;
+        }
+    }
+
     public function getExpansion() {
         $expansion = $this->expansion;
         return $expansion;

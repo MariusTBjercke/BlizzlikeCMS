@@ -34,12 +34,23 @@
       width: 100%;
       height: auto;
 
+      .role {
+        font-size: 1.6rem;
+        padding: 15px 5px 5px 2px;
+      }
+
+      .role-admin {
+        color: #caa426;
+        font-weight: bold;
+      }
+
       .blck-border-right {
-        border-right: 1px solid #000000 !important;
+        border-right: 2px solid #000000 !important;
       }
 
       .forum-post-avatar {
-        border-right: 1px solid #000000 !important;
+        border-right: 2px solid #000000 !important;
+        padding-bottom: 20px;
       }
 
       .table-spacing {
@@ -57,7 +68,7 @@
 
         .posted-by {
           width: 200px;
-          border-right: 1px solid #000000 !important;
+          border-right: 2px solid #000000 !important;
         }
       }
 
