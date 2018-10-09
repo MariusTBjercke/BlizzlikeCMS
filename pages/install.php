@@ -130,7 +130,7 @@ $installed = true;
 
     <form method="post" action="">
         <p><label for="servername">Server name</label><input type="text" id="servername" name="servername" placeholder=" Example WoTLK"></p>
-        <p><label for="serveraddress">Server Address (IP/URL)</label><input type="text" id="serveraddress" name="serveraddress" placeholder=" Example: 127.0.0.1"></p>
+        <p><label for="serveraddress">Server Address (IP/URL)</label><input type="text" id="serveraddress" name="serveraddress" placeholder=" Example: 127.0.0.1 or http://localhost"></p>
         <p><label for="worldport">World Port</label><input type="text" id="worldport" name="worldport" placeholder=" 8085"></p><br />
         <p><label for="hostname">MySQL: Hostname</label><input type="text" id="hostname" name="hostname" placeholder=" localhost"></p>
         <p><label for="username">MySQL: Username</label><input type="text" id="username" name="username" placeholder=" root"></p>
