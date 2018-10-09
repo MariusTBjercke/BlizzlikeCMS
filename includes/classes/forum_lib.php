@@ -157,9 +157,9 @@ class Forum {
                         <tbody>
                         <tr>
                             <td class="forum-post-avatar">
-                                <img src="img/avatars/<?= $poster->getAvatarID(); ?>.png" width="200">
+                                <img src="img/avatars/<?= $poster->getAvatarID(); ?>.png" width="180">
                                 <div class="role">Rank: <?= $poster->getRole(); ?></div>
-                                <div class="role">Highest level: <?= $poster->getHighestLevel(); ?></div>
+<!--                                <div class="role">Highest level: --><?//= $poster->getHighe*-stLevel(); ?><!--</div>-->
                             </td>
                             <td>
                                 <div class="topic_content_field"><?= $fetch['content']; ?></div>
