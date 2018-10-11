@@ -1,10 +1,19 @@
-
 .navbar-nav {
   width: 80%;
   height: 80px;
   position: absolute;
   right: -9px !important;
   padding-right: 8px;
+
+  .last-forum-topic {
+    position: absolute;
+    right: 22px;
+    top: -30px;
+
+    span {
+      font-weight: bold;
+    }
+  }
 }
 
 .navbar-list {

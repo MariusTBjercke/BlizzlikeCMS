@@ -159,7 +159,7 @@ class Forum {
                             <td class="forum-post-avatar">
                                 <img src="img/avatars/<?= $poster->getAvatarID(); ?>.png" width="180">
                                 <div class="role">Rank: <?= $poster->getRole(); ?></div>
-<!--                                <div class="role">Highest level: --><?//= $poster->getHighe*-stLevel(); ?><!--</div>-->
+                                <div class="role">Highest level: <?= $poster->getHighestLevel(); ?></div>
                             </td>
                             <td>
                                 <div class="topic_content_field"><?= $fetch['content']; ?></div>
@@ -225,6 +225,20 @@ class Forum {
             return true;
         } else {
             return false;
+        }
+    }
+
+    public function getLastTopic($viewAsLink = false) {
+        global $mysqli_auth;
+        global $mysqli_cms;
+
+        $query = "SELECT * FROM forum_posts ORDER BY id DESC LIMIT 1";
+        $result = $mysqli_cms->query($query);
+        $fetch = $result->fetch_assoc();
+        if ($viewAsLink == false) {
+            return $fetch['name'];
+        } else {
+            return '<a href="forum.php?page=topic&cat=' . $fetch['category_id'] . '&id=' . $fetch['id'] . '">' . $fetch['name'] . '</a>';
         }
     }
 

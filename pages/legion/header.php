@@ -1,3 +1,6 @@
+<?php
+$forum = new Forum();
+?>
 <div class="top-bar">
     <div class="container">
         <div class="row">
@@ -15,6 +18,10 @@
     <div class="navbar-legion">
         <a href="index.php" title="<?php echo $servername; ?>"><div class="top-logo"></div></a>
         <div class="navbar-nav">
+
+            <div class="last-forum-topic">
+                <span>Latest topic: </span> <?= $forum->getLastTopic(true); ?>
+            </div>
 
             <button type="button" title="Open menu" id="toggleNavigation" class="navbar-toggle collapsed disabled" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
                 <div class="toggledMenu">

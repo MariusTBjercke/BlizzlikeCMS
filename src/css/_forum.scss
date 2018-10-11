@@ -1,3 +1,6 @@
+// Forum vars
+$maxForumPostAvatarWidth: 200px;
+
 .forum-page {
 
   .table-wrapper {
@@ -54,7 +57,9 @@
 
       .forum-post-avatar {
         border-right: 2px solid #000000 !important;
+        max-width: $maxForumPostAvatarWidth;
         padding-bottom: 20px;
+        overflow: hidden;
 
         img {
           border-radius: 100%;
@@ -76,6 +81,7 @@
 
         .posted-by {
           width: 200px;
+          max-width: $maxForumPostAvatarWidth;
           border-right: 2px solid #000000 !important;
         }
       }
@@ -102,7 +108,7 @@
 
       .topic_content_field {
         padding: 10px;
-        margin-top: -45px;
+        margin-top: -55px;
 
         p {
           font-size: 1.7rem;
