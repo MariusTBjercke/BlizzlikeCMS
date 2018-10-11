@@ -235,10 +235,15 @@ class Forum {
         $query = "SELECT * FROM forum_posts ORDER BY id DESC LIMIT 1";
         $result = $mysqli_cms->query($query);
         $fetch = $result->fetch_assoc();
-        if ($viewAsLink == false) {
-            return $fetch['name'];
+        $num = $result->num_rows;
+        if ($num > 0) {
+            if ($viewAsLink == false) {
+                return $fetch['name'];
+            } else {
+                return '<a href="forum.php?page=topic&cat=' . $fetch['category_id'] . '&id=' . $fetch['id'] . '">' . $fetch['name'] . '</a>';
+            }
         } else {
-            return '<a href="forum.php?page=topic&cat=' . $fetch['category_id'] . '&id=' . $fetch['id'] . '">' . $fetch['name'] . '</a>';
+            return 'No topics yet.';
         }
     }
 

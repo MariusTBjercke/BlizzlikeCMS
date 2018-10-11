@@ -22,7 +22,7 @@ $result = $mysqli_cms->query("SELECT * FROM config");
 
 <div class="edit_settings">
 
-    <h1>Edit website settings</h1>
+    <h1>Edit social icons in the footer</h1>
     <button onclick="window.location='admin.php';">Go back</button>
 
     <ul>
