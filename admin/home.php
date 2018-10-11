@@ -7,6 +7,7 @@
         <li><a href="admin.php?page=edit_posts"><button><span class="glyphicon glyphicon-pencil"></span> Edit posts</button></a></li>
         <li><a href="admin.php?page=edit_gallery"><button><span class="glyphicon glyphicon-picture"></span> Edit gallery</button></a></li>
         <li><a href="admin.php?page=edit_settings"><button><span class="glyphicon glyphicon-cog"></span> Edit website settings</button></a></li>
+        <li><a href="admin.php?page=edit_settings"><button><i class="fa fa-facebook-square" aria-hidden="true"></i> Edit footer social icons</button></a></li>
 <!--        <li><a href="admin.php?page=edit_theme"><button><span class="glyphicon glyphicon-eye-open"></span> Edit website theme</button></a></li>-->
     </ul>
 </div>
