@@ -20,7 +20,7 @@ $forum = new Forum();
         <div class="navbar-nav">
 
             <div class="last-forum-topic">
-                <span>Latest topic: </span> <?= $forum->getLastTopic(true); ?>
+                <span><i class="fa fa-bullhorn" aria-hidden="true"></i> Latest topic: </span> <?= $forum->getLastTopic(true); ?>
             </div>
 
             <button type="button" title="Open menu" id="toggleNavigation" class="navbar-toggle collapsed disabled" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
