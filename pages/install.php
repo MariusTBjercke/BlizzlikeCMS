@@ -109,6 +109,24 @@ $installed = true;
     $mysqli->query("INSERT INTO forum_categories (name) VALUES ('News and announcements'), ('General'), ('World of Warcraft')");
     $mysqli->query("CREATE TABLE forum_subcategories (id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, name VARCHAR(255) NOT NULL, parent_id INT(11) NOT NULL)");
     $mysqli->query("INSERT INTO forum_subcategories (name, parent_id) VALUES ('News', '1'), ('Miscellaneous', '1'), ('General Chat', '2'), ('Server Chat', '3'), ('Support', '3')");
+    $mysqli->query("CREATE TABLE `forum_posts` (
+ `id` int(11) NOT NULL AUTO_INCREMENT,
+ `user_id` int(11) NOT NULL,
+ `category_id` int(11) NOT NULL,
+ `name` varchar(255) NOT NULL,
+ `content` text NOT NULL,
+ `date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=latin1");
+    $mysqli->query("CREATE TABLE `forum_post_replies` (
+ `id` int(11) NOT NULL AUTO_INCREMENT,
+ `user_id` int(11) NOT NULL,
+ `topic_id` int(11) NOT NULL,
+ `title` varchar(255) NOT NULL,
+ `content` text NOT NULL,
+ `date` date NOT NULL,
+ PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1");
 
 }
 
