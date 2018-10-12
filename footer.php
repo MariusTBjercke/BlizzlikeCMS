@@ -3,10 +3,34 @@
     <div class="container">
         <div class="footer-content">
             <div class="social-icons">
-                <a href="#" title="Visit our Facebook"><div class="facebook-icon grayscale"></div></a>
-                <a href="#" title="Visit our Instagram"><div class="instagram-icon grayscale"></div></a>
-                <a href="#" title="Visit our Twitter"><div class="twitter-icon grayscale"></div></a>
-                <a href="#" title="Visit our YouTube"><div class="youtube-icon grayscale"></div></a>
+                <?php
+                $socialQuery = $mysqli_cms->query("SELECT * FROM config");
+                $socialFetch = $socialQuery->fetch_assoc();
+                $facebookURL = $socialFetch['facebook'];
+                $instagramURL = $socialFetch['instagram'];
+                $twitterURL = $socialFetch['twitter'];
+                $youtubeURL = $socialFetch['youtube'];
+                if (strlen($facebookURL) > 0) {
+                    ?>
+                    <a href="<?= $facebookURL; ?>" target="_blank" title="Visit our Facebook"><div class="facebook-icon grayscale"></div></a>
+                    <?php
+                }
+                if (strlen($instagramURL) > 0) {
+                    ?>
+                    <a href="<?= $instagramURL; ?>" target="_blank" title="Visit our Instagram"><div class="instagram-icon grayscale"></div></a>
+                <?php
+                }
+                if (strlen($twitterURL) > 0) {
+                    ?>
+                    <a href="<?= $twitterURL; ?>" target="_blank" title="Visit our Twitter"><div class="twitter-icon grayscale"></div></a>
+                <?php
+                }
+                if (strlen($youtubeURL) > 0) {
+                    ?>
+                    <a href="<?= $youtubeURL; ?>" target="_blank" title="Visit our YouTube"><div class="youtube-icon grayscale"></div></a>
+                <?php
+                }
+                ?>
             </div>
         </div>
         <div class="footer-copyright"><?php echo $servername; ?> © <?php echo date("Y"); ?><br />Powered by a <a
