@@ -6,8 +6,7 @@ $activeplayersResult = $mysqli->query("SELECT * FROM characters");
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-    <meta name="description" content="Fast and stable Wrath of the Lich King (3.3.5a) private server with blizzlike
-    rates - go back to the good old days and enjoy the game in it's most glorious days.">
+    <meta name="description" content="<?= $server_description; ?>">
     <meta name="keywords" content="World of Wacraft, wow, wotlk, wrath, of, the, lich, king, wrath of the lich king,
     335a, 3.3.5a, stable, fast, private, server, blizzlike">
 	<title><?php if($title) { echo $title; } echo $servername; ?></title>

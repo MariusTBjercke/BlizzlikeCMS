@@ -1,5 +1,6 @@
 <?php
 if (isset($_POST['save_submit'])) {
+    $serverDescription = addslashes(trim($_POST['server_description']));
 	$servername = addslashes(trim($_POST['servername']));
 	$serveraddress = addslashes(trim($_POST['serveraddress']));
 	$worldport = addslashes(trim($_POST['worldport']));
@@ -15,7 +16,7 @@ if (isset($_POST['save_submit'])) {
         $check2 = 0;
     }
 
-	$result = $mysqli_cms->query("UPDATE config SET servername='$servername', serveraddress='$serveraddress', worldport='$worldport', show_post_frontpage='$check', show_latest_topic_frontpage='$check2', contact='$contact' WHERE id='1'");
+	$result = $mysqli_cms->query("UPDATE config SET servername='$servername', server_description='$serverDescription', serveraddress='$serveraddress', worldport='$worldport', show_post_frontpage='$check', show_latest_topic_frontpage='$check2', contact='$contact' WHERE id='1'");
 	echo '<script>window.location="admin.php?page=edit_settings&action=success";</script>';
 	exit;
 }
@@ -42,6 +43,7 @@ $result = $mysqli_cms->query("SELECT * FROM config");
                 <p>Display "Latest topic" above the header?</p>
                 <input type="checkbox" name="show_latest_topic_frontpage" <?php if (($row['show_latest_topic_frontpage']) > 0) { echo 'checked'; } ?>>
                 <?php
+                echo '<p><li><label>Site description:</label> <input type="text" name="server_description" value="' . $row['server_description'] . '"></li></p>';
 				echo '<p><li><label>Server name:</label> <input type="text" name="servername" value="' . $row['servername'] . '"></li></p>';
 				echo '<p><li><label>Server address:</label> <input type="text" name="serveraddress" value="' . $row['serveraddress'] . '"></li></p>';
 				echo '<p><li><label>World port:</label> <input type="text" name="worldport" value="' . $row['worldport'] . '"></li></p>';
@@ -69,6 +71,7 @@ $result = $mysqli_cms->query("SELECT * FROM config");
                 }
                 ?>
                 <?php
+                echo '<p><li><label>Site description:</label> ' . $row['server_description'] . '</li></p>';
 				echo '<p><li><label>Server name:</label> ' . $row['servername'] . '</li></p>';
 				echo '<p><li><label>Server address:</label> ' . $row['serveraddress'] . '</li></p>';
 				echo '<p><li><label>World port:</label> ' . $row['worldport'] . '</li></p>';
