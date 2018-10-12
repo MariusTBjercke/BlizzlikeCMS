@@ -2,6 +2,7 @@
 
 if (isset($_POST['install_submit'])) {
     $servername = $_POST['servername'];
+    $server_description = $_POST['server_description'];
     $serveraddress = $_POST['serveraddress'];
     $worldport = $_POST['worldport'];
     $hostname = $_POST['hostname'];
@@ -99,7 +100,7 @@ $installed = true;
 
     $mysqli->query("CREATE TABLE posts (id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, title VARCHAR(255) NOT NULL, content TEXT NOT NULL, poster_id INT(255) NOT NULL, date VARCHAR(255))");
     $mysqli->query("INSERT INTO posts (title, content, poster_id, date) VALUES ('Example Post', 'This post can be edited from the administration panel. You can also add new posts from there.', '1', $today)");
-    $mysqli->query("CREATE TABLE config (id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, servername VARCHAR(255) NOT NULL, server_description VARCHAR(255) NOT NULL DEFAULT 'You can change me from the administrator panel.', serveraddress VARCHAR(255) NOT NULL, worldport VARCHAR(255) NOT NULL, `show_post_frontpage` int(11) NOT NULL DEFAULT '1',
+    $mysqli->query("CREATE TABLE config (id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, servername VARCHAR(255) NOT NULL, server_description VARCHAR(255) NOT NULL DEFAULT 'You can change this from the admin panel.', serveraddress VARCHAR(255) NOT NULL, worldport VARCHAR(255) NOT NULL, `show_post_frontpage` int(11) NOT NULL DEFAULT '1',
  `show_latest_topic_frontpage` int(11) NOT NULL DEFAULT '1', contact VARCHAR(255) NOT NULL, `facebook` varchar(255) DEFAULT '#',
  `instagram` varchar(255) DEFAULT '#',
  `twitter` varchar(255) DEFAULT '#',
