@@ -66,6 +66,9 @@ $servername = $row["servername"];
 // Show first post as header on front page
 $show_frontpage = $row["show_post_frontpage"];
 
+// Show "Latest topic" above the header
+$show_latest_topic_frontpage = $row["show_latest_topic_frontpage"];
+
 // An email address people can contact you through
 $contactmail = "contact@example.com";
 
@@ -93,7 +96,8 @@ $installed = true;
 
     $mysqli->query("CREATE TABLE posts (id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, title VARCHAR(255) NOT NULL, content TEXT NOT NULL, poster_id INT(255) NOT NULL, date VARCHAR(255))");
     $mysqli->query("INSERT INTO posts (title, content, poster_id, date) VALUES ('Example Post', 'This post can be edited from the administration panel. You can also add new posts from there.', '1', $today)");
-    $mysqli->query("CREATE TABLE config (id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, servername VARCHAR(255) NOT NULL, serveraddress VARCHAR(255) NOT NULL, worldport VARCHAR(255) NOT NULL, show_post_frontpage INT(11) NOT NULL, contact VARCHAR(255) NOT NULL, `facebook` varchar(255) DEFAULT '#',
+    $mysqli->query("CREATE TABLE config (id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, servername VARCHAR(255) NOT NULL, serveraddress VARCHAR(255) NOT NULL, worldport VARCHAR(255) NOT NULL, `show_post_frontpage` int(11) NOT NULL DEFAULT '1',
+ `show_latest_topic_frontpage` int(11) NOT NULL DEFAULT '1', contact VARCHAR(255) NOT NULL, `facebook` varchar(255) DEFAULT '#',
  `instagram` varchar(255) DEFAULT '#',
  `twitter` varchar(255) DEFAULT '#',
  `youtube` varchar(255) DEFAULT '#', theme INT(11) NOT NULL)");

@@ -19,9 +19,16 @@ $forum = new Forum();
         <a href="index.php" title="<?php echo $servername; ?>"><div class="top-logo"></div></a>
         <div class="navbar-nav">
 
-            <div class="last-forum-topic">
-                <span><i class="fa fa-bullhorn" aria-hidden="true"></i> Latest topic: </span> <?= $forum->getLastTopic(true); ?>
-            </div>
+            <?php
+            if ($show_latest_topic_frontpage > 0) {
+                ?>
+                <div class="last-forum-topic">
+                    <span><i class="fa fa-bullhorn"
+                             aria-hidden="true"></i> Latest topic: </span> <?= $forum->getLastTopic(true); ?>
+                </div>
+                <?php
+            }
+            ?>
 
             <button type="button" title="Open menu" id="toggleNavigation" class="navbar-toggle collapsed disabled" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
                 <div class="toggledMenu">

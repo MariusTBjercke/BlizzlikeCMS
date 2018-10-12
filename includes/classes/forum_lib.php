@@ -17,9 +17,9 @@ class Forum {
         $array = $result->fetch_all(MYSQLI_ASSOC);
         if (isAdminLoggedIn()) {
             ?>
-            <button class="btn btn-primary"><i class="fa fa-plus" aria-hidden="true"></i> Create new forum (Admin only*)</button>
+            <button class="btn btn-primary"><i class="fa fa-plus" aria-hidden="true"></i> Create new forum</button>
             <?php
-        } else { echo '<p>You have to be <a href="admin.php">signed in as admin</a> to create a new forum.</p>'; }
+        }
         foreach ($array as $category) {
 
             // Subcategories query
