@@ -114,6 +114,20 @@ $maxForumPostAvatarWidth: 200px;
           font-size: 1.7rem;
         }
       }
+
+      .topic_reply_field {
+        padding: 10px;
+        margin-top: -5px;
+
+        p {
+          font-size: 1.7rem;
+        }
+
+        textarea {
+          width: 100%;
+          min-height: 150px;
+        }
+      }
     }
   }
 

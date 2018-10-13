@@ -14,4 +14,10 @@ if ($_GET['id']) {
         $forum->displayTopic($topicID);
         ?>
     </div>
+
+    <div class="show-replies">
+        <?php
+        echo $forum->displayReplies($topicID);
+        ?>
+    </div>
 </div>

@@ -173,6 +173,33 @@ class Forum {
         <?php
     }
 
+    public function displayReplies($topicID) {
+        ?>
+        <div class="table-wrapper">
+            <div class="table-top">
+                <div class="table-title">Quick reply</div>
+            </div>
+            <div class="table-body">
+                <form action="" method="post">
+                    <table class="table">
+                        <tbody>
+                        <tr>
+                            <td>
+                                <div class="topic_reply_field">
+                                    <p>Type your reply in the area below:</p>
+                                    <p><textarea name="reply"></textarea></p>
+                                    <p><button>Post reply</button></p>
+                                </div>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </form>
+            </div>
+        </div>
+        <?php
+    }
+
     public function createTopic($catID) {
         global $mysqli_auth;
         global $mysqli_cms;

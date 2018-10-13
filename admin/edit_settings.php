@@ -40,7 +40,7 @@ $result = $mysqli_cms->query("SELECT * FROM config");
                 ?>
                 <p>Use the first post as the front page header?</p>
                 <input type="checkbox" name="show_post_frontpage" <?php if (($row['show_post_frontpage']) > 0) { echo 'checked'; } ?>>
-                <p>Display "Latest topic" above the header?</p>
+                <p>Display "Latest topic" above the navigation?</p>
                 <input type="checkbox" name="show_latest_topic_frontpage" <?php if (($row['show_latest_topic_frontpage']) > 0) { echo 'checked'; } ?>>
                 <?php
                 echo '<p><li><label>Site description:</label> <input type="text" name="server_description" value="' . $row['server_description'] . '"></li></p>';
@@ -62,7 +62,7 @@ $result = $mysqli_cms->query("SELECT * FROM config");
                     echo 'No';
                 }
                 ?>
-                <p>Display "Latest topic" above the header?</p>
+                <p>Display "Latest topic" above the navigation?</p>
                 <?php
                 if (($row['show_latest_topic_frontpage']) > 0) {
                     echo 'Yes';
