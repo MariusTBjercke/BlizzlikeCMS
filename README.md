@@ -28,8 +28,8 @@ In order to log in to the administration panel, use the same credentials as your
 
 **PS: This is still a work in progress, but I will try to update the project frequently.**
 
-**I have also made a video tutorial (for Linux/Ubuntu 18.04) so far, so you might want to check it out:**
-<iframe width="560" height="315" src="https://www.youtube.com/embed/1h0Cpr5Osg4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+**I have also made a video tutorial (for Linux/Ubuntu 18.04) so far, so you might want to check it out as it might help you out of some tricky situations:**
+https://www.youtube.com/watch?v=1h0Cpr5Osg4
 
 **Preview of the Legion theme**
 <img src='img/demo/legion_demo.png' width='100%'>
