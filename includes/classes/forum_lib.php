@@ -188,7 +188,7 @@ class Forum {
                                 <div class="topic_reply_field">
                                     <p>Type your reply in the area below:</p>
                                     <p><textarea name="reply"></textarea></p>
-                                    <p><button>Post reply</button></p>
+                                    <p><input type="submit" name="reply_submit" value="Post reply"></p>
                                 </div>
                             </td>
                         </tr>
