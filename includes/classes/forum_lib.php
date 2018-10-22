@@ -174,30 +174,79 @@ class Forum {
     }
 
     public function displayReplies($topicID) {
-        ?>
-        <div class="table-wrapper">
-            <div class="table-top">
-                <div class="table-title">Quick reply</div>
+        global $mysqli_cms;
+
+        $query = "SELECT * FROM forum_post_replies WHERE topic_id='$topicID'";
+        $result = $mysqli_cms->query($query);
+        $array = $result->fetch_all(MYSQLI_ASSOC);
+        foreach ($array as $reply) {
+            $poster = new Account($reply['user_id']);
+            $poster->retrieveAccount();
+            $poster_name = $poster->getName();
+            ?>
+            <div class="table-wrapper">
+                <div class="table-top">
+                    <div class="table-title"><?= $reply['title']; ?></div>
+                </div>
+                <div class="table-body">
+                    <form action="" method="post">
+                        <table class="table">
+                            <thead>
+                            <tr class="black-bar blck-border-right">
+                                <th scope="col" class="posted-by">By <?= $poster_name; ?> - <?= $reply['date']; ?></th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td class="forum-post-avatar">
+                                    <img src="img/avatars/<?= $poster->getAvatarID(); ?>.png" width="180">
+                                    <div class="role">Rank: <?= $poster->getRole(); ?></div>
+                                    <div class="role">Highest level: <?= $poster->getHighestLevel(); ?></div>
+                                </td>
+                                <td>
+                                    <div class="topic_content_field"><?= $reply['content']; ?></div>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </form>
+                </div>
             </div>
-            <div class="table-body">
-                <form action="" method="post">
-                    <table class="table">
-                        <tbody>
-                        <tr>
-                            <td>
-                                <div class="topic_reply_field">
-                                    <p>Type your reply in the area below:</p>
-                                    <p><textarea name="reply"></textarea></p>
-                                    <p><input type="submit" name="reply_submit" value="Post reply"></p>
-                                </div>
-                            </td>
-                        </tr>
-                        </tbody>
-                    </table>
-                </form>
+            <?php
+        }
+        if (isUserLoggedIn()) {
+            ?>
+            <div class="table-wrapper">
+                <div class="table-top">
+                    <div class="table-title">Quick reply</div>
+                </div>
+                <div class="table-body">
+                    <form action="" method="post">
+                        <table class="table">
+                            <tbody>
+                            <tr>
+                                <td>
+                                    <div class="topic_reply_field">
+                                        <p>Title:</p>
+                                        <p><input type="text" name="title" class="form-control"></p>
+                                        <p>Reply:</p>
+                                        <p><textarea name="reply" class="form-control reply_field"></textarea></p>
+                                        <p><input type="submit" name="reply_submit" class="btn btn-primary"
+                                                  value="Post reply"></p>
+                                    </div>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </form>
+                </div>
             </div>
-        </div>
-        <?php
+            <?php
+        } else {
+            ?>
+            <p>You have to be <a href="user_login.php">signed in</a> to reply to this topic.</p>
+            <?php
+        }
     }
 
     public function createTopic($catID) {
@@ -247,6 +296,18 @@ class Forum {
         global $mysqli_cms;
 
         $query = "INSERT INTO forum_posts (user_id, category_id, name, content) VALUES ('$posterID', '$catID', '$title', '$message')";
+        $result = $mysqli_cms->query($query);
+        if ($result) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public function saveReply($title, $message, $posterID, $topicID) {
+        global $mysqli_cms;
+
+        $query = "INSERT INTO forum_post_replies (user_id, topic_id, title, content) VALUES ('$posterID', '$topicID', '$title', '$message')";
         $result = $mysqli_cms->query($query);
         if ($result) {
             return true;
