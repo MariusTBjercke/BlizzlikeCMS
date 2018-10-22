@@ -230,7 +230,7 @@ class Forum {
                                         <p>Title:</p>
                                         <p><input type="text" name="title" class="form-control"></p>
                                         <p>Reply:</p>
-                                        <p><textarea name="reply" class="form-control reply_field"></textarea></p>
+                                        <p><textarea name="reply" class="tinymce"></textarea></p>
                                         <p><input type="submit" name="reply_submit" class="btn btn-primary"
                                                   value="Post reply"></p>
                                     </div>
@@ -278,7 +278,7 @@ class Forum {
                         <th scope="col">Content</th>
                     </tr>
                     <tr>
-                        <td><textarea name="content" class="message_field"></textarea></td>
+                        <td><textarea name="content" class="tinymce"></textarea></td>
                     </tr>
                     <tr>
                         <td><input type="submit" name="submit" class="btn btn-primary" value="Submit"></td>

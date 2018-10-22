@@ -9,27 +9,6 @@ if(!empty($_GET['pagenum'])) {
 if (isset($_GET['id'])) {
     $post_id = $_GET['id'];
 }
-$_SESSION['headers'] = array(
-    "<script src='includes/tinymce/tinymce.min.js'></script>",
-    "<script>
-  tinymce.init({
-    selector: '.content_field',
-    branding: false,
-    height: 300,
-    theme: 'modern',
-    plugins: [
-    'advlist autolink lists link image charmap print preview hr anchor pagebreak',
-    'searchreplace wordcount visualblocks visualchars code fullscreen',
-    'insertdatetime media nonbreaking save table contextmenu directionality',
-    'emoticons template paste textcolor colorpicker textpattern imagetools codesample toc help'
-  ],
-    toolbar1: 'undo redo | insert | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image',
-    toolbar2: 'print preview media | forecolor backcolor emoticons | codesample help',
-    image_advtab: true
-  });
-  </script>
-  ",
-);
 ?>
 
 <h1>Edit posts</h1>
@@ -69,7 +48,7 @@ if ($_GET['action'] == 'edit') {
     <div class="edit_post">
         <form action="" method="post">
             <p><label>Title</label><br><input type="text" value="<?php echo $post->getTitle(); ?>" name="title"></p>
-            <p><label>Content</label><br><textarea class="content_field" name="content"><?php echo
+            <p><label>Content</label><br><textarea class="tinymce" name="content"><?php echo
                     $post->getContent();
             ?></textarea></p>
             <p><input type="submit" name="submit" value="Save"></p>
@@ -99,7 +78,7 @@ if ($_GET['action'] == 'edit') {
     <div class="add_post">
         <form action="" method="post">
             <p><label>Title</label><br><input type="text" name="title"></p>
-            <p><label>Content</label><br><textarea class="content_field" name="content"></textarea></p>
+            <p><label>Content</label><br><textarea class="tinymce" name="content"></textarea></p>
             <p><input type="submit" name="addPost_submit" value="Save"></p>
             <?php echo $admin->getPosterId(); ?>
         </form>

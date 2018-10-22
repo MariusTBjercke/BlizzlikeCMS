@@ -18,14 +18,24 @@ $activeplayersResult = $mysqli->query("SELECT * FROM characters");
     <link href="https://fonts.googleapis.com/css?family=Zilla+Slab" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="dist/main.css">
     <link rel="stylesheet" type="text/css" href="includes/font-awesome/css/font-awesome.min.css">
-    <?php
-    if (isset($_SESSION['headers'])) {
-        $headers = $_SESSION['headers'];
-        foreach ($headers as $header) {
-            echo $header;
-        }
-    }
-    ?>
+    <script src='includes/tinymce/tinymce.min.js'></script>
+    <script>
+        tinymce.init({
+            selector: '.tinymce',
+            branding: false,
+            height: 300,
+            theme: 'modern',
+            plugins: [
+                'advlist autolink lists link image charmap print preview hr anchor pagebreak',
+                'searchreplace wordcount visualblocks visualchars code fullscreen',
+                'insertdatetime media nonbreaking save table contextmenu directionality',
+                'emoticons template paste textcolor colorpicker textpattern imagetools codesample toc help'
+            ],
+            toolbar1: 'undo redo | insert | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image',
+            toolbar2: 'print preview media | forecolor backcolor emoticons | codesample help',
+            image_advtab: true
+        });
+    </script>
 </head>
 <body>
 
