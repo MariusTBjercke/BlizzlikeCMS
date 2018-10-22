@@ -11,6 +11,7 @@ You can also join us on Discord if you need any help or have any other requests:
 - Character search (Unfinished "armory")
 - Server status
 - CMS for editing posts/news on the website
+- Forum (Working, but still requires more work.)
 - Administration panel for editing server accounts without using the console
 - Gallery
 
