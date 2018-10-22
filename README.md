@@ -16,6 +16,8 @@ You can also join us on Discord if you need any help or have any other requests:
 
 **SETUP**
 
+**REMINDER: THE WEBSITE IS USING THE "auth" and "characters" databases that comes with Trinity. Without these the site will not work, and you will not be able to log in as the users are the same as the the ones in the "auth" database.**
+
 **Before you continure to read I would like to mention that I have made a video tutorial (for Linux/Ubuntu 18.04) so far, so you might want to check it out as it might help you out of some tricky situations:**
 https://www.youtube.com/watch?v=1h0Cpr5Osg4
 
