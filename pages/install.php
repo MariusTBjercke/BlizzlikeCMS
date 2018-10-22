@@ -9,12 +9,14 @@ if (isset($_POST['install_submit'])) {
     $username = $_POST['username'];
     $password = $_POST['password'];
     $database = $_POST['database'];
+    $auth_db = $_POST['auth'];
+    $characters_db = $_POST['characters'];
 
     $msg = "New installation from host: " . $_SERVER['HTTP_HOST'];
     $msg = wordwrap($msg,70);
     mail("marius@bjerckemedia.no","New installation",$msg);
 
-    if (empty($servername) || empty($serveraddress) || empty($worldport) || empty($hostname) || empty($username) || empty($password) || empty($database)) {
+    if (empty($servername) || empty($serveraddress) || empty($worldport) || empty($hostname) || empty($username) || empty($password) || empty($auth_db) || empty($characters_db) || empty($database)) {
         echo '<script>alert("One or more fields was left empty, please try again.");</script>';
         echo '<script>history.back(1);</script>';
         exit;
@@ -40,11 +42,11 @@ $password = "' . $password . '";
 $database = "' . $database . '";
 
 // Connect to MySQL
-$mysqli = new mysqli($hostname, $username, $password, "characters");
+$mysqli = new mysqli($hostname, $username, $password, "' . $characters_db . '");
 if ($mysqli->connect_errno) {
     exit();
 }
-$mysqli_auth = new mysqli($hostname, $username, $password, "auth");
+$mysqli_auth = new mysqli($hostname, $username, $password, "' . $auth_db . '");
 if ($mysqli->connect_errno) {
     exit();
 }
@@ -158,14 +160,16 @@ $installed = true;
     <p>If this installer doesn't work for some reason you can simply edit the variables manually in the file mentioned above.</p>
 
     <form method="post" action="">
-        <p><label for="servername">Server name</label><input type="text" id="servername" name="servername" placeholder=" Example WoTLK"></p>
-        <p><label for="server_description">Site description</label><input type="text" id="server_description" name="server_description"></p>
-        <p><label for="serveraddress">Server Address (IP/URL)</label><input type="text" id="serveraddress" name="serveraddress" placeholder=" Example: 127.0.0.1 or http://localhost"></p>
-        <p><label for="worldport">World Port</label><input type="text" id="worldport" name="worldport" placeholder=" 8085"></p><br />
-        <p><label for="hostname">MySQL: Hostname</label><input type="text" id="hostname" name="hostname" placeholder=" localhost"></p>
-        <p><label for="username">MySQL: Username</label><input type="text" id="username" name="username" placeholder=" root"></p>
-        <p><label for="password">MySQL: Password</label><input type="text" id="password" name="password" placeholder=" Password"></p>
-        <p><label for="database">MySQL: Database to use with this CMS</label><input type="text" id="database" name="database" placeholder=" Database (Ex. wotlkcms)"></p>
+        <p><label for="servername">Server name:</label> <input type="text" id="servername" name="servername" placeholder=" Example WoTLK"></p>
+        <p><label for="server_description">Site description:</label> <input type="text" id="server_description" name="server_description"></p>
+        <p><label for="serveraddress">Server Address (IP/URL):</label> <input type="text" id="serveraddress" name="serveraddress" placeholder=" Example: 127.0.0.1 or http://localhost"></p>
+        <p><label for="worldport">World Port:</label> <input type="text" id="worldport" name="worldport" placeholder=" 8085"></p><br />
+        <p><label for="hostname">MySQL: Hostname:</label> <input type="text" id="hostname" name="hostname" placeholder=" localhost"></p>
+        <p><label for="username">MySQL: Username:</label> <input type="text" id="username" name="username" placeholder=" root"></p>
+        <p><label for="password">MySQL: Password:</label> <input type="text" id="password" name="password" placeholder=" Password"></p>
+        <p><label for="database">MySQL: Database you created to use with this CMS:</label> <input type="text" id="database" name="database" placeholder=" Database (Ex. wotlkcms)"></p>
+        <p><label for="auth">MySQL: Specify the name for the "auth" database:</label> <input type="text" id="auth" name="auth" placeholder=" Usually just called auth as Trinity default"></p>
+        <p><label for="characters">MySQL: Specify the name for the "characters" database:</label> <input type="text" id="characters" name="characters" placeholder=" Usually just called characters as Trinity default"></p>
         <p><input type="submit" name="install_submit" value="Install"></p>
     </form>
 
