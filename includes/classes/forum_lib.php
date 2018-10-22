@@ -281,7 +281,7 @@ class Forum {
                         <td><textarea name="content" class="message_field"></textarea></td>
                     </tr>
                     <tr>
-                        <td><div class="btn btn-primary" title="Coming soon..">Preview</div> <input type="submit" name="submit" class="btn btn-primary" value="Submit"></td>
+                        <td><input type="submit" name="submit" class="btn btn-primary" value="Submit"></td>
                     </tr>
                     </tbody>
                 </table>
