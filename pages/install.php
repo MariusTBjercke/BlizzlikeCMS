@@ -179,9 +179,9 @@ $installed = true;
                 $errors = 0;
                 if (!extension_loaded('imagick')) {
                     $errors = 1;
-                    echo '<div class="text-danger">Not installed.</div>';
+                    echo '<span style="color:#ab000e">Not installed.</span>';
                 } else {
-                    echo '<div class="text-success">Installed.</div>';
+                    echo '<span style="color:#0ca800">Installed.</span>';
                 }
                 ?>
             </li>
