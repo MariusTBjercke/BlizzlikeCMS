@@ -10,8 +10,3 @@ $("#toggledMenuUl li").click(function() {
     var linkNameWithExt = linkName + '.php';
     window.location.href = linkNameWithExt;
 });
-
-var extInstalled = document.getElementById("installed");
-if (extInstalled === 'Not installed.') {
-    document.getElementById("installBtn").disabled = true;
-}
