@@ -11,7 +11,7 @@ $("#toggledMenuUl li").click(function() {
     window.location.href = linkNameWithExt;
 });
 
-extInstalled = document.getElementById("installed");
+var extInstalled = document.getElementById("installed");
 if (extInstalled === 'Not installed.') {
     $("#installBtn").prop('disabled', true);
 }
