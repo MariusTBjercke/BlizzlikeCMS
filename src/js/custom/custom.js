@@ -13,5 +13,5 @@ $("#toggledMenuUl li").click(function() {
 
 var extInstalled = document.getElementById("installed");
 if (extInstalled === 'Not installed.') {
-    $("#installBtn").prop('disabled', true);
+    document.getElementById("installBtn").disabled = true;
 }
