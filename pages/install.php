@@ -34,6 +34,7 @@ if (isset($_POST['install_submit'])) {
     $handle = fopen($my_file, 'w');
     // Writing data to config.php
     $data = '<?php
+error_reporting(0);
 
 // MySQL login details
 $hostname = "' . $hostname . '";
