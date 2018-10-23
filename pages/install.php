@@ -167,7 +167,7 @@ $installed = true;
         <p><label for="worldport">World Port:</label> <input type="text" id="worldport" name="worldport" placeholder=" 8085"></p><br />
         <p><label for="hostname">MySQL: Hostname:</label> <input type="text" id="hostname" name="hostname" placeholder=" localhost"></p>
         <p><label for="username">MySQL: Username:</label> <input type="text" id="username" name="username" placeholder=" root"></p>
-        <p><label for="password">MySQL: Password:</label> <input type="text" id="password" name="password" placeholder=" Password"></p>
+        <p><label for="password">MySQL: Password:</label> <input type="password" id="password" name="password" placeholder=" Password"></p>
         <p><label for="database">MySQL: Database you created to use with this CMS:</label> <input type="text" id="database" name="database" placeholder=" Database (Ex. wotlkcms)"></p>
         <p><label for="auth">MySQL: Specify the name for the "auth" database:</label> <input type="text" id="auth" name="auth" placeholder=" Usually just called auth as Trinity default"></p>
         <p><label for="characters">MySQL: Specify the name for the "characters" database:</label> <input type="text" id="characters" name="characters" placeholder=" Usually just called characters as Trinity default"></p>
