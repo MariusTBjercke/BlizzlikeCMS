@@ -179,7 +179,9 @@ $installed = true;
                 $errors = 0;
                 if (!extension_loaded('imagick')) {
                     $errors = 1;
-                    echo '<div class="text-danger">Imagick is not installed.</div>';
+                    echo '<div class="text-danger">Not installed.</div>';
+                } else {
+                    echo '<div class="text-success">Installed.</div>';
                 }
                 ?>
             </li>
