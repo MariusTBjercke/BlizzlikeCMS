@@ -160,7 +160,7 @@ $installed = true;
     <p>You can edit includes/config.php any time after this to make changes.</p>
     <p>If this installer doesn't work for some reason you can simply edit the variables manually in the file mentioned above.</p>
 
-    <p method="post" action="">
+    <form method="post" action="">
         <p><label for="servername">Server name:</label> <input type="text" id="servername" name="servername" placeholder=" Example WoTLK"></p>
         <p><label for="server_description">Site description:</label> <input type="text" id="server_description" name="server_description"></p>
         <p><label for="serveraddress">Server Address (IP/URL):</label> <input type="text" id="serveraddress" name="serveraddress" placeholder=" Example: 127.0.0.1 or http://localhost"></p>
