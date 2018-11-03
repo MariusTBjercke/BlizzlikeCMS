@@ -20,10 +20,12 @@ function getServerStatus() {
 
 // Get if user is logged in
 function isUserLoggedIn() {
-    if ($_SESSION['user_logged_n'] == 'true') {
-        return true;
-    } else {
-        return false;
+    if (isset($_SESSION['user_logged_n'])) {
+        if ($_SESSION['user_logged_n'] == 'true') {
+            return true;
+        } else {
+            return false;
+        }
     }
 }
 
