@@ -53,7 +53,6 @@ $_SESSION['headers'] = array(
         $forum->displayTopic($topicID);
         ?>
     </div>
-
     <div class="show-replies">
         <?php
         echo $forum->displayReplies($topicID);
