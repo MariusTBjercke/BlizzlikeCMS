@@ -12,6 +12,7 @@ if (isset($_POST['submit'])) {
 	$newfilename = round(microtime(true)) . '.' . end($temp);
 	$target_file = $target_dir . $newfilename;
 	$title = $_POST['title'];
+	$title = $mysqli_cms->real_escape_string($title);
 	$uploadOk = 1;
 	$imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
     // Check if image file is a actual image or fake image

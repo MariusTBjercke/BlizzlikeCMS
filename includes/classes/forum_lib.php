@@ -295,6 +295,10 @@ class Forum {
         global $mysqli_auth;
         global $mysqli_cms;
 
+        // Sanitize
+        $title = $mysqli_cms->real_escape_string($title);
+        $message = $mysqli_cms->real_escape_string($message);
+
         $query = "INSERT INTO forum_posts (user_id, category_id, name, content) VALUES ('$posterID', '$catID', '$title', '$message')";
         $result = $mysqli_cms->query($query);
         if ($result) {
@@ -307,12 +311,16 @@ class Forum {
     public function saveReply($title, $message, $posterID, $topicID) {
         global $mysqli_cms;
 
+        // Sanitize
+        $title = $mysqli_cms->real_escape_string($title);
+        $message = $mysqli_cms->real_escape_string($message);
+
         $query = "INSERT INTO forum_post_replies (user_id, topic_id, title, content) VALUES ('$posterID', '$topicID', '$title', '$message')";
         $result = $mysqli_cms->query($query);
         if ($result) {
             return true;
         } else {
-            return false;
+            return $mysqli_cms->error;
         }
     }
 
