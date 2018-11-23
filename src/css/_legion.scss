@@ -20,6 +20,11 @@ body:before {
   background: -webkit-radial-gradient(top center, ellipse cover, rgba(255, 255, 255, 0.2) 0%, rgba(0, 0, 0, 0.9) 100%);
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 @media screen and (max-height: 650px) {
   footer {
     height: 90px!important;

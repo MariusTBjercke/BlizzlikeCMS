@@ -7,8 +7,7 @@ $activeplayersResult = $mysqli->query("SELECT * FROM characters");
 <head>
 	<meta charset="UTF-8">
     <meta name="description" content="<?= $server_description; ?>">
-    <meta name="keywords" content="World of Wacraft, wow, wotlk, wrath, of, the, lich, king, wrath of the lich king,
-    335a, 3.3.5a, stable, fast, private, server, blizzlike">
+    <meta name="keywords" content="WoW Like Home, World of Warcraft, WoWLikeHome, WoW, Best Private Server, Best Server, Best Blizzlike Server, Best WoW Server, WOTLK server, 3.3.5a, Server, Private Server, Wintergrasp, Retail, The Wrath of the Lich King, Pathfinding, LoS, Best Scripts, WOTLK, Quality Private Server, Professional, Naxxramas, Naxx, Nax, Obsidian Sanctum, OS, EOT, Malygos, Eye of Eternity, Ulduar, Icecrown Citadel, ICC, ToC, Trial of the Crusade, full, full scripted, best scripted, Wintergrasp, blizzlike, blizlike">
 	<title><?php if($title) { echo $title; } echo $servername; ?></title>
     <link rel="shortcut icon" href="img/themes/<?php echo $theme_name; ?>/favicon.png">
     <link rel="stylesheet" type="text/css" href="includes/featherlight/featherlight.min.css">

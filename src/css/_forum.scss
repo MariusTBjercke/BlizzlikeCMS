@@ -113,6 +113,11 @@ $maxForumPostAvatarWidth: 200px;
         p {
           font-size: 1.7rem;
         }
+
+        img {
+          max-width: 100%;
+          height: auto;
+        }
       }
 
       .topic_reply_field {
