@@ -103,6 +103,9 @@ class Account {
             case 0:
                 return "Player";
                 break;
+            case 1:
+                return "Gamemaster";
+                break;
             case 2:
                 return "Moderator";
                 break;
