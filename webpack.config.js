@@ -1,5 +1,6 @@
 var path = require('path');
 var webpack = require('webpack');
+var UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 var TransferWebpackPlugin = require('transfer-webpack-plugin');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 

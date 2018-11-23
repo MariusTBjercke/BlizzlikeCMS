@@ -41,6 +41,7 @@ if (isset($_POST['charsearch'])) {
             <p><label>Race:</label> <?php echo $character->getRace(); ?></p>
             <p><label>Level:</label> <?php echo $character->getLevel(); ?></p>
             <p><label>Faction:</label> <?php echo ucfirst($character->getFaction()); ?></p>
+            <p><label>Last online:</label> <?php echo $character->getLastOnline(); ?></p>
             <p><label>Status:</label> <?php echo $character->getStatus(); ?></p>
 
             <?php

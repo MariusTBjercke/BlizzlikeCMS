@@ -8,6 +8,7 @@ class Player {
     public $race;
     public $faction;
     public $status;
+    public $logout_time;
 
     public function __construct($player_name) {
         $this->name = ucfirst($player_name);
@@ -28,6 +29,15 @@ class Player {
 
     function getLevel() {
         return $this->getCharQuery('level');
+    }
+
+    function getLastOnline() {
+        $logoutStamp = $this->getCharQuery('logout_time');
+        $logoutDate1 = date('Y-m-d', $logoutStamp);
+        $logoutDate2 = date('H:i:s', $logoutStamp);
+        $logoutDate = $logoutDate1 . 'T' . $logoutDate2 . 'Z';
+        $this->logout_time = $logoutDate;
+        return '<time class="timeago" datetime="'.$logoutDate.'"></time>';
     }
 
     function setStatus($status) {

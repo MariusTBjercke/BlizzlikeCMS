@@ -39,12 +39,13 @@
 </footer>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="dist/bundle.js"></script>
 <script src="includes/featherlight/featherlight.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="node_modules/timeago/jquery.timeago.js"></script>
 <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 <script src="includes/slick/slick.min.js"></script>
+<script src="dist/bundle.js"></script>
 <script src="js/site.min.js"></script>
 </body>
 </html>
