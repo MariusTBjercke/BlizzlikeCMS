@@ -35,6 +35,31 @@ $activeplayersResult = $mysqli->query("SELECT * FROM characters");
             image_advtab: true
         });
     </script>
+    <?php
+    $google_query = "SELECT * FROM google_config WHERE id='1'";
+    $google_result = $mysqli_cms->query($google_query);
+    $google_fetch = $google_result->fetch_assoc();
+    if (strlen($google_fetch['google_auto_ads']) > 0) {
+        echo $google_fetch['google_auto_ads'];
+    }
+    if (strlen($google_fetch['analytics_tracking_id']) > 0) {
+        ?>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=<?= $google_fetch['analytics_tracking_id']; ?>"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+
+            gtag('js', new Date());
+
+            gtag('config', '<?= $google_fetch['analytics_tracking_id']; ?>');
+        </script>
+        <?php
+    }
+    ?>
 </head>
 <body>
 

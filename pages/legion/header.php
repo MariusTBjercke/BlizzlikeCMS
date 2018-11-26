@@ -63,6 +63,16 @@ $forum = new Forum();
 
 <div class="midContent">
     <div class="container">
+        <div class="ad-spot1">
+            <?php
+            $google_query = "SELECT * FROM google_config WHERE id='1'";
+            $google_result = $mysqli_cms->query($google_query);
+            $google_fetch = $google_result->fetch_assoc();
+            if (strlen($google_fetch['google_ad_1']) > 0) {
+                echo $google_fetch['google_ad_1'];
+            }
+            ?>
+        </div>
         <?php
         include 'page.php';
         ?>

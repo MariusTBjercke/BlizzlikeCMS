@@ -17,6 +17,9 @@ if ($_SESSION['admin_logged_n'] == true) {
         case 'edit_theme':
             include 'edit_theme.php';
             break;
+        case 'edit_google':
+            include 'edit_google.php';
+            break;
         case 'edit_socialicons':
             include 'edit_socialicons.php';
             break;

@@ -141,6 +141,8 @@ $installed = true;
  `date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1");
+    $mysqli->query("CREATE TABLE google_config ( `id` INT NOT NULL AUTO_INCREMENT , `analytics_tracking_id` VARCHAR(255) , `google_ad_1` TEXT , `google_auto_ads` TEXT , PRIMARY KEY (`id`)) ENGINE = InnoDB;");
+    $mysqli->query("INSERT INTO google_config (analytics_tracking_id, google_ad_1, google_auto_ads) VALUES (NULL, NULL, NULL)");
 
 }
 
