@@ -13,6 +13,7 @@ You can also join us on Discord if you need any help or have any other requests:
 - CMS for editing posts/news on the website
 - Forum (Working, but still requires more work.)
 - Administration panel for editing server accounts without using the console
+- Google Analytics, Ad and Auto Ads management. (Admin panel)
 - Gallery
 
 **SETUP**
