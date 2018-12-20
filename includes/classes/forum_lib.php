@@ -80,6 +80,27 @@ class Forum {
         }
     }
 
+    public function displayLastPosterFromID($postID) {
+        global $mysqli_auth;
+        global $mysqli_cms;
+
+        $query = "SELECT * FROM forum_posts WHERE id='$postID'";
+        $result = $mysqli_cms->query($query);
+        $fetch = $result->fetch_assoc();
+        $poster_id = $fetch['user_id'];
+        $check_for_replies = $mysqli_cms->query("SELECT * FROM forum_post_replies WHERE topic_id='$postID' ORDER BY id DESC LIMIT 1");
+        $repliesResult = $check_for_replies->fetch_assoc();
+        $poster = new Account($repliesResult['user_id']);
+        $poster->retrieveAccount();
+        if (strlen($poster->getName()) > 0) {
+            return $poster->getName();
+        } else {
+            $poster = new Account($poster_id);
+            $poster->retrieveAccount();
+            return $poster->getName();
+        }
+    }
+
     public function displayPost($postID) {
         global $mysqli_auth;
         global $mysqli_cms;
@@ -124,7 +145,7 @@ class Forum {
                         <td class="text-center"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></td>
                         <td><a href="forum.php?page=topic&cat=' . $postID . '&id=' . $item['id'] . '">' . $item['name'] . '</a></td>
                         <td></td>
-                        <td>@admin</td>
+                        <td>'.$this->displayLastPosterFromID($item['id']).'</td>
                     </tr>';
         }
     }
