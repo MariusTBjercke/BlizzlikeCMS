@@ -121,6 +121,8 @@ $installed = true;
     $mysqli->query("INSERT INTO forum (name) VALUES ('Forum')");
     $mysqli->query("CREATE TABLE forum_categories (id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, name VARCHAR(255) NOT NULL)");
     $mysqli->query("INSERT INTO forum_categories (name) VALUES ('News and announcements'), ('General'), ('World of Warcraft')");
+    $mysqli->query("CREATE TABLE events ( `id` INT(11) NOT NULL AUTO_INCREMENT , `name` VARCHAR(255) NOT NULL , `activated` INT(1) NOT NULL DEFAULT '0' , PRIMARY KEY (`id`))");
+    $mysqli->query("INSERT INTO `events` (`id`, `name`, `activated`) VALUES (NULL, 'christmas', '0'), (NULL, 'happy_new_year', '0')");
     $mysqli->query("CREATE TABLE forum_subcategories (id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, name VARCHAR(255) NOT NULL, parent_id INT(11) NOT NULL)");
     $mysqli->query("INSERT INTO forum_subcategories (name, parent_id) VALUES ('News', '1'), ('Miscellaneous', '1'), ('General Chat', '2'), ('Server Chat', '3'), ('Support', '3')");
     $mysqli->query("CREATE TABLE `forum_posts` (

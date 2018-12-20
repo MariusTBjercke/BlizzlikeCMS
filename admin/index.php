@@ -23,6 +23,9 @@ if ($_SESSION['admin_logged_n'] == true) {
         case 'edit_socialicons':
             include 'edit_socialicons.php';
             break;
+        case 'edit_events':
+            include 'edit_events.php';
+            break;
         default:
             include 'home.php';
             break;

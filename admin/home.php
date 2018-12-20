@@ -9,6 +9,13 @@
         <li><a href="admin.php?page=edit_settings"><button><span class="glyphicon glyphicon-cog"></span> Edit website settings</button></a></li>
         <li><a href="admin.php?page=edit_google"><button><span class="glyphicon glyphicon-cog"></span> Edit Google ads and analytics</button></a></li>
         <li><a href="admin.php?page=edit_socialicons"><button><i class="fa fa-facebook-square" aria-hidden="true"></i> Edit footer social icons</button></a></li>
-<!--        <li><a href="admin.php?page=edit_theme"><button><span class="glyphicon glyphicon-eye-open"></span> Edit website theme</button></a></li>-->
+    </ul>
+    <ul>
+        <li><a href="admin.php?page=edit_events"><button><i class="fa fa-calendar" aria-hidden="true"></i> Edit events</button></a></li>
+        <li><a href="#"><button><i class="fa fa-question-circle" aria-hidden="true"></i></button></a></li>
+        <li><a href="#"><button><i class="fa fa-question-circle" aria-hidden="true"></i></button></a></li>
+        <li><a href="#"><button><i class="fa fa-question-circle" aria-hidden="true"></i></button></a></li>
+        <li><a href="#"><button><i class="fa fa-question-circle" aria-hidden="true"></i></button></a></li>
+        <li><a href="#"><button><i class="fa fa-question-circle" aria-hidden="true"></i></button></a></li>
     </ul>
 </div>

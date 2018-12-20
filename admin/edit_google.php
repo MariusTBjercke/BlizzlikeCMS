@@ -23,8 +23,8 @@ $fetch = $result->fetch_assoc();
     <form action="" method="post">
         <ul>
             <li><p>Google Analytics Tracking ID: <a href="https://support.google.com/analytics/answer/1008080?visit_id=636788614818147357-2366831304&rd=1" title="What is this?" target="_blank"><i class="fa fa-question-circle" aria-hidden="true"></i></a><input type="text" name="analytics_id" class="form-control" value="<?= $fetch['analytics_tracking_id']; ?>"></p></li>
-            <li><p>Google AD #1: <a href="#" title="Positioned right underneath the navigation bar. Include the whole Javascript code from Google Adsense."><i class="fa fa-question-circle" aria-hidden="true"></i></a><br><textarea name="google_ad_1" class="form-control"><?= $fetch['google_ad_1']; ?></textarea></p></li>
-            <li><p>Google Auto Ads: <a href="https://support.google.com/adsense/answer/7480616?hl=en" title="Read more about Auto ads." target="_blank"><i class="fa fa-question-circle" aria-hidden="true"></i></a><br><textarea name="google_auto_ads" class="form-control"><?= $fetch['google_auto_ads']; ?></textarea></p></li>
+            <li><p>Google AD #1: <a href="#" title="Positioned right underneath the navigation bar. Include the whole Javascript code from Google Adsense - from <script> to </script>."><i class="fa fa-question-circle" aria-hidden="true"></i></a><br><textarea name="google_ad_1" class="form-control"><?= $fetch['google_ad_1']; ?></textarea></p></li>
+            <li><p>Google Auto Ads: <a href="https://support.google.com/adsense/answer/7480616?hl=en" title="Read more about Auto ads. From <script> to </script>." target="_blank"><i class="fa fa-question-circle" aria-hidden="true"></i></a><br><textarea name="google_auto_ads" class="form-control"><?= $fetch['google_auto_ads']; ?></textarea></p></li>
         </ul>
 
         <input type="submit" name="submit" value="Save settings" class="btn">

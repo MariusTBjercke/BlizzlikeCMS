@@ -3,6 +3,7 @@
 @import "legion";
 @import "user";
 @import "admin";
+@import "events";
 @import "forum";
 
 $randomNumber1: random(50);
@@ -12,6 +13,13 @@ $randomNumber4: '-' + random(50);
 $randomNumber5: random(50);
 
 body {
+  margin:0;
+}
+canvas {
+  position:absolute;
+  opacity: 0.3;
+  top:0;
+  left:0;
 }
 
 .rotateNumber1 {

@@ -62,7 +62,6 @@ $activeplayersResult = $mysqli->query("SELECT * FROM characters");
     ?>
 </head>
 <body>
-
 <?php
 include 'pages/' . $theme_name . '/header.php';
 ?>
