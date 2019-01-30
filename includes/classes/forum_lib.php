@@ -39,7 +39,7 @@ class Forum {
                             <th scope="col"></th>
                             <th scope="col">Title</th>
                             <th scope="col"></th>
-                            <th scope="col">Last Post By</th>
+                            <th scope="col">Last Topic By</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -121,7 +121,7 @@ class Forum {
                         <th scope="col"></th>
                         <th scope="col">Title</th>
                         <th scope="col"></th>
-                        <th scope="col">Last Post By</th>
+                        <th scope="col">Last Reply By</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -206,6 +206,9 @@ class Forum {
             $poster_name = $poster->getName();
             ?>
             <div class="table-wrapper">
+                <div class="quote-reply" id="<?= $reply['id']; ?>">
+                    <button>Quote this reply</button>
+                </div>
                 <div class="table-top">
                     <div class="table-title"><?= $reply['title']; ?></div>
                 </div>
@@ -225,7 +228,7 @@ class Forum {
                                     <div class="role">Highest level: <?= $poster->getHighestLevel(); ?></div>
                                 </td>
                                 <td>
-                                    <div class="topic_content_field"><?= $reply['content']; ?></div>
+                                    <div class="topic_content_field" content="<?= $poster_name; ?>" id="content-field-<?= $reply['id']; ?>"><?= $reply['content']; ?></div>
                                 </td>
                             </tr>
                             </tbody>

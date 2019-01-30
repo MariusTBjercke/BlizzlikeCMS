@@ -6,6 +6,30 @@ $maxForumPostAvatarWidth: 200px;
   .table-wrapper {
     margin-top: 30px;
     width: 100%;
+    position: relative;
+
+    .quote-reply {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+
+      button {
+        background-color: #ca9d29;
+        color: #000000;
+        font-size: 1.8rem;
+        border: 3px solid #a28a4c;
+        margin: 10px;
+        border-radius: 10px;
+        -webkit-transition: background-color 0.5s;
+        -moz-transition: background-color 0.5s;
+        -o-transition: background-color 0.5s;
+        transition: background-color 0.5s;
+
+        &:hover {
+          background-color: #e1b12c;
+        }
+      }
+    }
 
     .table-top {
       background-color: #183459;
@@ -63,6 +87,7 @@ $maxForumPostAvatarWidth: 200px;
 
         img {
           border-radius: 100%;
+          max-height: 180px;
         }
       }
 

@@ -10,3 +10,12 @@ $("#toggledMenuUl li").click(function() {
     var linkNameWithExt = linkName + '.php';
     window.location.href = linkNameWithExt;
 });
+
+// Forum quote reply button
+$(".quote-reply").click(function() {
+    var number = $(this).attr('id');
+    var holder = $("#content-field-" + number);
+    var author = holder.attr('content');
+    var content = "By: " + author + '<br />' + holder.text();
+    tinyMCE.activeEditor.setContent(content);
+});

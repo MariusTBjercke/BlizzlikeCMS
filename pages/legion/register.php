@@ -16,11 +16,11 @@
                 <input type="text" class="form-control" id="email" placeholder="Email" name="email" required>
             </div>
             <div class="form-group">
-                <input type="password" class="form-control" id="password" name="password1"
+                <input type="password" class="form-control" id="password1" name="password1"
                        placeholder="Password (Minimum 6 characters)" required>
             </div>
             <div class="form-group">
-                <input type="password" class="form-control" id="password" name="password2"
+                <input type="password" class="form-control" id="password2" name="password2"
                        placeholder="Confirm the password" required>
             </div>
             <div class="form-group">
