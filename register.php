@@ -48,6 +48,17 @@ if (isset($_POST['submit'])) {
 		exit;
 	}
 
+	// Check if the auth database has a Battle.net table in it
+    if ($bnetResult = $mysqli_auth->query("SHOW TABLES LIKE 'battlenet_accounts'")) {
+        if ($bnetResult->num_rows == 1) {
+
+            // Insert Battle.net info
+            $bnetHash = bin2hex(strrev(hex2bin(strtoupper(hash("sha256",strtoupper(hash("sha256", strtoupper($email)).":".strtoupper($password1)))))));
+            $bnetQueryResult = $mysqli_auth->query("INSERT INTO battlenet_accounts (email, sha_pass_hash) VALUES ('$email', '$bnetHash')");
+
+        }
+    }
+
 	$result = $mysqli_auth->query("INSERT INTO account (username, email, sha_pass_hash) VALUES ('$username', '$email', SHA1(UPPER('$username:$password1')))");
 	echo '<script>alert("Your account has been created! You may now log in.");</script>';
 	echo '<script>window.location="howto.php";</script>';
