@@ -206,9 +206,15 @@ class Forum {
             $poster_name = $poster->getName();
             ?>
             <div class="table-wrapper">
+            <?php
+            if (isUserLoggedIn()) {
+            ?>
                 <div class="quote-reply" id="<?= $reply['id']; ?>">
                     <button>Quote this reply</button>
                 </div>
+            <?php
+            }
+            ?>
                 <div class="table-top">
                     <div class="table-title"><?= $reply['title']; ?></div>
                 </div>
