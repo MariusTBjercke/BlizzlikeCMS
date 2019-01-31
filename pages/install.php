@@ -11,6 +11,7 @@ if (isset($_POST['install_submit'])) {
     $database = $_POST['database'];
     $auth_db = $_POST['auth'];
     $characters_db = $_POST['characters'];
+    $downloadlink = $_POST['downloadlink'];
 
     $msg = "New installation from host: " . $_SERVER['HTTP_HOST'];
     $msg = wordwrap($msg,70);
@@ -82,6 +83,8 @@ $contactmail = "contact@example.com";
 // Fill in your server IP/URL and world port
 $server = $row["serveraddress"];
 $port = $row["worldport"];
+
+$wow_downloadlink = "' . $downloadlink . '";
 
 $installed = true;
 
@@ -175,6 +178,7 @@ $installed = true;
         <p><label for="database">MySQL: Database you created to use with this CMS:</label> <input type="text" id="database" name="database" placeholder=" Database (Ex. wotlkcms)"></p>
         <p><label for="auth">MySQL: Specify the name for the "auth" database:</label> <input type="text" id="auth" name="auth" placeholder=" Usually just called auth as Trinity default"></p>
         <p><label for="characters">MySQL: Specify the name for the "characters" database:</label> <input type="text" id="characters" name="characters" placeholder=" Usually just called characters as Trinity default"></p>
+        <p><label for="downloadlink">Client download link:</label> <input type="text" id="downloadlink" name="downloadlink" placeholder=" Ex. download/wow.zip"><small> *Not required, but will appear as a link on the "how to" page if it has input:</small></p>
 
         <h3>Extension checker:</h3>
         <ul>
