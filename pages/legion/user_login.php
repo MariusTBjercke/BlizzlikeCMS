@@ -14,7 +14,11 @@ if (isset($_POST['submit'])) {
         $_SESSION['user_logged_n'] = true;
         $_SESSION['username'] = ucfirst($username);
         $_SESSION['user_id'] = $acc_id;
-        echo '<script>window.location="user.php?action=success";</script>';
+        if ($_SESSION['lastURL']) {
+            echo '<script>window.location="'.$_SESSION['lastURL'].'";</script>';
+        } else {
+            echo '<script>window.location="user.php?action=success";</script>';
+        }
     } else {
         echo '<script>alert("Wrong username or password, please try again.");</script>';
     }

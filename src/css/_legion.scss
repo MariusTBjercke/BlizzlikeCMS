@@ -729,7 +729,7 @@ footer {
 
 .midContent-content {
   background-color: rgba(0, 0, 0, 0.5);
-  padding: 5px 0 20% 40px;
+  padding: 10px 30px 20% 30px;
   color: #FFFFFF;
 }
 
@@ -1328,6 +1328,7 @@ hr{
 
 .edit_gallery form {
   margin-top: 20px;
+  color: #FFFFFF;
 }
 
 .edit_gallery input {
@@ -1336,6 +1337,10 @@ hr{
 
 .edit_gallery input[type="submit"] {
   color: #000000;
+}
+
+.edit_gallery input[type="file"] {
+  color: #FFFFFF;
 }
 
 .edit_gallery_pagination {

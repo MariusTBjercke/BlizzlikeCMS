@@ -273,6 +273,7 @@ class Forum {
             </div>
             <?php
         } else {
+            $_SESSION['lastURL'] = $_SERVER['REQUEST_URI'];
             ?>
             <p>You have to be <a href="user_login.php">signed in</a> to reply to this topic.</p>
             <?php
