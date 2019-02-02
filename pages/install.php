@@ -137,6 +137,7 @@ $installed = true;
  `date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=latin1");
+    $mysqli->query("CREATE TABLE `forum_post_thumbs` ( `id` INT(11) NOT NULL AUTO_INCREMENT , `post_id` INT(11) NOT NULL , `user_id` INT(11) NOT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;");
     $mysqli->query("CREATE TABLE `forum_post_replies` (
  `id` int(11) NOT NULL AUTO_INCREMENT,
  `user_id` int(11) NOT NULL,

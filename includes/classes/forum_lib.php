@@ -217,7 +217,7 @@ class Forum {
             ?>
                 <div class="table-top">
                     <div class="table-title"><?= $reply['title']; ?></div>
-                    <div class="thumb-wrapper"><?php ?> <i class="fa fa-thumbs-up" aria-hidden="true" title="0 Likes"></i></div>
+                    <div class="thumb-wrapper"><?php ?> <i class="fa fa-thumbs-up thumb" aria-hidden="true" id="<?= $reply['id']; ?>" title="0 Likes"></i></div>
                 </div>
                 <div class="table-body">
                     <form action="" method="post">

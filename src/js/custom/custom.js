@@ -24,3 +24,19 @@ $(".quote-reply").click(function() {
     tinymce.activeEditor.execCommand('mceInsertContent', false, content);
     $('html, body').animate({scrollTop:$(document).height()}, 'slow');
 });
+
+// Thumbs up function
+$(".thumb").click(function() {
+    if ($(this).hasClass("done")) {} else {
+        var number = $(this).attr('id');
+        var newNum = 1;
+        $(this).before('+' + newNum + ' ');
+
+        $.ajax({
+            url: "../../includes/functions/forum-thumb.php?post_id=" + number,
+            type: 'GET',
+        }).done(function() {
+            $(".thumb").addClass("done");
+        });
+    }
+});
