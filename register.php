@@ -9,7 +9,7 @@ include 'includes/classes/events_lib.php';
 include 'header.php';
 if (isset($_POST['submit'])) {
 
-	$username = strtoupper(addslashes(trim($_POST['username'])));
+	$username = addslashes(trim($_POST['username']));
 	$email = addslashes(trim($_POST['email']));
 	$password1 = addslashes(trim($_POST['password1']));
 	$password2 = addslashes(trim($_POST['password2']));

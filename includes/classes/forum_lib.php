@@ -217,6 +217,7 @@ class Forum {
             ?>
                 <div class="table-top">
                     <div class="table-title"><?= $reply['title']; ?></div>
+                    <div class="thumb-wrapper"><?php ?> <i class="fa fa-thumbs-up" aria-hidden="true" title="0 Likes"></i></div>
                 </div>
                 <div class="table-body">
                     <form action="" method="post">
@@ -258,9 +259,9 @@ class Forum {
                                 <td>
                                     <div class="topic_reply_field">
                                         <p>Title:</p>
-                                        <p><input type="text" name="title" class="form-control"></p>
+                                        <p><input type="text" name="title" id="reply-title" class="form-control"></p>
                                         <p>Reply:</p>
-                                        <p><textarea name="reply" class="tinymce"></textarea></p>
+                                        <p><textarea name="reply" class="tinymce" id="reply-area"></textarea></p>
                                         <p><input type="submit" name="reply_submit" class="btn btn-primary"
                                                   value="Post reply"></p>
                                     </div>
