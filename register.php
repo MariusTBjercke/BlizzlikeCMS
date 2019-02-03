@@ -10,7 +10,7 @@ include 'header.php';
 if (isset($_POST['submit'])) {
 
 	$username = addslashes(trim($_POST['username']));
-	$email = addslashes(trim($_POST['email']));
+	$email = strtoupper(addslashes(trim($_POST['email'])));
 	$password1 = addslashes(trim($_POST['password1']));
 	$password2 = addslashes(trim($_POST['password2']));
 	$recaptcha = addslashes(trim($_POST['recaptcha']));
@@ -61,7 +61,7 @@ if (isset($_POST['submit'])) {
         $findIDResult = $mysqli_auth->query($findIDQuery);
         $username = $bnetacc."#1";
 
-        $result = $mysqli_auth->query("INSERT INTO account (username, email, sha_pass_hash, battlenet_account, battlenet_index) VALUES ('$username', '$email', SHA1(UPPER('$username:$password1')), '$bnetacc', '1')");
+        $result = $mysqli_auth->query("INSERT INTO account (username, email, reg_mail, sha_pass_hash, battlenet_account, battlenet_index) VALUES ('$username', '$email', '$email', SHA1(UPPER('$username:$password1')), '$bnetacc', '1')");
         echo '<script>alert("Your account has been created! You may now log in.");</script>';
         echo '<script>window.location="howto.php";</script>';
 
