@@ -62,7 +62,6 @@ if (isset($_POST['submit'])) {
         $username = $bnetacc."#1";
 
         $result = $mysqli_auth->query("INSERT INTO account (username, email, sha_pass_hash, battlenet_account, battlenet_index) VALUES ('$username', '$email', SHA1(UPPER('$username:$password1')), '$bnetacc', '1')");
-        echo '<script>alert("'.$mysqli_auth->error.$bnetacc.'");</script>';
         echo '<script>alert("Your account has been created! You may now log in.");</script>';
         echo '<script>window.location="howto.php";</script>';
 
