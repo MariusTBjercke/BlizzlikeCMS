@@ -210,7 +210,7 @@ class Forum {
             if (isUserLoggedIn()) {
             ?>
                 <div class="quote-reply" id="<?= $reply['id']; ?>">
-                    <button>Quote this reply</button>
+                    <button>Quote and reply</button>
                 </div>
             <?php
             }
