@@ -3,8 +3,13 @@ $maxForumPostAvatarWidth: 200px;
 
 .forum-page {
 
+  .top-table {
+    margin-bottom: 0 !important;
+  }
+
   .table-wrapper {
     margin-top: 30px;
+    margin-bottom: 100px;
     width: 100%;
     position: relative;
 
@@ -171,6 +176,11 @@ $maxForumPostAvatarWidth: 200px;
           min-height: 150px;
         }
       }
+    }
+
+    .google-auto-placed {
+      position: absolute;
+      bottom: -105px;
     }
   }
 

@@ -162,7 +162,7 @@ class Forum {
         $poster->retrieveAccount();
         $poster_name = $poster->getName();
         ?>
-        <div class="table-wrapper">
+        <div class="table-wrapper top-table">
             <a href="#" onclick="history.back(1);"><button class="btn btn-primary"><i class="fa fa-arrow-left" aria-hidden="true"></i> Go back</button></a>
             <div class="table-top">
                 <div class="table-title"><?= $fetch['name']; ?></div>
