@@ -8,7 +8,7 @@ $forum = new Forum();
             <ul class="pull-right">
                 <li>Server status: <?php getServerStatus(); ?></li>
                 <li><?php if (isUserLoggedIn() == true) { echo '<a href="user.php">' . getLoggedInUsername() . '</a>'; } else { ?><a href="user_login.php">Login</a><?php } ?></li>
-                <li><a href="admin.php">Administration</a></li>
+                <li><a href="admin.php">Admin</a></li>
             </ul>
         </div>
     </div>
