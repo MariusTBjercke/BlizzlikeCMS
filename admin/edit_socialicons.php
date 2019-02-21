@@ -4,8 +4,9 @@ if (isset($_POST['submit'])) {
     $instagram = addslashes(trim($_POST['instagram']));
     $twitter = addslashes(trim($_POST['twitter']));
     $youtube = addslashes(trim($_POST['youtube']));
+    $discord = addslashes(trim($_POST['discord']));
 
-    $result = $mysqli_cms->query("UPDATE config SET facebook='$facebook', instagram='$instagram', twitter='$twitter', youtube='$youtube' WHERE id='1'");
+    $result = $mysqli_cms->query("UPDATE config SET facebook='$facebook', instagram='$instagram', twitter='$twitter', youtube='$youtube', discord='$discord' WHERE id='1'");
     echo '<script>window.location="admin.php?page=edit_socialicons&action=success";</script>';
     exit;
 }
@@ -26,6 +27,7 @@ $fetch = $result->fetch_assoc();
         <li><p>Instagram: <input type="text" name="instagram" class="form-control" value="<?= $fetch['instagram']; ?>"></p></li>
         <li><p>Twitter: <input type="text" name="twitter" class="form-control" value="<?= $fetch['twitter']; ?>"></p></li>
         <li><p>YouTube: <input type="text" name="youtube" class="form-control" value="<?= $fetch['youtube']; ?>"></p></li>
+        <li><p>Discord: <input type="text" name="discord" class="form-control" value="<?= $fetch['discord']; ?>"></p></li>
     </ul>
 
     <input type="submit" name="submit" value="Edit settings" class="btn">

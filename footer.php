@@ -10,6 +10,7 @@
                 $instagramURL = $socialFetch['instagram'];
                 $twitterURL = $socialFetch['twitter'];
                 $youtubeURL = $socialFetch['youtube'];
+                $discordURL = $socialFetch['discord'];
                 if (strlen($facebookURL) > 0) {
                     ?>
                     <a href="<?= $facebookURL; ?>" target="_blank" title="Visit our Facebook"><div class="facebook-icon grayscale"></div></a>
@@ -29,6 +30,11 @@
                     ?>
                     <a href="<?= $youtubeURL; ?>" target="_blank" title="Visit our YouTube"><div class="youtube-icon grayscale"></div></a>
                 <?php
+                }
+                if (strlen($discordURL) > 0) {
+                    ?>
+                    <a href="<?= $discordURL; ?>" target="_blank" title="Join our Discord"><div class="discord-icon grayscale"></div></a>
+                    <?php
                 }
                 ?>
             </div>
