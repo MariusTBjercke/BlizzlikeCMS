@@ -194,6 +194,14 @@ class Forum {
         <?php
     }
 
+    public function displayThumbs($topicID) {
+        global $mysqli_cms;
+
+        $query = "SELECT * FROM forum_post_thumbs WHERE post_id='$topicID'";
+        $result = $mysqli_cms->query($query);
+        return $result->num_rows;
+    }
+
     public function displayReplies($topicID) {
         global $mysqli_cms;
 
@@ -204,6 +212,7 @@ class Forum {
             $poster = new Account($reply['user_id']);
             $poster->retrieveAccount();
             $poster_name = $poster->getName();
+            $thumbs = $this->displayThumbs($reply['id']);
             ?>
             <div class="table-wrapper">
             <?php
@@ -217,7 +226,7 @@ class Forum {
             ?>
                 <div class="table-top">
                     <div class="table-title"><?= $reply['title']; ?></div>
-                    <div class="thumb-wrapper"><?php ?> <i class="fa fa-thumbs-up thumb" aria-hidden="true" id="<?= $reply['id']; ?>" title="0 Likes"></i></div>
+                    <div class="thumb-wrapper"><span class="thumbs-up"><?php if (($thumbs) > 0) { ?>+<?= $thumbs; } ?></span><?php ?> <i class="fa fa-thumbs-up thumb" aria-hidden="true" id="<?= $reply['id']; ?>" title="<?= $this->displayThumbs($reply['id']) ?> Likes"></i></div>
                 </div>
                 <div class="table-body">
                     <form action="" method="post">
