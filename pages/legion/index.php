@@ -2,11 +2,15 @@
 if ($show_frontpage > 0) {
     ?>
     <div class="container">
-        <div class="front-banner">
-            <?php
-            $site = new Site();
-            echo $site->getFirstPost();
-            ?>
+        <div class="row">
+            <div class="col">
+                <div class="front-banner">
+                    <?php
+                    $site = new Site();
+                    echo $site->getFirstPost();
+                    ?>
+                </div>
+            </div>
         </div>
     </div>
     <?php

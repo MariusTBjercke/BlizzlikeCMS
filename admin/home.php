@@ -12,7 +12,7 @@
     </ul>
     <ul>
         <li><a href="admin.php?page=edit_events"><button><i class="fa fa-calendar" aria-hidden="true"></i> Edit events</button></a></li>
-        <li><a href="#"><button><i class="fa fa-question-circle" aria-hidden="true"></i></button></a></li>
+        <li><a href="admin.php?page=edit_polls"><button><i class="fa fa-check" aria-hidden="true"></i> Edit site polls</button></a></li>
         <li><a href="#"><button><i class="fa fa-question-circle" aria-hidden="true"></i></button></a></li>
         <li><a href="#"><button><i class="fa fa-question-circle" aria-hidden="true"></i></button></a></li>
         <li><a href="#"><button><i class="fa fa-question-circle" aria-hidden="true"></i></button></a></li>
