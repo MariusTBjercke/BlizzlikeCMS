@@ -36,6 +36,7 @@ if (isset($_POST['install_submit'])) {
     // Writing data to config.php
     $data = '<?php
 error_reporting(0);
+mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
 
 // MySQL login details
 $hostname = "' . $hostname . '";
@@ -150,7 +151,7 @@ $installed = true;
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1");
     $mysqli->query("CREATE TABLE google_config ( `id` INT NOT NULL AUTO_INCREMENT , `analytics_tracking_id` VARCHAR(255) , `google_ad_1` TEXT , `google_auto_ads` TEXT , PRIMARY KEY (`id`)) ENGINE = InnoDB;");
     $mysqli->query("INSERT INTO google_config (analytics_tracking_id, google_ad_1, google_auto_ads) VALUES (NULL, NULL, NULL)");
-    $mysqli->query("CREATE TABLE polls ( `id` INT(11) NOT NULL AUTO_INCREMENT , `name` VARCHAR(255) NOT NULL , `value` INT(11) NOT NULL , `ip` VARCHAR(255) NOT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;");
+    $mysqli->query("CREATE TABLE polls ( `id` INT(11) NOT NULL AUTO_INCREMENT , `question` VARCHAR(255) NOT NULL , `yes` INT(11) , `no` INT(11) , `active` INT(1) DEFAULT '1' , `ip` VARCHAR(255) NOT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;");
 }
 
 ?>
@@ -209,7 +210,7 @@ $installed = true;
 </div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="dist/bundle.js"></script>
+<script src="dist/<?= $theme_name; ?>-bundle.js"></script>
 <script src="includes/featherlight/featherlight.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>

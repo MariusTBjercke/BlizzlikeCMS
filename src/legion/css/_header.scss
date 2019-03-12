@@ -16,6 +16,30 @@
   }
 }
 
+.poll {
+  font-size: 2rem;
+  color: #caa426;
+  margin-top: 20px;
+  margin-right: 10px;
+  margin-bottom: 40px;
+
+  span {
+    font-weight: bold;
+  }
+
+  .buttons {
+    margin-top: 5px;
+
+    input[type=submit] {
+      background-color: #221410;
+      border-color: #6b4e1d;
+      color: #caa426;
+      float: left;
+      margin-right: 10px;
+    }
+  }
+}
+
 .discord-margin {
   margin-top: 20px;
 }

@@ -384,4 +384,18 @@ class Forum {
         }
     }
 
+    public function getForumNotification() {
+        global $mysqli_cms;
+
+        $ip = $_SERVER['REMOTE_ADDR'];
+        $query = "SELECT * FROM forum_notification WHERE ip = '$ip'";
+        $result = $mysqli_cms->query($query);
+        $num = $result->num_rows;
+        if ($num > 0) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
 }

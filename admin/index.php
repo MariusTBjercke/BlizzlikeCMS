@@ -26,6 +26,9 @@ if ($_SESSION['admin_logged_n'] == true) {
         case 'edit_events':
             include 'edit_events.php';
             break;
+        case 'edit_polls':
+            include 'edit_polls.php';
+            break;
         default:
             include 'home.php';
             break;

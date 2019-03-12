@@ -5,14 +5,14 @@ var TransferWebpackPlugin = require('transfer-webpack-plugin');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 var extractPlugin = new ExtractTextPlugin({
-    filename: 'main.css'
+    filename: 'legion.css'
 });
 
 module.exports = {
-    entry: './src/js/app.js',
+    entry: './src/legion/js/app.js',
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: 'bundle.js',
+        filename: 'legion-bundle.js',
         publicPath: '/dist'
     },
     module: {

@@ -1,6 +1,6 @@
 <div class="admin_front">
     <h1>Administration panel</h1>
-    <a href="logout.php" class="admin_logout"><button>Logout</button></a>
+    <a href="logout.php" class="admin_logout"><button><i class="fa fa-key"></i> Logout</button></a>
     <h3>Choose from the menu below:</h3>
     <ul>
         <li><a href="admin.php?page=edit_accounts"><button><span class="glyphicon glyphicon-user"></span> Edit accounts</button></a></li>

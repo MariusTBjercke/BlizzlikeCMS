@@ -1,14 +1,46 @@
 <?php
+$polls = new Polls();
+
+if (isset($_GET['submit_yes'])) {
+    $polls->voteYes();
+}
+if (isset($_GET['submit_no'])) {
+    $polls->voteNo();
+}
 if ($show_frontpage > 0) {
     ?>
     <div class="container">
         <div class="row">
-            <div class="col">
+            <div class="col-sm-9">
                 <div class="front-banner">
                     <?php
                     $site = new Site();
                     echo $site->getFirstPost();
                     ?>
+                </div>
+            </div>
+            <div class="col">
+                <div class="poll">
+                    <?php
+                    echo '<i class="fa fa-bullhorn"></i> <span>Question:</span> ' . $polls->displayActivePoll();
+                    ?>
+                    <div class="buttons">
+                        <?php
+                        $request = $polls->checkIfHasVoted();
+                        if ($request) {
+                            echo $polls->displayAnswers();
+                        } else {
+                        ?>
+                            <form action="" type="get">
+                                <input type="submit" name="submit_yes" value="Yes">
+                            </form>
+                            <form action="" type="get">
+                                <input type="submit" name="submit_no" value="No">
+                            </form>
+                        <?php
+                        }
+                        ?>
+                    </div>
                 </div>
             </div>
         </div>
