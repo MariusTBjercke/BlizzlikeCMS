@@ -1,0 +1,104 @@
+.user-profilepic-modal-bg {
+  background-color: rgba(0, 0, 0, 0.60);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  display: none;
+  overflow: auto;
+  z-index: 200;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  .user-profilepic-modal {
+    background-color: #FFFFFF;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    border-radius: 1rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px 50px 50px 50px;
+    color: #000000;
+    z-index: 300;
+
+    .fileUpload {
+      margin-top: 30px;
+    }
+
+    .form-control {
+      padding: 0;
+    }
+  }
+}
+
+.user-avatar {
+  position: relative;
+  width: 130px;
+  z-index: 1;
+  img {
+    width: 130px;
+    height: 130px;
+    border: 2px solid #9b9b9b;
+  }
+
+  .change-avatar {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0.6);
+    text-align: center;
+    line-height: 40px;
+    display: none;
+
+    span {
+      a {
+        color: #FFFFFF;
+      }
+    }
+  }
+}
+
+.user-facts {
+  ul {
+    list-style: none;
+    font-size: 1.8rem;
+
+    span {
+      font-weight: bold;
+    }
+  }
+}
+
+.avatar-upload-section {
+
+  .fileUpload {
+    position: relative;
+    overflow: hidden;
+    color: #FFFFFF;
+    width: 250px;
+  }
+  .fileUpload input.upload {
+    cursor: pointer;
+  }
+
+  .fileUpload input {
+    color: #000000 !important;
+  }
+
+  .fileUpload input[type="submit"] {
+    margin-top: 20px;
+  }
+
+}
+
+.register-btn {
+  background-color: #c79a32;
+
+  &:hover {
+    background-color: #af8133;
+  }
+}

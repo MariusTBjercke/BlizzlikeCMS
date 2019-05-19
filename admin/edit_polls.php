@@ -1,10 +1,16 @@
 <?php
+$polls = new Polls();
 if (isset($_POST['submit'])) {
     $question = addslashes(trim($_POST['question']));
 
-    $mysqli_cms->query("INSERT INTO polls (question) VALUES ('$question')");
-    echo '<script>window.location="admin.php?page=edit_polls&action=success";</script>';
-    exit;
+    $result = $polls->saveNewPoll($question);
+    if ($result == true) {
+        echo '<script>window.location="admin.php?page=edit_polls&action=success";</script>';
+        exit;
+    } else {
+        echo '<script>window.location="admin.php?page=edit_polls&action=false";</script>';
+        exit;
+    }
 }
 ?>
 

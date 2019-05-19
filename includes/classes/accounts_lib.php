@@ -25,6 +25,11 @@ class Account {
         }
     }
 
+    public function resetPassword($sha_pass_hash) {
+        global $mysqli_auth;
+
+    }
+
     public function retrieveAccount() {
         global $mysqli_auth;
         global $mysqli_cms;

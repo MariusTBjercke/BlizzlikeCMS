@@ -1,0 +1,297 @@
+.navbar-nav {
+  width: 90%;
+  height: 80px;
+  position: absolute;
+  right: -9px !important;
+  padding-right: 8px;
+
+  .last-forum-topic {
+    position: absolute;
+    right: 22px;
+    top: -30px;
+
+    span {
+      font-weight: bold;
+    }
+  }
+}
+
+.poll {
+  font-size: 2rem;
+  color: #caa426;
+  margin-top: 20px;
+  margin-right: 10px;
+  margin-bottom: 40px;
+
+  span {
+    font-weight: bold;
+  }
+
+  .buttons {
+    margin-top: 5px;
+
+    input[type=submit] {
+      background-color: #221410;
+      border-color: #6b4e1d;
+      color: #caa426;
+      float: left;
+      margin-right: 10px;
+    }
+  }
+}
+
+.discord-margin {
+  margin-top: 20px;
+}
+
+.navbar-list {
+  float: right;
+}
+
+.navbar-menuitem {
+  display: inline;
+  padding: 24px 15px 32px 15px;
+  line-height: 70px;
+}
+
+@media(min-width: 1321px) {
+  .navbar-nav {
+    font-size: 1.8rem;
+  }
+  .navbar-menuitem {
+    padding: 27px 15px 36px 15px;
+  }
+}
+
+@media(max-width: 1320px) {
+  .navbar-nav {
+    font-size: 1.3rem;
+  }
+  .navbar-menuitem {
+    padding: 27px 15px 36px 15px;
+  }
+}
+
+@media(max-width: 1000px) {
+  .navbar-list {
+    display: none;
+  }
+  .navbar-toggle {
+    display: none;
+  }
+}
+
+#toggledMenu {
+  display: none;
+}
+
+#toggledMenu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  min-width: 300px;
+  background-color: #402822;
+}
+
+#toggledMenu li {
+  margin: 0;
+  padding: 0;
+  display: inline;
+}
+
+.navbar-toggle {
+  color: #FFFFFF;
+  background-color: #402822 !important;
+  margin-top: 14px !important;
+  margin-right: 45px !important;
+}
+
+.navbar-menuitem a {
+  text-decoration: none;
+  color: #caa426;
+}
+
+.navbar-menuitem:hover {
+  background-color: #3c2a13;
+}
+
+.menuitem-active {
+  background-color: #3c2a13;
+}
+
+.mobilemenu-active {
+  color: #ffcc21 !important;
+  border-bottom: 3px solid #ffcc21 !important;
+}
+.navbar-nav {
+  width: 90%;
+  height: 80px;
+  position: absolute;
+  right: 0px;
+}
+
+.navbar-list {
+  float: right;
+}
+
+.navbar-menuitem {
+  display: inline;
+  padding: 24px 15px 32px 15px;
+  line-height: 70px;
+}
+
+@media(min-width: 1321px) {
+  .navbar-nav {
+    font-size: 1.8rem;
+  }
+  .navbar-menuitem {
+    padding: 24px 15px 32px 15px;
+  }
+}
+
+@media(max-width: 1320px) {
+  .navbar-nav {
+    font-size: 1.3rem;
+  }
+  .navbar-menuitem {
+    padding: 24px 15px 32px 15px;
+  }
+}
+
+@media(max-width: 1000px) {
+  .navbar-list {
+    display: none;
+  }
+  .navbar-toggle {
+    display: none;
+  }
+}
+
+#toggledMenu {
+  display: none;
+}
+
+#toggledMenu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  min-width: 300px;
+  background-color: #402822;
+}
+
+#toggledMenu li {
+  margin: 0;
+  padding: 0;
+  display: inline;
+}
+
+.navbar-toggle {
+  color: #FFFFFF;
+  background-color: #402822 !important;
+  margin-top: 14px !important;
+  margin-right: 45px !important;
+}
+
+.navbar-menuitem a {
+  text-decoration: none;
+  color: #caa426;
+}
+
+.navbar-menuitem:hover {
+  background-color: #3c2a13;
+}
+
+.menuitem-active {
+  background-color: #3c2a13;
+}
+
+.mobilemenu-active {
+  color: #ffcc21 !important;
+  border-bottom: 3px solid #ffcc21 !important;
+}
+.navbar-nav {
+  width: 90%;
+  height: 80px;
+  position: absolute;
+  right: 0;
+}
+
+.navbar-list {
+  float: right;
+}
+
+.navbar-menuitem {
+  display: inline;
+  padding: 22px 15px 30px 15px;
+  line-height: 70px;
+}
+
+@media(min-width: 1321px) {
+  .navbar-nav {
+    font-size: 1.8rem;
+  }
+  .navbar-menuitem {
+    padding: 26px 15px 34px 15px;
+  }
+}
+
+@media(max-width: 1320px) {
+  .navbar-nav {
+    font-size: 1.3rem;
+  }
+  .navbar-menuitem {
+    padding: 28px 15px 35px 15px;
+  }
+}
+
+@media(max-width: 1000px) {
+  .navbar-list {
+    display: none;
+  }
+  .navbar-toggle {
+    display: block;
+  }
+}
+
+#toggledMenu {
+  display: none;
+}
+
+#toggledMenu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  min-width: 300px;
+  background-color: #402822;
+}
+
+#toggledMenu li {
+  margin: 0;
+  padding: 0;
+  display: inline;
+}
+
+.navbar-toggle {
+  color: #FFFFFF;
+  background-color: #402822 !important;
+  margin-top: 14px !important;
+  margin-right: 45px !important;
+}
+
+.navbar-menuitem a {
+  text-decoration: none;
+  color: #caa426;
+}
+
+.navbar-menuitem:hover {
+  background-color: #3c2a13;
+}
+
+.menuitem-active {
+  background-color: #3c2a13;
+}
+
+.mobilemenu-active {
+  color: #ffcc21 !important;
+  border-bottom: 3px solid #ffcc21 !important;
+}

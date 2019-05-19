@@ -33,6 +33,9 @@ switch($page) {
     case "userlogin":
         include 'pages/' . $theme_name . '/user_login.php';
         break;
+    case "forgottenpw":
+        include 'pages/' . $theme_name . '/forgotten_pw.php';
+        break;
     case "user":
         include 'pages/' . $theme_name . '/user.php';
         break;

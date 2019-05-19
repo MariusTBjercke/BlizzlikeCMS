@@ -23,6 +23,17 @@ class Polls {
 
     }
 
+    public function saveNewPoll($poll) {
+        global $mysqli_cms;
+
+        $result = $mysqli_cms->query("INSERT INTO polls (question) VALUES ('$poll')");
+        if ($result) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
     public function displayActivePoll() {
         global $mysqli_cms;
 
