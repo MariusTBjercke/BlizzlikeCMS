@@ -26,7 +26,8 @@ if ($show_frontpage > 0) {
                     ?>
                     <div class="buttons">
                         <?php
-                        $request = $polls->checkIfHasVoted();
+                        $poll_id = $polls->activePollID;
+                        $request = $polls->checkIfHasVoted($poll_id);
                         if ($request) {
                             echo $polls->displayAnswers();
                         } else {

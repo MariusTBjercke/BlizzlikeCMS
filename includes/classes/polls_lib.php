@@ -5,6 +5,7 @@ class Polls {
     public $activePollID;
     public $YesVotes;
     public $NoVotes;
+    public $Question;
 
     public function __construct() {
         global $mysqli_cms;
@@ -12,9 +13,10 @@ class Polls {
         $query = "SELECT * FROM polls ORDER BY id DESC LIMIT 1";
         $result = $mysqli_cms->query($query);
         $fetch = $result->fetch_assoc();
-        $this->activePollID = $fetch['id'];
+        $this->activePollID;
         $this->YesVotes = $fetch['yes'];
         $this->NoVotes = $fetch['no'];
+        $this->Question = $fetch['question'];
     }
 
     public function displayPopup() {
@@ -23,10 +25,14 @@ class Polls {
 
     }
 
+    public function displayPollID() {
+        return $this->activePollID;
+    }
+
     public function saveNewPoll($poll) {
         global $mysqli_cms;
 
-        $result = $mysqli_cms->query("INSERT INTO polls (question) VALUES ('$poll')");
+        $result = $mysqli_cms->query("INSERT INTO `polls` (`id`, `question`, `yes`, `no`, `active`, `ip`) VALUES (NULL, '', NULL, NULL, '1', ''), (NULL, '$poll', NULL, NULL, '1', '')");
         if ($result) {
             return true;
         } else {
@@ -35,19 +41,14 @@ class Polls {
     }
 
     public function displayActivePoll() {
-        global $mysqli_cms;
-
-        $query = "SELECT * FROM polls ORDER BY id DESC LIMIT 1";
-        $result = $mysqli_cms->query($query);
-        $fetch = $result->fetch_assoc();
-        return $fetch['question'];
+        return $this->Question;
     }
 
-    public function checkIfHasVoted() {
+    public function checkIfHasVoted($poll_id) {
         global $mysqli_cms;
         $ip = $_SERVER['REMOTE_ADDR'];
 
-        $query = "SELECT * FROM poll_votes WHERE ip = '$ip'";
+        $query = "SELECT * FROM poll_votes WHERE ip = '$ip' AND poll_id = '$poll_id'";
         $result = $mysqli_cms->query($query);
         $num = $result->num_rows;
         if ($num > 0) {
