@@ -13,7 +13,7 @@ class Polls {
         $query = "SELECT * FROM polls ORDER BY id DESC LIMIT 1";
         $result = $mysqli_cms->query($query);
         $fetch = $result->fetch_assoc();
-        $this->activePollID;
+        $this->activePollID = $fetch['id'];
         $this->YesVotes = $fetch['yes'];
         $this->NoVotes = $fetch['no'];
         $this->Question = $fetch['question'];
@@ -66,7 +66,7 @@ class Polls {
         $pollID = $this->activePollID;
         $query = "UPDATE polls SET yes='$newYesVotes' WHERE id='$pollID'";
         $result = $mysqli_cms->query($query);
-        $query2 = "INSERT INTO poll_votes (ip) VALUES ('$ip')";
+        $query2 = "INSERT INTO poll_votes (poll_id, ip) VALUES ('$pollID', '$ip')";
         $result2 = $mysqli_cms->query($query2);
         if ($result && $result2) {
             return true;
@@ -81,9 +81,9 @@ class Polls {
         $ip = $_SERVER['REMOTE_ADDR'];
         $newNoVotes = $this->NoVotes + 1;
         $pollID = $this->activePollID;
-        $query = "UPDATE polls SET no='$newNoVotes' WHERE id='$pollID'";
+        $query = "UPDATE poll_votes SET no='$newNoVotes' WHERE id='$pollID'";
         $result = $mysqli_cms->query($query);
-        $query2 = "INSERT INTO poll_votes (ip) VALUES ('$ip')";
+        $query2 = "INSERT INTO poll_votes (poll_id, ip) VALUES ('$pollID', '$ip')";
         $result2 = $mysqli_cms->query($query2);
         if ($result && $result2) {
             return true;
