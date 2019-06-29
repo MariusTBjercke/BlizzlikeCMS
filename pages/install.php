@@ -152,6 +152,7 @@ $installed = true;
     $mysqli->query("CREATE TABLE google_config ( `id` INT NOT NULL AUTO_INCREMENT , `analytics_tracking_id` VARCHAR(255) , `google_ad_1` TEXT , `google_auto_ads` TEXT , PRIMARY KEY (`id`)) ENGINE = InnoDB;");
     $mysqli->query("INSERT INTO google_config (analytics_tracking_id, google_ad_1, google_auto_ads) VALUES (NULL, NULL, NULL)");
     $mysqli->query("CREATE TABLE polls ( `id` INT(11) NOT NULL AUTO_INCREMENT , `question` VARCHAR(255) NOT NULL , `yes` INT(11) , `no` INT(11) , `active` INT(1) DEFAULT '1' , `ip` VARCHAR(255) NOT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;");
+    $mysqli->query("INSERT INTO polls (`question`, `yes`, `no`, `active`) VALUES ('Turn this on and off in the admin panel.', 0, 0, 1)");
     $mysqli->query("CREATE TABLE poll_votes ( `id` INT(11) NOT NULL AUTO_INCREMENT , `poll_id` INT(11) NOT NULL , `ip` VARCHAR(255) NOT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;");
 }
 
