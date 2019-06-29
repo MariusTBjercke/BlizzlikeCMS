@@ -2,7 +2,7 @@
 $polls = new Polls();
 
 if (isset($_GET['submit_yes'])) {
-    echo $polls->voteYes();
+    $polls->voteYes();
 }
 if (isset($_GET['submit_no'])) {
     $polls->voteNo();
