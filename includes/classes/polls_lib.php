@@ -81,7 +81,7 @@ class Polls {
         $ip = $_SERVER['REMOTE_ADDR'];
         $newNoVotes = $this->NoVotes + 1;
         $pollID = $this->activePollID;
-        $query = "UPDATE poll_votes SET no='$newNoVotes' WHERE id='$pollID'";
+        $query = "UPDATE polls SET no='$newNoVotes' WHERE id='$pollID'";
         $result = $mysqli_cms->query($query);
         $query2 = "INSERT INTO poll_votes (poll_id, ip) VALUES ('$pollID', '$ip')";
         $result2 = $mysqli_cms->query($query2);
