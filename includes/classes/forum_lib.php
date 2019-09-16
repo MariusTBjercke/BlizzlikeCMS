@@ -30,7 +30,7 @@ class Forum {
             ?>
             <div class="table-wrapper">
                 <div class="table-top">
-                    <div class="table-title forum-category-title"><?= $category['name']; ?> <?php if (isAdminLoggedIn()) { ?><a href="#" class="editForumCategoryName"><i class="fa fa-pencil-square"></i></a> <a href="#" class="trash"><i class="fa fa-trash"></i></a> <?php } ?></div>
+                    <div class="table-title forum-category-title"><?= $category['name']; ?> <?php if (isAdminLoggedIn()) { ?> <a href="?deleteSubCat=true&forum-title-trash=<?php echo $category_id; ?>" class="trash"><i class="fa fa-trash"></i></a> <?php } ?></div>
                 </div>
                 <div class="table-body">
                     <table class="table">
@@ -61,6 +61,20 @@ class Forum {
             </div>
             <?php
         }
+    }
+
+    public function deleteCategory($catID) {
+        global $mysqli_auth;
+        global $mysqli_cms;
+
+        $query = "DELETE FROM forum_categories WHERE id = '$catID'";
+        $result = $mysqli_cms->query($query);
+        if ($result) {
+            echo true;
+        } else {
+            echo false;
+        }
+
     }
 
     public function displayLastPosterNameFromCategory($categoryID) {
