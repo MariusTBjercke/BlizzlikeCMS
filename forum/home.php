@@ -7,6 +7,12 @@ if ($_GET['deleteSubCat'] == true) {
     echo '<script>window.reload();</script>';
 }
 
+if ($_GET['deletePost'] == true) {
+    $postID = $_GET['forum-post-id'];
+    $forum->deletePost($postID);
+    echo '<script>window.reload();</script>';
+}
+
 ?>
 
 <div class="forum-page forum-home">

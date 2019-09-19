@@ -74,7 +74,20 @@ class Forum {
         } else {
             echo false;
         }
+    }
 
+    // TODO: Finish deletePost function
+    public function deletePost($postID) {
+        global $mysqli_auth;
+        global $mysqli_cms;
+
+        $query = "DELETE FROM forum_posts WHERE id = '$postID'";
+        $result = $mysqli_cms->query($query);
+        if ($result) {
+            echo true;
+        } else {
+            echo false;
+        }
     }
 
     public function displayLastPosterNameFromCategory($categoryID) {
