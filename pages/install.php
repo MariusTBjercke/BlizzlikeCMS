@@ -112,7 +112,7 @@ $installed = true;
  `instagram` varchar(255) DEFAULT '#',
  `twitter` varchar(255) DEFAULT '#',
  `youtube` varchar(255) DEFAULT '#',
- `discord` varchar(255) DEFAULT '#', theme INT(11) NOT NULL)");
+ `discord` varchar(255) DEFAULT '#', theme INT(11) NOT NULL, `mail_server` varchar(255) DEFAULT NULL, `mail_port` INT(11) DEFAULT NULL, `mail_auth` INT(1) DEFAULT '0')");
     $mysqli->query("INSERT INTO config (servername, server_description, serveraddress, worldport, show_post_frontpage, contact, theme) VALUES ('$servername', '$server_description', '$serveraddress', '$worldport', '1', 'contact@example.com', '2')");
     $mysqli->query("CREATE TABLE gamemasters (id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, charname VARCHAR(255) NOT NULL)");
     $mysqli->query("INSERT INTO gamemasters (charname) VALUES ('Example')");
