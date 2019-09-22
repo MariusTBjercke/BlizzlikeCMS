@@ -1,6 +1,7 @@
 <?php
+require_once('accounts_lib.php');
 
-class Forum {
+class Forum extends Account {
 
     public $forumActive;
 
@@ -177,6 +178,26 @@ class Forum {
         }
     }
 
+    public function fileExists($userID) {
+        global $mysqli_auth;
+        global $mysqli_cms;
+
+        $query = "SELECT * FROM account WHERE id='$userID'";
+        $result = $mysqli_auth->query($query);
+        $fetch = $result->fetch_assoc();
+        $poster = new Account($userID);
+        $poster->retrieveAccount();
+
+        $realPath = $_SERVER['DOCUMENT_ROOT'] . '/img/avatars/' . $poster->getAvatarID() . '.png';
+        $imgURL = '/img/avatars/' . $poster->getAvatarID() . '.png';
+
+        if (!file_exists($realPath)) {
+            return '/img/avatars/no-avatar.png';
+        } else {
+            return $imgURL;
+        }
+    }
+
     public function displayTopic($topicID)
     {
         global $mysqli_auth;
@@ -186,6 +207,7 @@ class Forum {
         $result = $mysqli_cms->query($query);
         $fetch = $result->fetch_assoc();
         $poster = new Account($fetch['user_id']);
+        $posterID = $fetch['user_id'];
         $poster->retrieveAccount();
         $poster_name = $poster->getName();
         ?>
@@ -205,7 +227,7 @@ class Forum {
                         <tbody>
                         <tr>
                             <td class="forum-post-avatar">
-                                <img src="img/avatars/<?= $poster->getAvatarID(); ?>.png" width="180">
+                                <img src="<?php echo $this->fileExists($posterID); ?>" width="180">
                                 <div class="role">Rank: <?= $poster->getRole(); ?></div>
                                 <div class="role">Highest level: <?= $poster->getHighestLevel(); ?></div>
                             </td>
@@ -238,6 +260,7 @@ class Forum {
         foreach ($array as $reply) {
             $poster = new Account($reply['user_id']);
             $poster->retrieveAccount();
+            $posterID = $reply['user_id'];
             $poster_name = $poster->getName();
             $thumbs = $this->displayThumbs($reply['id']);
             ?>
@@ -266,7 +289,7 @@ class Forum {
                             <tbody>
                             <tr>
                                 <td class="forum-post-avatar">
-                                    <img src="img/avatars/<?= $poster->getAvatarID(); ?>.png" width="180">
+                                    <img src="<?php echo $this->fileExists($posterID); ?>" width="180">
                                     <div class="role">Rank: <?= $poster->getRole(); ?></div>
                                     <div class="role">Highest level: <?= $poster->getHighestLevel(); ?></div>
                                 </td>

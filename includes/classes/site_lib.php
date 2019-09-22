@@ -104,8 +104,8 @@ class Site
         $link .= "://";
 
         $link .= $_SERVER['HTTP_HOST'];
-        $validURL = str_replace("&", "&amp", $url);
-        return $validURL;
+        $link .= $_SERVER['REQUEST_URI'];
+        return $link;
     }
 
 }

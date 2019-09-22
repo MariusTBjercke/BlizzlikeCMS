@@ -78,10 +78,10 @@ if (isset($_FILES["file"])) {
                 <?php
                 if (empty($account->getAvatarID())) {
                     ?>
-                    <img src="<?php echo $site->getCurrentURL(); ?>/img/avatars/no-avatar.png" title="Avatar" alt="Avatar">
+                    <img src="../../img/avatars/no-avatar.png" title="Avatar" alt="Avatar">
                     <?php
                 } else {
-                    echo '<img src="' . $site->getCurrentURL() . '/img/thumbnails/'.$account->getAvatarID().'.png" title="Avatar" alt="Avatar">';
+                    echo '<img src="../../img/thumbnails/'.$account->getAvatarID().'.png" title="Avatar" alt="Avatar">';
                 }
                 ?>
             </div>
