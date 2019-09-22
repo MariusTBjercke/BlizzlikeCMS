@@ -76,11 +76,12 @@ if (isset($_FILES["file"])) {
                 </div>
                 <?php
                 if (empty($account->getAvatarID())) {
+                    $actual_link = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
                     ?>
                     <img src="../../img/avatars/no-avatar.png" title="Avatar" alt="Avatar">
                     <?php
                 } else {
-                    echo '<img src="../../img/thumbnails/'.$account->getAvatarID().'.png" title="Avatar" alt="Avatar">';
+                    echo '<img src="'. $actual_link .'/img/thumbnails/'.$account->getAvatarID().'.png" title="Avatar" alt="Avatar">';
                 }
                 ?>
             </div>
