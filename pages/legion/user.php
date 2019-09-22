@@ -81,7 +81,7 @@ if (isset($_FILES["file"])) {
                     <img src="../../img/avatars/no-avatar.png" title="Avatar" alt="Avatar">
                     <?php
                 } else {
-                    echo '<img src="'. $actual_link .'/img/thumbnails/'.$account->getAvatarID().'.png" title="Avatar" alt="Avatar">';
+                    echo '<img src="/img/thumbnails/'.$account->getAvatarID().'.png" title="Avatar" alt="Avatar">';
                 }
                 ?>
             </div>
