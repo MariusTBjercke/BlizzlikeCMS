@@ -62,6 +62,13 @@ if (isset($_FILES["file"])) {
             <p><a href="logout.php">Logout?</a></p>
 
             <p>Your Avatar</p>
+            <?php
+            $errors = 0;
+            if (!extension_loaded('imagick')) {
+                $errors = 1;
+                echo '<span id="installed" style="color:#ab000e">Imagick PHP extension not installed, and the picture may not display properly.</span>';
+            }
+            ?>
             <div class="user-avatar">
                 <div class="user-avatar-box"></div>
                 <div class="change-avatar">

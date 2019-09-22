@@ -16,6 +16,5 @@
         <li><a href="admin.php?page=edit_mail"><button><i class="fa fa-envelope" aria-hidden="true"> Edit Mail Settings</i></button></a></li>
         <li><a href="#"><button><i class="fa fa-question-circle" aria-hidden="true"></i></button></a></li>
         <li><a href="#"><button><i class="fa fa-question-circle" aria-hidden="true"></i></button></a></li>
-        <li><a href="#"><button><i class="fa fa-question-circle" aria-hidden="true"></i></button></a></li>
     </ul>
 </div>
