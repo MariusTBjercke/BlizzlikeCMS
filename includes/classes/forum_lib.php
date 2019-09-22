@@ -178,7 +178,7 @@ class Forum extends Account {
         }
     }
 
-    public function fileExists($userID) {
+    public function displayAvatar($userID) {
         global $mysqli_auth;
         global $mysqli_cms;
 
@@ -227,7 +227,7 @@ class Forum extends Account {
                         <tbody>
                         <tr>
                             <td class="forum-post-avatar">
-                                <img src="<?php echo $this->fileExists($posterID); ?>" width="180">
+                                <img src="<?php echo $this->displayAvatar($posterID); ?>" width="180">
                                 <div class="role">Rank: <?= $poster->getRole(); ?></div>
                                 <div class="role">Highest level: <?= $poster->getHighestLevel(); ?></div>
                             </td>
@@ -289,7 +289,7 @@ class Forum extends Account {
                             <tbody>
                             <tr>
                                 <td class="forum-post-avatar">
-                                    <img src="<?php echo $this->fileExists($posterID); ?>" width="180">
+                                    <img src="<?php echo $this->displayAvatar($posterID); ?>" width="180">
                                     <div class="role">Rank: <?= $poster->getRole(); ?></div>
                                     <div class="role">Highest level: <?= $poster->getHighestLevel(); ?></div>
                                 </td>
