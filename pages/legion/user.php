@@ -1,5 +1,6 @@
 <?php
 $account = new Account($_SESSION['user_id']);
+$site = new Site();
 $account->retrieveAccount();
 if ($account->checkIfLoggedIn() != true) {
     ?>
@@ -76,12 +77,11 @@ if (isset($_FILES["file"])) {
                 </div>
                 <?php
                 if (empty($account->getAvatarID())) {
-                    $actual_link = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
                     ?>
-                    <img src="../../img/avatars/no-avatar.png" title="Avatar" alt="Avatar">
+                    <img src="<?php echo $site->getCurrentURL(); ?>/img/avatars/no-avatar.png" title="Avatar" alt="Avatar">
                     <?php
                 } else {
-                    echo '<img src="/img/thumbnails/'.$account->getAvatarID().'.png" title="Avatar" alt="Avatar">';
+                    echo '<img src="' . $site->getCurrentURL() . '/img/thumbnails/'.$account->getAvatarID().'.png" title="Avatar" alt="Avatar">';
                 }
                 ?>
             </div>
