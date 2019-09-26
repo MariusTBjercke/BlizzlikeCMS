@@ -24,13 +24,19 @@ class Site
         echo '<div class="posts_list_front">';
         while ($row = $result->fetch_assoc()) {
             $poster_id = $row['poster_id'];
+            $account = new Account($poster_id);
+            $account->retrieveAccount();
             $newTime = strtotime($row['date']);
             $outputTime = date('d.m.Y', $newTime);
             $result2 = $mysqli_auth->query("SELECT * FROM account WHERE id='$poster_id'");
             $row2 = $result2->fetch_assoc();
-            echo '<h1>' . $row['title'] . '</h1>
-        <h2>Posted by <span class="frontPage-news-author">' . $row2['username'] . '</span><br/>' . $outputTime . '</h2>
-        <p>' . $row['content'] . '</p>';
+            echo '<h1 class="post-title">' . $row['title'] . '</h1>
+<div class="row">
+        <div class="col"><img src="img/thumbnails/'. $account->getAvatarID() . '.png" class="img-thumbnail front-page-thumbnail"></div>
+        <div class="col-sm-3"><h2>Posted by <span class="frontPage-news-author">' . $row2['username'] . '</span><br/>' . $outputTime . '</h2></div>
+        </div><div class="row">
+        <p>' . $row['content'] . '</p></div>';
+            echo '</div>';
         }
 
         echo '<ul>';

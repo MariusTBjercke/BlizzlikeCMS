@@ -874,7 +874,7 @@ footer {
 }
 
 .frontPage-news h1 {
-  margin: 30px 0px 0px 0px;
+  margin: 0px 0 10px;
   padding: 0;
 }
 
@@ -1186,6 +1186,10 @@ hr{
   padding-bottom: 40px;
 }
 
+.post-title {
+  color: #caa426 !important;
+}
+
 .edit_post {
   margin-top: 20px;
   padding-bottom: 200px;
@@ -1218,6 +1222,12 @@ hr{
 .frontPage-news li {
   display: inline-block;
   padding-right: 10px;
+}
+
+.front-page-thumbnail {
+  min-width: 100px;
+  min-height: auto;
+  margin-left: 15px;
 }
 
 .clear {
