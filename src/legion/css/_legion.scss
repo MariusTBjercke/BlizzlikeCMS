@@ -874,7 +874,7 @@ footer {
 }
 
 .frontPage-news h1 {
-  margin: 0px 0 10px;
+  margin: 0;
   padding: 0;
 }
 
@@ -1222,6 +1222,10 @@ hr{
 .frontPage-news li {
   display: inline-block;
   padding-right: 10px;
+}
+
+.frontPage-news-article {
+  margin-top: 20px;
 }
 
 .front-page-thumbnail {
