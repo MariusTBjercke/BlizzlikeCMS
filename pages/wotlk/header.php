@@ -1,80 +1,143 @@
 <?php
 $forum = new Forum();
 ?>
-<div class="top-bar">
+
+<div class="top-bg2-bar">
     <div class="container">
         <div class="row">
-            <h1><a href="index.php"><?php echo $servername; ?></a></h1>
-            <ul class="pull-right">
-                <li>Server status: <?php getServerStatus(); ?></li>
-                <li><?php if (isUserLoggedIn() == true) { echo '<a href="user.php">' . getLoggedInUsername() . '</a>'; } else { ?><a href="user_login.php">Login</a><?php } ?></li>
-                <li><a href="admin.php">Admin</a></li>
-            </ul>
+            <div class="col-sm text-right servername"><a href="index.php"><?= $servername; ?></a></div>
+        </div>
+    </div>
+</div>
+
+<div class="page-bg-top">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm">
+                <a href="index.php" title="<?php echo $servername; ?>"><div class="top-logo"></div></a>
+            </div>
         </div>
     </div>
 </div>
 
 <div class="container">
-    <div class="navbar-legion">
-        <a href="index.php" title="<?php echo $servername; ?>"><div class="top-logo"></div></a>
-        <div class="navbar-nav">
+    <div class="left-wotlk-bg">
+        <div class="ne-top"></div>
+        <div class="ne-center"></div>
+    </div>
+</div>
 
-            <?php
-            if ($show_latest_topic_frontpage > 0) {
-                ?>
-                <div class="last-forum-topic">
-                    <span><i class="fa fa-bullhorn"
-                             aria-hidden="true"></i> Latest topic: </span> <?= $forum->getLastTopic(true); ?>
-                </div>
-                <?php
-            }
-            ?>
-
-            <button type="button" title="Open menu" id="toggleNavigation" class="navbar-toggle collapsed disabled" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                <div class="toggledMenu">
-                    <ul id="toggledMenuUl">
-                        <li class="<?php if ($page == 'home') { echo 'mobilemenu-active'; } ?>" id="index"><a href="index.php"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
-                        <li class="<?php if ($page == 'register') { echo 'mobilemenu-active'; } ?>" id="register"><a href="register.php"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Register</a></li>
-                        <li class="<?php if ($page == 'onlineplayers') { echo 'mobilemenu-active'; } ?>" id="onlineplayers"><a href="onlineplayers.php"><i class="fa fa-users" aria-hidden="true"></i> Who's online</a></li>
-                        <li class="<?php if ($page == 'forum') { echo 'mobilemenu-active'; } ?>" id="forum"><a href="forum.php"><i class="fa fa-comments" aria-hidden="true"></i> Forum</a></li>
-                        <li class="<?php if ($page == 'howto') { echo 'mobilemenu-active'; } ?>" id="howto"><a href="howto.php"><i class="fa fa-question-circle" aria-hidden="true"></i> How to</a></li>
-                        <li class="<?php if ($page == 'armory') { echo 'mobilemenu-active'; } ?>" id="armory"><a href="armory.php"><i class="fa fa-universal-access" aria-hidden="true"></i> Armory</a></li>
-                        <li class="<?php if ($page == 'gallery') { echo 'mobilemenu-active'; } ?>" id="gallery"><a href="gallery.php"><i class="fa fa-file-image-o" aria-hidden="true"></i> Gallery</a></li>
-                    </ul>
-                </div>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-
-            <div class="navbar-list">
-                <div class="navbar-menuitem <?php if ($page == 'home') { echo 'menuitem-active'; } ?>"><a href="index.php"><i class="fa fa-home" aria-hidden="true"></i> Home</a></div>
-                <div class="navbar-menuitem <?php if ($page == 'register') { echo 'menuitem-active'; } ?>"><a href="register.php"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Register</a></div>
-                <div class="navbar-menuitem <?php if ($page == 'onlineplayers') { echo 'menuitem-active'; } ?>"><a href="onlineplayers.php"><i class="fa fa-users" aria-hidden="true"></i> Online players</a></div>
-                <div class="navbar-menuitem <?php if ($page == 'forum') { echo 'menuitem-active'; } ?>"><a href="forum.php"><i class="fa fa-comments" aria-hidden="true"></i> Forum</a></div>
-                <div class="navbar-menuitem <?php if ($page == 'howto') { echo 'menuitem-active'; } ?>"><a href="howto.php"><i class="fa fa-question-circle" aria-hidden="true"></i> How to</a></div>
-                <div class="navbar-menuitem <?php if ($page == 'armory') { echo 'menuitem-active'; } ?>"><a href="armory.php"><i class="fa fa-universal-access" aria-hidden="true"></i> Armory</a></div>
-                <div class="navbar-menuitem <?php if ($page == 'gallery') { echo 'menuitem-active'; } ?>"><a href="gallery.php"><i class="fa fa-file-image-o" aria-hidden="true"></i> Gallery</a></div>
+<div class="container">
+    <div class="row">
+        <div class="leftMenu">
+            <a href="#">
+            <div class="menu-item">
+                <div class="news-icon"></div>
+                <div class="plus-icon"></div>
+                <span class="menu-text">News</span>
+                <div class="menu-item-add"></div>
             </div>
+            </a>
+            <div class="menu-content-top"></div>
+            <div class="menu-content-mid">
+                <ul>
+                    <li>Home</li>
+                </ul>
+            </div>
+            <div class="menu-content-bot"></div>
 
+            <a href="#">
+            <div class="menu-item">
+                <div class="news-icon"></div>
+                <div class="plus-icon"></div>
+                <span class="menu-text">Account</span>
+                <div class="menu-item-add"></div>
+            </div>
+            </a>
+            <div class="menu-content-top"></div>
+            <div class="menu-content-mid">
+                <ul>
+                    <li>Register</li>
+                    <li>Login</li>
+                </ul>
+            </div>
+            <div class="menu-content-bot"></div>
+
+            <a href="#">
+                <div class="menu-item">
+                    <div class="news-icon"></div>
+                    <div class="plus-icon"></div>
+                    <span class="menu-text">Server</span>
+                    <div class="menu-item-add"></div>
+                </div>
+            </a>
+            <div class="menu-content-top"></div>
+            <div class="menu-content-mid">
+                <ul>
+                    <li>Online players</li>
+                    <li>Status: <?php getServerStatus(); ?></li>
+                    <li>Armory</li>
+                    <li>How to</li>
+                </ul>
+            </div>
+            <div class="menu-content-bot"></div>
+
+            <a href="#">
+                <div class="menu-item">
+                    <div class="news-icon"></div>
+                    <div class="plus-icon"></div>
+                    <span class="menu-text">Community</span>
+                    <div class="menu-item-add"></div>
+                </div>
+            </a>
+            <div class="menu-content-top"></div>
+            <div class="menu-content-mid">
+                <ul>
+                    <li>Forum</li>
+                </ul>
+            </div>
+            <div class="menu-content-bot"></div>
+
+            <a href="#">
+                <div class="menu-item">
+                    <div class="news-icon"></div>
+                    <div class="plus-icon"></div>
+                    <span class="menu-text">Media</span>
+                    <div class="menu-item-add"></div>
+                </div>
+            </a>
+            <div class="menu-content-top"></div>
+            <div class="menu-content-mid">
+                <ul>
+                    <li>Gallery</li>
+                </ul>
+            </div>
+            <div class="menu-content-bot"></div>
+
+            <a href="#">
+                <div class="menu-item">
+                    <div class="news-icon"></div>
+                    <div class="plus-icon"></div>
+                    <span class="menu-text">Site</span>
+                    <div class="menu-item-add"></div>
+                </div>
+            </a>
+            <div class="menu-content-top"></div>
+            <div class="menu-content-mid">
+                <ul>
+                    <li>Administration</li>
+                </ul>
+            </div>
+            <div class="menu-content-bot"></div>
         </div>
     </div>
 </div>
 
-<div class="midContent">
-    <div class="container">
-        <div class="ad-spot1">
-            <?php
-            $google_query = "SELECT * FROM google_config WHERE id='1'";
-            $google_result = $mysqli_cms->query($google_query);
-            $google_fetch = $google_result->fetch_assoc();
-            if (strlen($google_fetch['google_ad_1']) > 0) {
-                echo $google_fetch['google_ad_1'];
-            }
-            ?>
-        </div>
-        <?php
-        include 'page.php';
-        ?>
-    </div>
-</div>
+<!-- TODO: ADD PAGE CONTENT HERE -->
+<!--<div class="midContent">-->
+<!--    <div class="container">-->
+<!--        --><?php
+//        include 'page.php';
+//        ?>
+<!--    </div>-->
+<!--</div>-->

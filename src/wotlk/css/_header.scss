@@ -1,3 +1,114 @@
+.top-bg2-bar {
+  width: 100%;
+  background: url("/img/themes/wotlk/topbg2.gif");
+  height: 25px;
+
+  .servername {
+    padding-top: 5px;
+
+    a {
+      color: #D0A803;
+    }
+  }
+}
+
+.left-wotlk-bg {
+  margin-left: -820px;
+  margin-top: -40px;
+  position: relative;
+}
+
+.ne-top {
+  background: url(/img/themes/wotlk/ne-top-left.gif);
+  width: 107px;
+  height: 40px;
+  position: absolute;
+  left: 705px;
+}
+
+.ne-center {
+  background: url(/img/themes/wotlk/ne-center.jpg);
+  width: 980px;
+  height: 548px;
+  position: absolute;
+  top: 39px;
+}
+
+.leftMenu {
+  width: 144px;
+  min-height: 300px;
+  margin-top: 10px;
+  margin-left: 30px;
+
+  .menu-item {
+    background: url("/img/themes/wotlk/leftMenu/leftMenu-button-off.gif");
+    width: 144px;
+    height: 27px;
+    position: relative;
+    margin-top: 3px;
+
+    .news-icon {
+      background: url("/img/themes/wotlk/leftMenu/icon-news-off.gif");
+      width: 23px;
+      height: 21px;
+      position: absolute;
+      left: 2px;
+      top: 3px;
+    }
+
+    .menu-text {
+      position: absolute;
+      margin-left: 28px;
+      background: linear-gradient(to top, #f6f042, #d69a1a 70%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: bold;
+      font-size: 1.7rem;
+    }
+
+    .plus-icon {
+      background: url("/img/themes/wotlk/leftMenu/leftmenu-plus.gif");
+      width: 15px;
+      height: 14px;
+      position: absolute;
+      right: 2px;
+      bottom: 3px;
+    }
+
+    .menu-item-add {
+      background: url("/img/themes/wotlk/menu-add.gif");
+      width: 9px;
+      height: 39px;
+      position: absolute;
+      top: -6px;
+      right: -10px;
+    }
+  }
+
+  .menu-content-top {
+    height: 6px;
+    width: 145px;
+    background: url(/img/themes/wotlk/leftMenu/leftMenu-cont-top.png) no-repeat 0 0;
+  }
+
+  .menu-content-mid {
+    width: 145px;
+    background: url(/img/themes/wotlk/leftMenu/leftMenu-back.png) repeat 0 0;
+
+    ul, li {
+      margin: 0;
+      padding-left: 5px;
+      list-style: none;
+    }
+  }
+
+  .menu-content-bot {
+    height: 8px;
+    width: 145px;
+    background: url(/img/themes/wotlk/leftMenu/leftMenu-cont-bot.png) no-repeat 0 0;
+  }
+}
+
 .navbar-nav {
   width: 90%;
   height: 80px;

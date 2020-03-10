@@ -2,7 +2,7 @@
 
     <div class="register-content">
 
-        <div class="register-gnome"></div>
+        <div class="register-dk"></div>
 
         <h2>Create a new account</h2>
         <p>Fill out the form below in order to create a new account</p>

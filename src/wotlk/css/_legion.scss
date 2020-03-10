@@ -1,23 +1,10 @@
 body {
-  background-color: #000000;
-  background-image: url("/img/themes/legion/bg.jpg");
-  background-size: cover;
+  background: #000 url(/img/themes/wotlk/page-bg.jpg) no-repeat 50% 0;
   color: #000000;
   font-family: 'Zilla Slab', serif;
   overflow-x: hidden;
   min-height: 100%;
   position: relative;
-}
-
-body:before {
-  content: " ";
-  position: absolute;
-  z-index: -1;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: -webkit-radial-gradient(top center, ellipse cover, rgba(255, 255, 255, 0.2) 0%, rgba(0, 0, 0, 0.9) 100%);
 }
 
 img {
@@ -366,14 +353,13 @@ select {
 }
 
 .top-logo {
-  background-image: url("/img/themes/legion/logo-wow.png");
-  width: 256px;
-  height: 103px;
-  background-size: 256px 103px;
+  background-image: url("/img/themes/wotlk/WrathLogo.png");
+  width: 200px;
+  height: 100px;
+  background-size: 200px 100px;
   position: absolute;
-  left: -125px;
   z-index: 1;
-  margin: -10px 0px 0px 0px;
+  margin: 0px 0px 0px 0px;
 }
 
 .left-sidebar {
@@ -428,7 +414,7 @@ select {
 
 .midContent {
   width: 100%;
-  margin-top: 150px;
+  margin-top: 40px;
 }
 
 .midContent a {
@@ -561,8 +547,8 @@ select {
 
 #bg-right {
   background-image: url("/img/themes/wotlk/bg.png");
-  width: 768px;
-  height: 539px;
+  width: 1920px;
+  height: 1080px;
   position: absolute;
   z-index: -1;
   right: -590px;
@@ -808,13 +794,13 @@ footer {
   height: 100%;
 }
 
-.register-gnome {
-  background-image: url("/img/themes/wotlk/characters/gnome.png");
-  width: 313px;
-  height: 341px;
+.register-dk {
+  background-image: url("/img/themes/wotlk/characters/lich_king.png");
+  width: 500px;
+  height: 620px;
   position: absolute;
-  left: 540px;
-  top: 150px;
+  left: 440px;
+  top: 100px;
 }
 
 .videos {
