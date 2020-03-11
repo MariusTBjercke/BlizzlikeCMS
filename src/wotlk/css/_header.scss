@@ -39,6 +39,7 @@
   min-height: 300px;
   margin-top: 10px;
   margin-left: 30px;
+  position: relative;
 
   .menu-item {
     background: url("/img/themes/wotlk/leftMenu/leftMenu-button-off.gif");
@@ -85,6 +86,30 @@
     }
   }
 
+  .menu-dropdown-news {
+    display: block;
+  }
+
+  .menu-dropdown-account {
+    display: block;
+  }
+
+  .menu-dropdown-server {
+    display: block;
+  }
+
+  .menu-dropdown-community {
+    display: block;
+  }
+
+  .menu-dropdown-media {
+    display: block;
+  }
+
+  .menu-dropdown-site {
+    display: none;
+  }
+
   .menu-content-top {
     height: 6px;
     width: 145px;
@@ -99,13 +124,30 @@
       margin: 0;
       padding-left: 5px;
       list-style: none;
+
+      a {
+        background: linear-gradient(0deg,#f6f042,#d69a1a 70%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
     }
+
   }
 
   .menu-content-bot {
     height: 8px;
     width: 145px;
     background: url(/img/themes/wotlk/leftMenu/leftMenu-cont-bot.png) no-repeat 0 0;
+  }
+
+  .menu-bg {
+    background: url("/img/themes/wotlk/menu-bg.jpg");
+    width: 87px;
+    min-height: 307px;
+    position: absolute;
+    left: 60px;
+    margin-top: -10px;
   }
 }
 
@@ -211,7 +253,7 @@
 }
 
 .navbar-toggle {
-  color: #FFFFFF;
+  color: #472714;
   background-color: #402822 !important;
   margin-top: 14px !important;
   margin-right: 45px !important;
@@ -297,7 +339,7 @@
 }
 
 .navbar-toggle {
-  color: #FFFFFF;
+  color: #472714;
   background-color: #402822 !important;
   margin-top: 14px !important;
   margin-right: 45px !important;
@@ -383,7 +425,7 @@
 }
 
 .navbar-toggle {
-  color: #FFFFFF;
+  color: #472714;
   background-color: #402822 !important;
   margin-top: 14px !important;
   margin-right: 45px !important;

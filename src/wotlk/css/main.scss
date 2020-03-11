@@ -1,6 +1,7 @@
 @import "colors";
 @import "header";
 @import "legion";
+@import "wotlk";
 @import "user";
 @import "admin";
 @import "events";
@@ -110,13 +111,13 @@ canvas {
 #ramdomInt {
   background-color: $main;
   border: 1px solid black;
-  color: white;
+  color: #000000;
   padding: 5px;
 }
 
 #randomRange {
   background-color: $secondary;
   border: 1px solid black;
-  color: white;
+  color: #000000;
   padding: 5px;
 }

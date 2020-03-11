@@ -1,0 +1,27 @@
+.page-content {
+  position: absolute;
+  top: 0px;
+  left: 178px;
+
+  .border-left {
+    background: url("/img/themes/wotlk/border-left.gif");
+    width: 58px;
+    min-height: 110vh;
+  }
+
+  .light-bg {
+    background: url("/img/themes/wotlk/light.jpg");
+    width: 810px;
+    min-height: 100%;
+    position: absolute;
+    top: 0;
+    left: 58px;
+
+    .light-bg-content {
+      position: relative;
+      width: 98%;
+      height: 100%;
+    }
+  }
+
+}

@@ -40,3 +40,11 @@ $(".thumb").click(function() {
         });
     }
 });
+
+// WoTLK Menu Dropdown
+var menuItems = ["news", "account", "server", "community", "media", "site"];
+$.each(menuItems, function(key, value){
+    $("." + value).click(function() {
+        $(".menu-dropdown-" + value).slideToggle("slow");
+    });
+});
