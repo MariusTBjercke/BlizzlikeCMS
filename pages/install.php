@@ -35,8 +35,8 @@ if (isset($_POST['install_submit'])) {
     $handle = fopen($my_file, 'w');
     // Writing data to config.php
     $data = '<?php
-ini_set(display_errors, 0);
-ini_set(display_startup_errors, 0);
+//ini_set(display_errors, 0);
+//ini_set(display_startup_errors, 0);
 
 // MySQL login details
 $hostname = "' . $hostname . '";
