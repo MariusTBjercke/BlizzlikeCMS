@@ -4,6 +4,7 @@ if (isset($_POST['save_submit'])) {
 	$servername = addslashes(trim($_POST['servername']));
 	$serveraddress = addslashes(trim($_POST['serveraddress']));
 	$worldport = addslashes(trim($_POST['worldport']));
+	$theme = addslashes(trim($_POST['theme']));
 	$contact = addslashes(trim($_POST['contact']));
 	if (isset($_POST['show_post_frontpage'])) {
 	    $check = 1;
@@ -16,7 +17,7 @@ if (isset($_POST['save_submit'])) {
         $check2 = 0;
     }
 
-	$result = $mysqli_cms->query("UPDATE config SET servername='$servername', server_description='$serverDescription', serveraddress='$serveraddress', worldport='$worldport', show_post_frontpage='$check', show_latest_topic_frontpage='$check2', contact='$contact' WHERE id='1'");
+	$result = $mysqli_cms->query("UPDATE config SET servername='$servername', server_description='$serverDescription', serveraddress='$serveraddress', worldport='$worldport', theme='$theme', show_post_frontpage='$check', show_latest_topic_frontpage='$check2', contact='$contact' WHERE id='1'");
 	echo '<script>window.location="admin.php?page=edit_settings&action=success";</script>';
 	exit;
 }
@@ -31,6 +32,23 @@ $result = $mysqli_cms->query("SELECT * FROM config");
 
 	<ul>
 		<?php
+
+        function themeNameOption($themeID) {
+            if ($themeID == 2) {
+                return '<option value="2">Legion</option>';
+            } else if ($themeID == 1) {
+                return '<option value="1">Wrath of The Lich King</option>';
+            }
+        }
+
+        function themeName($themeID) {
+            if ($themeID == 2) {
+                return 'Legion';
+            } else if ($themeID == 1) {
+                return 'Wrath of The Lich King';
+            }
+        }
+
 		if ($_GET['action'] == 'edit') {
 			$edit_settings = true;
 			while ($row = $result->fetch_assoc()) {
@@ -47,6 +65,11 @@ $result = $mysqli_cms->query("SELECT * FROM config");
 				echo '<p><li><label>Server name:</label> <input type="text" name="servername" value="' . $row['servername'] . '"></li></p>';
 				echo '<p><li><label>Server address:</label> <input type="text" name="serveraddress" value="' . $row['serveraddress'] . '"></li></p>';
 				echo '<p><li><label>World port:</label> <input type="text" name="worldport" value="' . $row['worldport'] . '"></li></p>';
+				echo '<p><li><label>Theme:</label> <select name="theme">
+' . themeNameOption($row['theme']) . '
+  <option value="2">Legion</option>
+  <option value="1">Wrath of The Lich King</option>
+</select></li></p>';
 				echo '<p><li><label>Contact mail:</label> <input type="text" name="contact" value="' . $row['contact'] . '"></li></p>';
 				echo '<p><input type="submit" name="save_submit" value="Save">';
 				echo '</form>';
@@ -75,6 +98,7 @@ $result = $mysqli_cms->query("SELECT * FROM config");
 				echo '<p><li><label>Server name:</label> ' . $row['servername'] . '</li></p>';
 				echo '<p><li><label>Server address:</label> ' . $row['serveraddress'] . '</li></p>';
 				echo '<p><li><label>World port:</label> ' . $row['worldport'] . '</li></p>';
+				echo '<p><li><label>Theme:</label> ' . themeName($row['theme']) . '</li></p>';
 				echo '<p><li><label>Contact mail:</label> ' . $row['contact'] . '</li></p>';
 			}
 		}
