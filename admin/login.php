@@ -3,8 +3,16 @@ if (isset($_POST['submit'])) {
     $username = addslashes(trim($_POST['username']));
     $password = addslashes(trim($_POST['password']));
 
+    global $mysqli_auth;
+    $query = "SELECT * FROM account WHERE username='$username'";
+    $result = $mysqli_auth->query($query);
+    $fetch = $result->fetch_assoc();
+    $acc_id = $fetch['id'];
+    $salt = $fetch['salt'];
+    $verifier = $fetch['verifier'];
+
     $admin = new Admin;
-    if ($admin->validateLogin($username, $password) == true) {
+    if ($admin->VerifySRP6Login($username, $password, $salt, $verifier) == true) {
         $_SESSION['admin_logged_n'] = true;
         $_SESSION['username'] = $username;
         $_SESSION['admin_id'] = $admin->getPosterId();

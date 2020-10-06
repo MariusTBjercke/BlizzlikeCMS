@@ -10,7 +10,7 @@ include 'includes/classes/events_lib.php';
 include 'header.php';
 if (isset($_POST['submit'])) {
 
-	$username = addslashes(trim($_POST['username']));
+	$username = strtoupper(addslashes(trim($_POST['username'])));
 	$email = strtoupper(addslashes(trim($_POST['email'])));
 	$password1 = addslashes(trim($_POST['password1']));
 	$password2 = addslashes(trim($_POST['password2']));
@@ -49,31 +49,47 @@ if (isset($_POST['submit'])) {
 		exit;
 	}
 
-	// Check if the auth database has a Battle.net table in it
-    $tableCheck = $mysqli_auth->query("SHOW TABLES LIKE 'battlenet_accounts'");
-	if ($tableCheck->num_rows == 1) {
+    function CalculateSRP6Verifier($username, $password, $salt)
+    {
+        // algorithm constants
+        $g = gmp_init(7);
+        $N = gmp_init('894B645E89E1535BBDAD5B8B290650530801B18EBFBF5E8FAB3C82872A3E9BB7', 16);
 
-        // Insert Battle.net info
-        $bnetHash = bin2hex(strrev(hex2bin(strtoupper(hash("sha256",strtoupper(hash("sha256", strtoupper($email)).":".strtoupper($password1)))))));
-        $bnetQueryResult = $mysqli_auth->query("INSERT INTO battlenet_accounts (email, sha_pass_hash) VALUES ('$email', '$bnetHash')");
-        $bnetacc = $mysqli_auth->insert_id;
+        // calculate first hash
+        $h1 = sha1(strtoupper($username . ':' . $password), TRUE);
 
-        $findIDQuery = "SELECT * FROM battlenet_accounts WHERE sha_pass_hash='$bnetHash'";
-        $findIDResult = $mysqli_auth->query($findIDQuery);
-        $username = $bnetacc."#1";
+        // calculate second hash
+        $h2 = sha1($salt.$h1, TRUE);
 
-        $result = $mysqli_auth->query("INSERT INTO account (username, email, reg_mail, sha_pass_hash, battlenet_account, battlenet_index) VALUES ('$username', '$email', '$email', SHA1(UPPER('$username:$password1')), '$bnetacc', '1')");
-        echo '<script>alert("Your account has been created! You may now log in.");</script>';
-        echo '<script>window.location="howto.php";</script>';
+        // convert to integer (little-endian)
+        $h2 = gmp_import($h2, 1, GMP_LSW_FIRST);
 
-	} else {
+        // g^h2 mod N
+        $verifier = gmp_powm($g, $h2, $N);
 
-        $result = $mysqli_auth->query("INSERT INTO account (username, email, sha_pass_hash) VALUES ('$username', '$email', SHA1(UPPER('$username:$password1')))");
-        echo '<script>alert("Your account has been created! You may now log in.");</script>';
-        echo '<script>window.location="howto.php";</script>';
+        // convert back to a byte array (little-endian)
+        $verifier = gmp_export($verifier, 1, GMP_LSW_FIRST);
 
+        // pad to 32 bytes, remember that zeros go on the end in little-endian!
+        $verifier = str_pad($verifier, 32, chr(0), STR_PAD_RIGHT);
+
+        // done!
+        return $verifier;
     }
 
+    // generate a random salt
+    $salt = random_bytes(32);
+
+    // calculate verifier using this salt
+    $verifier = CalculateSRP6Verifier($username, $password1, $salt);
+
+    // done - this is what you put in the account table!
+    $newSalt = $salt;
+    $newVerifier = $verifier;
+
+    $result = $mysqli_auth->query("INSERT INTO account (username, email, salt, verifier) VALUES ('$username', '$email', '$newSalt', '$newVerifier')");
+    echo '<script>alert("Your account has been created! You may now log in.");</script>';
+    echo '<script>window.location="howto.php";</script>';
 }
 include 'footer.php';
 ?>
