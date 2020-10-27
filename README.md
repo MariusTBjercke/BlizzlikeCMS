@@ -23,17 +23,62 @@ This is project is a work in progress, community contributions are always welcom
 ### Pre-Requsites
 
 - The project currently requires that all Trinity and CMS databases are located on the same SQL Server.
-* We currently do not support hosting your Characters, Auth, World, or BlizzlikeCMS databases on different machines *
+*We currently do not support hosting your Characters, Auth, World, or BlizzlikeCMS databases on different servers.*
+- You have the ability to sudo on the CMS server and the TrinityCore server.
+*You can host both TrinityCore and Blizzlike on the same machine, but it is not recommended*
+- You have some familiartiy with using Linux and have configured networking correctly.
+*It is recommended that you use static IP addresses for your servers*
 
-**REMINDER: THE WEBSITE IS USING THE "auth" and "characters" databases that comes with Trinity. Without these the site will not work, and you will not be able to log in as the users are the same as the the ones in the "auth" database.**
+### Things to be aware of
 
-**The video(s) doesn't mean that you shouldn't read the material underneath, as it explains you more about how to edit the theme/appearance.**
+- BlizzlikeCMS does not include it's own user accounts.  It will connect to your TrinityCore Auth DB and use the
+existing user accounts from the Trinity server.  
+- The GM level of your Trinity user accounts will determine who can access the Admin Panel on the CMS.
 
-Simply import all the files into your desired website root folder, then open the site in your browser and follow the installation. Make sure you have **permission** to write to includes/config.php
+### Create the BlizzlikeCMS database and SQL user account.
 
-For security reasons, remember to **delete both install.php** files after the installation is complete*
+1.  Log into the TrinityCore WoW SQL server and create a dedicated blizzlike db user account:
+`sudo mysql`
+`CREATE USER 'BLIZZLIKE_USER'@'BLIZZLIKE_SERVER_IP' IDENTIFIED BY 'SOME_PASSWORD';`
+2.  Create an empty Blizzlike CMS Database.
+`CREATE DATABASE BLIZZLIKE_DB_NAME DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;`
+3.  Allow the Blizzlike user to have admin access to the DB server
+`GRANT ALL PRIVILEGES ON *.* TO 'BLIZZLIKE_USER'@'BLIZZLIKE_SERVER_IP' WITH GRANT OPTION;`
 
-In order to log in to the administration panel, use the same credentials as your server accounts with admin rights.
+### Setup the BlizzlikeCMS web server.
+
+1.  Install the project dependencies.
+`sudo apt-get install -y mysql-client apache2 php php-gmp php-imagick php-mysql php-gd php-soap git`
+2.  Clone in the project repo into the Apache web server root.
+`sudo git clone git@github.com:MariusTBjercke/BlizzlikeCMS.git /var/www/html`
+3.  Clean up file system permissions.
+`sudo chown www-data:www-data /var/www/html -R`
+`sudo chmod 775 /var/www/html -R`
+`sudo chmod 777 /var/www/html/img`
+`sudo chmod 777 /var/www/html/config.php`
+4. Add the PHP_GMP extension to php.ini
+`sudo vi /etc/php/{PHP_Version}/apache2/php.ini`
+Add the following line anywhere inside:
+`extension=php_gmp.so`
+5.  Restart the Apache webserver.
+`sudo service apache2 restart`
+
+### Run the server install script
+
+1.  From your computer.  Open a web browser and navigate to http://BLIZZLIKE_SERVER_IP/install.php
+2.  Use the database user you created in the SQL setup stage above.
+
+### Cleanup
+
+Delete or move the file /var/www/html/install.php in order to keep your installation secure.  Example:
+`sudo rm /var/www/html/install.php` to delete the file.
+`sudo mv /var/www/html/install.php /home/$USER/install.php` to move it into your home folder.
+
+### Log in and configure the CMS via the admin panel.
+1.  Navigate to http://BLIZZLIKE_SERVER_IP/admin.php
+2.  You will need to have a GM user in TrinityCore setup before you can log in here.
+*If you do not have a GM user in TrinityCore yet, make sure you follow the steps outlined by the TrinityCore project*
+*https://trinitycore.atlassian.net/wiki/spaces/tc/pages/77971021/Final+Server+Steps*
 
 ## Working with CSS/Javascript
 
