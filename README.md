@@ -1,3 +1,5 @@
+# !! UNFORTUNATELY, THIS PROJECT IS DEAD FOR NOW. YOU ARE STILL FREE TO PULL AND FORK AS YOU LIKE. !!
+
 # Blizzlike is a CMS for the TrinityCore Open Source MMO Framework.
 This is project is designed to be a simple, easy to use web content management system and user
 registration portal for World of Warcraft private servers powered by TrinityCore.
