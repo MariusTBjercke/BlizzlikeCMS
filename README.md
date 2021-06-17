@@ -94,6 +94,3 @@ If you are going to edit the stylesheet/javascript files you are going to need <
 
 **Preview of the Legion theme**
 <img src='img/demo/legion_demo.png' width='100%'>
-
-## How to Get Help
-If you need help or want to contribute, join us on Discord: https://discord.gg/Y9TTaNk
