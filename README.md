@@ -40,7 +40,7 @@ existing user accounts from the Trinity server.
 ### Create the BlizzlikeCMS database and SQL user account.
 
 1.  Log into the TrinityCore WoW SQL server and create a dedicated blizzlike db user account:
-`sudo mysql`
+`mysql`
 `CREATE USER 'BLIZZLIKE_USER'@'BLIZZLIKE_SERVER_IP' IDENTIFIED BY 'SOME_PASSWORD';`
 2.  Create an empty Blizzlike CMS Database.
 `CREATE DATABASE BLIZZLIKE_DB_NAME DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;`
@@ -50,20 +50,20 @@ existing user accounts from the Trinity server.
 ### Setup the BlizzlikeCMS web server.
 
 1.  Install the project dependencies.
-`sudo apt-get install -y mysql-client apache2 php php-gmp php-imagick php-mysql php-gd php-soap git`
+`apt-get install -y mysql-client apache2 php php-gmp php-imagick php-mysql php-gd php-soap git`
 2.  Clone in the project repo into the Apache web server root.
-`sudo git clone git@github.com:MariusTBjercke/BlizzlikeCMS.git /var/www/html`
+`git clone git@github.com:MariusTBjercke/BlizzlikeCMS.git /var/www/html`
 3.  Clean up file system permissions.
-`sudo chown www-data:www-data /var/www/html -R`
-`sudo chmod 775 /var/www/html -R`
-`sudo chmod 777 /var/www/html/img`
-`sudo chmod 777 /var/www/html/config.php`
+`chown www-data:www-data /var/www/html -R`
+`chmod 775 /var/www/html -R`
+`chmod 777 /var/www/html/img`
+`chmod 777 /var/www/html/config.php`
 4. Add the PHP_GMP extension to php.ini
-`sudo vi /etc/php/{PHP_Version}/apache2/php.ini`
+`vi /etc/php/{PHP_Version}/apache2/php.ini`
 Add the following line anywhere inside:
 `extension=php_gmp.so`
 5.  Restart the Apache webserver.
-`sudo service apache2 restart`
+`service apache2 restart`
 
 ### Run the server install script
 
@@ -73,8 +73,8 @@ Add the following line anywhere inside:
 ### Cleanup
 
 Delete or move the file /var/www/html/install.php in order to keep your installation secure.  Example:
-`sudo rm /var/www/html/install.php` to delete the file.
-`sudo mv /var/www/html/install.php /home/$USER/install.php` to move it into your home folder.
+`rm /var/www/html/install.php` to delete the file.
+`mv /var/www/html/install.php /home/$USER/install.php` to move it into your home folder.
 
 ### Log in and configure the CMS via the admin panel.
 1.  Navigate to http://BLIZZLIKE_SERVER_IP/admin.php
