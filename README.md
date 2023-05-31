@@ -1,4 +1,10 @@
-# !! UNFORTUNATELY, THIS PROJECT IS DEAD FOR NOW. YOU ARE STILL FREE TO PULL AND FORK AS YOU LIKE. !!
+# Project Status Update: On Hiatus
+
+This project, which started as an exciting journey into the world of PHP at the early stage of my career, is currently on hold. It served as a great learning platform where I could explore and understand the intricacies of PHP development.
+
+Since then, I've gained additional knowledge and developed new strategies that would likely necessitate a complete rethinking of this project's approach. If I were to pick this up again, a different approach or perhaps a suitable framework would be considered to enhance optimization and security.
+
+In the meantime, I encourage others to take the lessons learned here and continue to explore and innovate. Thank you for your interest in this project.
 
 # Blizzlike is a CMS for the TrinityCore Open Source MMO Framework.
 This project is designed to be a simple, easy to use web content management system and user
