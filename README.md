@@ -26,8 +26,6 @@ This is project is a work in progress, community contributions are always welcom
 
 ## Installation on Ubuntu 18.04
 
-(optional) Watch the setup video located here:  https://www.youtube.com/watch?v=1h0Cpr5Osg4
-
 ### Pre-Requsites
 
 - The project currently requires that all Trinity and CMS databases are located on the same SQL Server.
